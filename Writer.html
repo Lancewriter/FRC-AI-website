@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #f8f8f8;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo img {
+            height: 50px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 15px;
+        }
+        nav ul li a:hover {
+            background-color: #ddd;
+            border-radius: 5px;
+        }
+        .cta .button {
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+        .cta .button:hover {
+            background-color: #0056b3;
+        }
+        #hero {
+            background-image: url("clean office environment.jpg");
+            background-color: #007bff;
+            background-size: cover;
+            background-position: center;   
+            color:black;
+            text-align:center;
+            text-align: center;
+            padding: 100px 0;
+        }
+        #hero .button {
+            background-color: #fff;
+            color: #007bff;
+        }
+        #hero .button:hover {
+            background-color: #ddd;
+        }
+        #features {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .feature-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .feature {
+            flex: 1 1 calc(45% - 20px);
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .feature h3 {
+            color: #007bff;
+        }
+        footer {
+            background-color: #f8f8f8;
+            max-width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid #ddd;
+        }
+        @media (max-width: 768px) {
+            .feature-list {
+                flex-direction: column;
+                align-items: center;
+            }
+            .feature {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+         /* Tab container */
+        .tab-container {
+            margin-top: 30px;
+            max-width: 100%;
+        }
+
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid #ddd;
+            color:#007bff;
+        }
+
+        .tabs button {
+            flex: 1;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            color:#007bff;
+        }
+
+        .tabs button.active {
+            background-color:  #007bff;
+            color: white;
+        }
+
+        .tabs button:hover {
+            background-color: #ddd;
+        }
+
+        /* Tab content */
+        .tab-content {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-top: none;
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+    
+    </style>
+</head>
+<body>
+    <header>
+        <div class="content">
+            
+            
+        </div>
+        
+        <div class="content">
+            <h1>FRC-AI</h1>
+            
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#AI-header">AI deployment</a></li>
+                <li><a href="#Financial-analysis-header">Financial analysis</a></li>
+                <li><a href="#Finance-projects-header">Finance Projects(M&A/Exit)</a></li>
+                <li><a href="#Economic-Analysis-header">Economic analysis</a>
+                <li><a href="#why-choose-us-header">Why us</a></li>
+                <li><a href="#Contact-us-header">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <img src="Logo2.jpg" alt="Your Logo">
+        </div>
+        <div class="content">
+            
+            
+        </div>
+        
+    </header>
+    <section id="hero">
+        <div class="container">
+            <h1>Resilence for SMEs and Fintech start ups</h1>
+        <h3>Manage risk effectively to ensure growth and resilience.</h3>
+        </div>
+    </section>
+    <section id="features">
+        <div class="container">
+            <h2>Build your resilience</h2>
+            <p>Leverage AI tools as well as risk management expertise and experience honed at leading global financial institutions </p>
+            <div class="feature-list">
+                <div class="feature">
+                    <h3 id="AI automation table">AI automation</h3>
+                    <p>SMEs can leverage AI to compete with larger organizations by enhancing customer engagement and stremlining procedures.</p>
+                </div>
+                <div class="feature">
+                    <h3 id="AI decision science table">AI decision science</h3>
+                    <p>AI Decision Science empowers data-driven strategies, optimizing decisions and driving growth.</p>
+                </div>
+                <div class="feature">
+                    <h3 id="Financial Analysis table">Financial risk analysis</h3>
+                    <p>Manage the risk of your of main business partners defaulting</p>
+                </div>
+                <div class="feature">
+                    <h3 id="Finance Projects table">Finance Projects</h3>
+                    <p>Does your finance team have the capacity,expertise and discretion to execute projects such as M&A / Owner Exits sucessfully?</p>
+                </div>
+                <div class="feature">
+                    <h3 id="Cash flow optimisation table">Cash flow optimisation</h3>
+                    <p>Optimizing cash flow enhances resilience and ensures sustainable growth for SMEs.</p>
+                </div>
+                <div class="feature">
+                    <h3 id="Economic Analysis table">Economic analysis</h3>
+                    <p>Economic analysis enhances resilience and informs strategic decisions for sustainable SME growth.</p>
+                </div>
+                
+                <div class="feature">
+                    <h3 id="AI decision science table">Financial risk training</h3>
+                    <p>Finance risk training equips SME's finance teams with tools to mitigate risks effectively.</p>
+                </div>
+                <div class="feature">
+                    <h3 id="AI training">AI training</h3>
+                    <p>Details about feature four.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+        <div class="container">
+            <!-- Tab Container -->
+            <div class="tab-container">
+                <!-- Tabs -->
+                <div class="tabs">
+                    <button class="tab-button active" data-tab="financial-analysis">Financial Analysis</button>
+                    <button class="tab-button" data-tab="finance-projects">Finance Projects</button>
+                    <button class="tab-button" data-tab="economic-analysis">Economic Analysis</button>
+                    <button class="tab-button" data-tab="ai-services">AI Services</button>
+                </div>
+    
+                <!-- Tab Content -->
+                <div id="financial-analysis" class="tab-content active">
+                    <h2>Financial Analysis</h2>
+                    <p>Detailed insights into your financial risk and opportunities, ensuring resilient business relationships and stability.</p>
+                </div>
+                <div id="finance-projects" class="tab-content">
+                    <h2>Finance Projects</h2>
+                    <p>Expert guidance for M&A, exits, and confidential projects to maximize value and streamline strategic objectives.</p>
+                </div>
+                <div id="economic-analysis" class="tab-content">
+                    <h2>Economic Analysis</h2>
+                    <p>Comprehensive economic insights to enhance resilience and drive strategic decision-making tailored to market conditions.</p>
+                </div>
+                <div id="ai-services" class="tab-content">
+                    <h2>AI Services</h2>
+                    <p>Leverage AI to optimize decisions, enhance customer engagement, and develop innovative strategies for growth.</p>
+                </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 FRC-AI. All rights reserved.</p>
+            <p>contact us: info@frc-ai.com</p>
+        </div>
+    </footer>
+    <script>
+        // Handle Tab Switching
+        const tabButtons = document.querySelectorAll(".tab-button");
+        const tabContents = document.querySelectorAll(".tab-content");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        function activateTab(tabId) {
+            // Remove active class from all buttons and contents
+            tabButtons.forEach(button => button.classList.remove("active"));
+            tabContents.forEach(content => content.classList.remove("active"));
+
+            // Add active class to the selected button and content
+            document.querySelector(`button[data-tab="${tabId}"]`).classList.add("active");
+            document.getElementById(tabId).classList.add("active");
+        }
+
+        // Event listener for tab buttons
+        tabButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                const tabId = button.getAttribute("data-tab");
+                activateTab(tabId);
+            });
+        });
+
+        // Event listener for navigation links
+        navLinks.forEach(link => {
+            link.addEventListener("click", (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute("href").substring(1);
+                activateTab(targetId);
+
+                // Smooth scroll to the tab container
+                document.querySelector(".tab-container").scrollIntoView({ behavior: "smooth" });
+            });
+        });
+    </script>
+
+</body>
+</html>

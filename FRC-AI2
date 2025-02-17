@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three-Column Layout with Full-Width Headings</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: grid;
+            grid-template-rows: auto auto 1fr;
+        }
+        /* Navigation Bar Styling */
+        .navbar {
+            grid-row: 1;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #333;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        .navbar a:hover {
+            background-color: #555;
+        }
+        /* Header Styling */
+        header {
+            grid-row: 2;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin-top: 50px; /* Height of the navbar */
+        }
+        /* Main Content Area */
+        .container {
+            grid-row: 3;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr 2fr;
+            height: calc(100vh - 90px); /* Full height minus navbar and header */
+        }
+        .column1 {
+            grid-column: 1;
+            grid-row: 1 / span 2;
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+        }
+        .column2 {
+            grid-column: 2;
+            grid-row: 1;
+            background-color: #555;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+        }
+        .column3 {
+            grid-column: 3;
+            grid-row: 1;
+            background-color: #777;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+    </header>
+
+    <!-- Main Content Area -->
+    <div class="container">
+        <div class="column1">Column 1</div>
+        <div class="column2">Column 2</div>
+        <div class="column3">Column 3</div>
+    </div>
+</body>
+</html>

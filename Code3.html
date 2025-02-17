@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        nav {
+            background-color: #f8f8f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .navbar {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .menu-item {
+            position: relative;
+        }
+
+        .menu-item > a {
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+            color: #333;
+        }
+
+        .menu-item:hover > a {
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            list-style: none;
+            padding: 10px 0;
+            margin: 0;
+            z-index: 1000;
+        }
+
+        .menu-item:hover .dropdown {
+            display: block;
+        }
+
+        .dropdown a {
+            padding: 10px 20px;
+            color: #333;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown a:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #f8f8f8;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="navbar">
+            <li class="menu-item">
+                <a href="#">Services</a>
+                <ul class="dropdown">
+                    <li><a href="#" onclick="Menu_scrollToSection('Why_US_section', event); closeDropdown(this);">Why Us</a></li>
+                    <li><a href="mailto:info@frc-ai.com?subject=Inquiry from Website" onclick="closeDropdown(this);">Contact Us</a></li>
+                </ul>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="Why_US_section">
+        <h1>Why Us</h1>
+        <p>This section explains why we are the best choice for your needs.</p>
+    </section>
+
+    <section id="contact">
+        <h1>Contact Us</h1>
+        <p>You can reach us via email or phone for more information.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 FRC-AI. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Scroll to a specific section
+        function Menu_scrollToSection(sectionId, event) {
+            event.preventDefault(); // Prevent default anchor action
+            const section = document.getElementById(sectionId);
+            if (section) {
+                const headerOffset = 80; // Adjust for fixed header height
+                const elementPosition = section.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth",
+                });
+            }
+        }
+
+        // Close dropdown after a link is clicked
+        function closeDropdown(element) {
+            const dropdown = element.closest(".dropdown");
+            if (dropdown) {
+                dropdown.style.display = "none"; // Hide dropdown
+                setTimeout(() => {
+                    dropdown.style.display = ""; // Reset to default (to allow hover again)
+                }, 100); // Small delay to ensure hover behaviour isn't disrupted
+            }
+        }
+
+        // Close dropdown when clicking outside (for hover-based menus)
+        document.addEventListener("click", (event) => {
+            const isDropdownClick = event.target.closest(".menu-item");
+            if (!isDropdownClick) {
+                document.querySelectorAll(".dropdown").forEach((dropdown) => {
+                    dropdown.style.display = "none"; // Temporarily disable hover display
+                    setTimeout(() => {
+                        dropdown.style.display = ""; // Reset to default hover behaviour
+                    }, 100);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
