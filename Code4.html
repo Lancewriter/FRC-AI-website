@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sectors Dropdown Example</title>
+    <style>
+        /* Basic styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #007bff;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #0056b3;
+            border-radius: 5px;
+        }
+
+        /* Dropdown styles */
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #007bff;
+            display: none; /* Initially hidden */
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .dropdown li a {
+            color: white;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        .dropdown li a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Show dropdown on hover or "hover" class */
+        .menu-item:hover .dropdown,
+        .menu-item.active .dropdown {
+            display: block;
+        }
+        .menu-item_services:hover .dropdown,
+        .menu-item_services.active .dropdown {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="navbar">
+            <li class="menu-item">
+                <a href="#Sectors">Sectors</a>
+                <ul class="dropdown">
+                    <li><a href="#Construction">Construction</a></li>
+                    <li><a href="#Consultancies">Consultancies</a></li>
+                    <li><a href="#Manufacturing">Manufacturing</a></li>
+                </ul>
+            </li>
+            <li class="menu-item_services">
+              <a href="#Services">Services</a>
+              <ul class="dropdown">
+                  <li><a href="#Construction">Construction</a></li>
+                  <li><a href="#Consultancies">Consultancies</a></li>
+                  <li><a href="#Manufacturing">Manufacturing</a></li>
+              </ul>
+          </li>
+        </ul>
+    </nav>
+
+    <a href="#" onclick="toggleSectorsMenu(); return false;">Open Sectors Dropdown</a>
+    <a href="#" onclick="toggleServicesMenu(); return false;">Open Services Dropdown</a>
+
+    <script>
+        // JavaScript to toggle the dropdown
+        function toggleSectorsMenu() {
+            const menuItem = document.querySelector(".menu-item");
+            if (menuItem) {
+                menuItem.classList.toggle("active"); // Toggle the "hover" class
+            }
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener("click", (event) => {
+            const menuItem = document.querySelector(".menu-item");
+            if (menuItem && !event.target.closest(".menu-item") && !event.target.closest("a[href='#']")) {
+                menuItem.classList.remove("active"); // Remove the hover class
+            }
+        });
+
+        function toggleServicesMenu() {
+            const menuItem = document.querySelector(".menu-item_services");
+            if (menuItem) {
+                menuItem.classList.toggle("active"); // Toggle the "hover" class
+            }
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener("click", (event) => {
+            const menuItem = document.querySelector(".menu-item_services");
+            if (menuItem && !event.target.closest(".menu-item_services")&& !event.target.closest("a[href='#']")) {
+              menuItem.classList.remove("active"); // Remove the hover class
+            }
+        });
+    </script>
+</body>
+</html>

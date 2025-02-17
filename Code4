@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Risk Management for SMEs</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding-top: 80px; /* Adjust based on header height */
+        }
+
+        .sticky-header {
+            position: fixed; /* Ensures the header stays at the top */
+            top: 0;
+            left: 0;
+            width: 100%; /* Full width across the page */
+            z-index: 1000; /* Stays above other elements */
+            background-color: #003366; /* Header background color */
+            color: white;
+            padding: 20px 10px 10px 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+        }
+
+        .sticky-header h1 {
+            margin: 0; /* Removes default margin for consistent spacing */
+            font-size: 1.5em; /* Adjust size to fit design */
+            color: white; /* Ensure text is visible against background */
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #003366;
+            padding: 10px;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 10px 20px;
+            text-align: center;
+            transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+        }
+        .nav a:hover {
+            background-color: #00509e; /* Lighter blue for hover */
+            color: #fff; /* Keep text visible */
+        }
+
+        .hero {
+            background-image: url("bad calculator and graphs.jpg"); /* Replace with actual image URL */
+            background-size: cover;
+            background-position: center;
+            color: whitesmoke;
+            text-align: center;
+            padding: 100px 50px;
+            margin-top: 80px; /* Adjust based on the combined height of header and nav */
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+        }
+
+        .hero h2 {
+            font-size: 1.5em;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .content h2 {
+            color: #003366;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .grid-table, .grid-tableCR {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusts to fit available space */
+            gap: 20px; /* Uniform spacing between grid items */
+            margin-top: 20px;
+            background-color: #f9f9f9; /* Subtle background color */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+        }
+
+        .grid-item, .grid-itemCR {
+            background-color: #003366; /* Consistent cell background color */
+            color: white;
+            padding: 20px; /* Uniform padding for all cells */
+            text-align: left;
+            border-radius: 8px; /* Rounded corners for uniform appearance */
+            font-size: 1em;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for individual cells */
+        }
+
+        .large-cell, .large-cellCR {
+            grid-column: span 1; /* Keeps large cells in their designated columns */
+            grid-row: span 3; /* Spans multiple rows for emphasis */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: #003366; /* Consistent background color */
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Consistent shadow */
+        }
+
+        .small-cell, .small-cellCR {
+            grid-column: span 1; /* Each cell occupies one column */
+            text-align: left;
+            background-color: white; /* Consistent background for content cells */
+            color: #003366;
+            padding: 20px; /* Uniform padding */
+            border-radius: 8px; /* Rounded corners for uniform appearance */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Consistent shadow */
+        }
+
+        .small-cellCR p, .small-cell p {
+            margin-bottom: 10px; /* Uniform spacing between paragraphs */
+            text-align: left; /* Align text to the left for readability */
+        }
+
+        .small-cellCR h2, .small-cell h2 {
+            text-align: center; /* Center section titles */
+            margin-bottom: 15px; /* Add spacing below titles */
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        footer a {
+            color: #f0ad4e;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="sticky-header">
+        <h1>Financial Risk Consultancy-AI (FRC-AI)</h1>
+        <nav class="nav">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#Proactive FRM">Proactive Financial Risk Management</a>
+            <a href="#finance-projects">Finance Projects</a>
+            <a href="#economic-analysis">Economic Analysis</a>
+            <a href="#why-choose-us">Why Choose Us</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Resilience for SMEs and Fintech Startups</h1>
+        <h2>Manage risk effectively to ensure growth and resilience.</h2>
+    </section>
+
+    <!-- Main Content -->
+    <section id="services" class="content">
+        <h2>Our Services</h2>
+        <div class="grid-table">
+            <div class="grid-item large-cell">
+                <h3>Services Overview</h3>
+                <p>Click the items below to explore our offerings.</p>
+            </div>
+            <div class="grid-item small-cell">Financial Analysis - Credit Risk</div>
+            <div class="grid-item small-cell">Finance Projects (M&A / Exits)</div>
+            <div class="grid-item small-cell">Cashflow Optimization</div>
+            <div class="grid-item small-cell">Economic Insights</div>
+            <div class="grid-item small-cell">AI Automation</div>
+            <div class="grid-item small-cell">Decision Science</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Contact us: <a href="mailto:info@frc-ai.com">info@frc-ai.com</a> | Phone: +1 123 456 7890</p>
+        <p>&copy; 2024 FRC-AI. All rights reserved.</p>
+    </footer>
+</body>
+</html>
