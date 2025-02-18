@@ -1031,20 +1031,40 @@
         width: 100vw;
     }
     .title {display:none ;}
-     .mobile_title{display:block;}
-     .mobile_title h1{font-size:20px ;}
+    .main_logo{display:none;}
+    .mobile_title{display:block;}
+    .mobile_title h1{
+        font-size:20px ;
+        font-size: 20px;
+        font-weight: bold;
+        white-space: nowrap; /* Prevent text from wrapping */
+        flex: 1; /* Allow flexible resizing */
+    }
     .mobile_header{
          display: flex;
-            height: 40vh; /* Full viewport height */
+         height: 150px; /* Full viewport height */
+        flex-direction: row; /* Keep elements side by side */
+        align-items: center; /* Align title and image vertically */
+        justify-content: space-between; /* Push elements to edges */
+        width: 100vw; /* Full width */
+        padding: 0 10px;
+        margin: 0;
+        
+    }
+    .menu-toggle {
+        font-size: 24px;
+        margin-left: 10px;
+        cursor: pointer;
     }
     .mobile_hero{
+        flex: 1.5; /* Allow image to take more space */
+        height: 100%;
         display:block;
-        width: 100vw;
-        height: 100px; /* Allow the height to adjust */
+        max-width: 60%;
         min-height: 150px; /* Set a reasonable min-height */
         background-image: url("Business-Consulting-Image.jpg"); /* Replace with your actual image */
         background-size: contain; /* Ensures the full image is visible */
-        background-position: left;
+        background-position: center;
         background-repeat: no-repeat;
     }
 
@@ -1293,9 +1313,7 @@
                 <h1>FRC-AI</h1>
             </div>
         <div class="mobile_header">
-             <div class="mobile_title">
-                <h1>FRC-AI</h1>
-            </div>
+             
             <div class="mobile_hero"></div>
              <div class="mobile_title">
                 <h1>FRC-AI</h1>
