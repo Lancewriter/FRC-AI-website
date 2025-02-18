@@ -995,7 +995,9 @@
 }
 
 
-
+ .mobile_hero{
+        display:none;
+    }
 
 .hidden {
     display: none;
@@ -1010,9 +1012,13 @@
     }
 
     header {
+        
         flex-direction: column;
         padding: 10px;
         width: 100vw;
+    }
+    .mobile_hero{
+        display:flex;
     }
 
     .hidden{
@@ -1253,6 +1259,10 @@
 
 <body>
     <header>
+
+        <div class="mobile_hero">
+            <img src="Business-Consulting-Image.jpg" alt="Your Logo">
+        </div>
         
         <div class="logo">
             <img src="Logo2.jpg" alt="Your Logo">
