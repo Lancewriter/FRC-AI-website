@@ -1026,7 +1026,7 @@
             height: 40vh; /* Full viewport height */
     }
     .mobile_hero{
-        display:flex;
+        display:block;
         width: 120vw;
         height: 100px; /* Allow the height to adjust */
         min-height: 150px; /* Set a reasonable min-height */
@@ -1274,15 +1274,20 @@
 
 <body>
     <header>
-        <div class="mobile_header">
-            <div class="mobile_hero"></div>
-       
-        
-            <div class="logo">
+        <div class="logo">
                    <img src="Logo2.jpg" alt="Your Logo">
             </div>
             <div class="title">
                 <h1>FRC-AI</h1>
+            </div>
+        <div class="mobile_header">
+            <div class="mobile_hero"></div>
+           
+            <div class="title">
+                <h1>FRC-AI</h1>
+            </div>
+            <div class="logo">
+                   <img src="Logo2.jpg" alt="Your Logo">
             </div>
             <div class="menu-toggle" onclick="Mobile_toggleMenu()">☰</div>
             
