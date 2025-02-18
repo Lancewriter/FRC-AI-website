@@ -995,7 +995,9 @@
     color: #333;
 }
 
-
+.mobile_header{
+    display:none;
+}
  .mobile_hero{
         display:none;
     }
@@ -1018,6 +1020,10 @@
         padding: 10px;
         height:300px;
         width: 100vw;
+    }
+    .mobile_header{
+         display: flex;
+            height: 40vh; /* Full viewport height */
     }
     .mobile_hero{
         display:flex;
@@ -1268,20 +1274,49 @@
 
 <body>
     <header>
-
-        <div class="mobile_hero">
-          
-        </div>
+        <div class="mobile_header">
+            <div class="mobile_hero"></div>
+       
         
-        <div class="logo">
-            <img src="Logo2.jpg" alt="Your Logo">
-                        
-        </div>
-        <div class="title">
-            <h1>FRC-AI</h1>
+            <div class="logo">
+                   <img src="Logo2.jpg" alt="Your Logo">
+            </div>
+            <div class="title">
+                <h1>FRC-AI</h1>
+            </div>
+            <div class="menu-toggle" onclick="Mobile_toggleMenu()">☰</div>
             
-        </div>
-        
+             <nav id="mobile-menu" class="hidden">
+             <ul class="navbar">
+             <li><a href="#"onclick="Menu_scrollToSection('landing')">Home</a></li>
+             <li><a href="#" onclick="Menu_scrollToSection('Why_US_section')" aria-label="Go to Why us section">Why Us</a></li>
+       
+             <li class="menu-item">
+               <a href="#Sectors">Sectors</a>
+               <ul class="dropdown">
+                <li><a href="#" onclick="Menu_scrollToSection('Construction_cell',event);closeDropdown(this);" aria-label="Go to Construction/Contractors section"class="contact-button">Construction/Contractors</a></li>
+                        <li><a href="#" onclick="Menu_scrollToSection('Non_Finance_consultancy_cell',event);closeDropdown(this);" aria-label="Go consultancies section"class="contact-button">Consultancies</a></li>
+                        <li><a href="#" onclick="Menu_scrollToSection('Manu/Corporates-cell',event);closeDropdown(this);" aria-label="Go to manufacturers section"class="contact-button">Manufacturing/Corporates</a></li>
+                        <li><a href="#" onclick="Menu_scrollToSection('Fintech_cell',event);closeDropdown(this);" aria-label="Go to Fin-techs/start-ups section"class="contact-button">Fin-techs/Start-ups</a></li>
+                        <li><a href="#" onclick="Menu_scrollToSection('Hospitality_cell',event);closeDropdown(this);" aria-label="Go to hospitality section"class="contact-button">Hospitality/Restaurants</a></li>
+                        <li><a href="#" onclick="Menu_scrollToSection('Non-Profit_cell',event);closeDropdown(this);" aria-label="Go to Non-profits section"class="contact-button">Non-Profits</a></li>
+                 </ul>
+                </li>
+        <li class="menu-item">
+            <a href="#Services">Servivces</a>
+            <ul class="dropdown">
+                <li><a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('ai-services-tab',event);closeDropdown(this);" aria-label="Go to ai services Tab" class="contact-button">AI Design and Deployment</a></li>
+                        <li><a href="#" onclick="scrollToSection('Services_tabs');scrollToSection('Services_tabs');scrollToTab('financial-analysis-tab',event);closeDropdown(this);" aria-label="Go to Financial Analysis Tab"class="contact-button">Financial analysis</a></li>
+                        <li><a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('finance-projects-tab',event);closeDropdown(this);" aria-label="Go to Finance projects Tab"class="contact-button">Finance Projects(M&A/Exit)</a></li>
+                        <li><a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('economic-analysis-tab',event);closeDropdown(this);" aria-label="Go to economic analysis Tab"class="contact-button">Economic analysis</a></li>
+                        <li><a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('business_recovery-tab',event);closeDropdown(this);" aria-label="Go to business resilence Tab"class="contact-button">Business Recovery/Resilence</a></li>
+                        
+            </ul>
+        </li>
+        <!-- Add other links here -->
+    </ul>
+</nav>
+</div>
         <nav>
             <ul class="navbar">
                 <li><a href="#"onclick="Menu_scrollToSection('landing',event);">Home</a></li>
