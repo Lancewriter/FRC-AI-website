@@ -17,6 +17,8 @@
         * {
            box-sizing: border-box; /* Ensure padding and borders are included in element width/height */
         }
+        .mobile_title{display:none}
+        
         .section_hero {
             font-family:'Trebuchet','Tahoma','Helvetica','Arial',sans-serif;
             font-size: 35px;
@@ -54,6 +56,9 @@
             top: 0; /* Keep it at the top of the viewport */
             z-index: 1000; /* Ensures it stays above other elements */
             font-size: 8;
+        }
+         .main_logo{
+            padding-left: 20px;
         }
         .logo{
             padding-left: 20px;
@@ -324,8 +329,8 @@
             border-top: 1px solid #ddd;
         }
         @media (max-width: 100%) {
-            .title h1{font-size:20px ;}
-           
+            .mobile_title h1{font-size:20px ;}
+            .main_logo{display:none;}
             .feature-list {
                 flex-direction: column;
                 align-items: center;
@@ -1021,6 +1026,7 @@
         height:300px;
         width: 100vw;
     }
+    .title {display:none ;}
     .mobile_header{
          display: flex;
             height: 40vh; /* Full viewport height */
@@ -1274,13 +1280,16 @@
 
 <body>
     <header>
-        <div class="logo">
+        <div class="main_logo">
                    <img src="Logo2.jpg" alt="Your Logo">
             </div>
             <div class="title">
                 <h1>FRC-AI</h1>
             </div>
         <div class="mobile_header">
+             <div class="mobile_title">
+                <h1>FRC-AI</h1>
+            </div>
             <div class="mobile_hero"></div>
            
            
@@ -1352,7 +1361,7 @@
         
 
 <div class="menu-toggle" onclick="Mobile_toggleMenu()">☰</div>
-<div class="logo">
+<div class="main_logo">
     <!--<img src="Logo2.jpg" alt="Your Logo">-->
 </div>
 <nav id="mobile-menu" class="hidden">
