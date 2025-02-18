@@ -1018,10 +1018,13 @@
         width: 100vw;
     }
     .mobile_hero{
-        display:flex;
-         height: 150px;
-         width:100vw;
-         background-size: contain;
+        width: 100%;
+        height: 150px; /* Allow the height to adjust */
+        min-height: 150px; /* Set a reasonable min-height */
+        background-image: url("Business-Consulting-Image.jpg"); /* Replace with your actual image */
+        background-size: contain; /* Ensures the full image is visible */
+        background-position: center center;
+        background-repeat: no-repeat;
     }
 
     .hidden{
@@ -1264,7 +1267,7 @@
     <header>
 
         <div class="mobile_hero">
-            <img src="Business-Consulting-Image.jpg" alt="Your Logo">
+          
         </div>
         
         <div class="logo">
@@ -1273,6 +1276,7 @@
         </div>
         <div class="title">
             <h1>FRC-AI</h1>
+            <h3>menu</h3>
         </div>
         
         <nav>
