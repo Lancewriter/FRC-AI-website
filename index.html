@@ -2402,7 +2402,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function Mobile_toggleMenu() {
-    const menu = document.getElementById("hidden");
+    const menu = document.getElementById("mobile-menu");
     menu.classList.remove("open");
     menu.classList.toggle("open");
     const expanded = menu.classList.contains("open");
@@ -2410,7 +2410,7 @@ function Mobile_toggleMenu() {
 }
 function toggleMenu() {
     const menu = document.getElementById("menu-item");
-    menu.classList.toggle("hidden");
+    menu.classList.remove("open");
     menu.classList.toggle("open");
 }
 // Close dropdown after a link is clicked
