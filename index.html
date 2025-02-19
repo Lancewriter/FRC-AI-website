@@ -2436,29 +2436,31 @@ function closeDropdown(element) {
         });
 
 document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.querySelector(".menu-toggle"); // Mobile menu button (☰)
-    const mobileMenu = document.getElementById("mobile-menu"); // The mobile menu container
-    const menuLinks = document.querySelectorAll("#mobile-menu .dropdown a"); // All child menu links
+    const menuToggle = document.querySelector(".menu-toggle"); // Button ☰
+    const mobileMenu = document.getElementById("hidden"); // Mobile menu container
+    const menuLinks = document.querySelectorAll("#hidden a"); // All menu links
 
-    // Toggle the mobile menu when clicking the menu button
-    menuToggle.addEventListener("click", function () {
+    // Toggle mobile menu visibility on clicking the menu button
+    menuToggle.addEventListener("click", function (event) {
+        event.stopPropagation(); // Prevents immediate closing when clicking the toggle
         mobileMenu.classList.toggle("open");
     });
 
-    // Close menu when any child menu item is clicked
+    // Close mobile menu when any child menu item is clicked
     menuLinks.forEach(link => {
         link.addEventListener("click", function () {
-            mobileMenu.classList.remove("open"); // Hide the menu
+            mobileMenu.classList.remove("open");
         });
     });
 
-    // Close menu when clicking outside the menu
+    // Close menu when clicking outside (only if open)
     document.addEventListener("click", function (event) {
         if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
-            mobileMenu.classList.remove("open"); // Hide menu if clicked outside
+            mobileMenu.classList.remove("open");
         }
     });
 });
+
 
 
 </script>
