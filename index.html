@@ -2435,6 +2435,32 @@ function closeDropdown(element) {
             }
         });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu-toggle"); // Mobile menu button (☰)
+    const mobileMenu = document.getElementById("mobile-menu"); // The mobile menu container
+    const menuLinks = document.querySelectorAll("#mobile-menu .dropdown a"); // All child menu links
+
+    // Toggle the mobile menu when clicking the menu button
+    menuToggle.addEventListener("click", function () {
+        mobileMenu.classList.toggle("open");
+    });
+
+    // Close menu when any child menu item is clicked
+    menuLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            mobileMenu.classList.remove("open"); // Hide the menu
+        });
+    });
+
+    // Close menu when clicking outside the menu
+    document.addEventListener("click", function (event) {
+        if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+            mobileMenu.classList.remove("open"); // Hide menu if clicked outside
+        }
+    });
+});
+
+
 </script>
 
 
