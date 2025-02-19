@@ -2435,38 +2435,6 @@ function closeDropdown(element) {
             }
         });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.querySelector(".menu-toggle"); // Button ☰
-    const mobileMenu = document.getElementById("hidden"); // Mobile menu container
-    const menuLinks = document.querySelectorAll("#hidden a"); // All menu links
-
-    // Toggle mobile menu visibility on clicking the menu button
-    menuToggle.addEventListener("click", function (event) {
-        event.stopPropagation(); // Prevents immediate closing when clicking the toggle
-        mobileMenu.classList.toggle("open");
-    });
-
-    // Close mobile menu when any child menu item is clicked
-    menuLinks.forEach(link => {
-       const dropdown = element.closest(".dropdown");
-            if (dropdown) {
-                dropdown.style.display = "none"; // Hide dropdown
-                setTimeout(() => {
-                    dropdown.style.display = ""; // Reset to default (to allow hover again)
-                }, 100); // Small delay to ensure hover behaviour isn't disrupted
-        });
-    });
-
-    // Close menu when clicking outside (only if open)
-    document.addEventListener("click", function (event) const isDropdownClick = event.target.closest(".mobileMenu");
-            if (!isDropdownClick) {
-                document.querySelectorAll(".dropdown").forEach((dropdown) => {
-                    dropdown.style.display = "none"; // Temporarily disable hover display
-                    setTimeout(() => {
-                        dropdown.style.display = ""; // Reset to default hover behaviour
-                    }, 100);
-    });
-});
 
 
 
