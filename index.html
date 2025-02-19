@@ -1056,6 +1056,7 @@
         
     }
     .menu-toggle {
+        position:relative;
         font-size: 24px;
         margin-left: 10px;
         cursor: pointer;
@@ -1079,8 +1080,12 @@
         
     }
 
-    .hidden{
-    display:none;
+    .hidden {
+    display: none !important; /* Ensures menu is hidden initially */
+}
+
+    # mobile-menu{
+    display:block;
     position:fixed;
     top:100%
     left:0;
@@ -1331,7 +1336,7 @@
                 <h1>FRC-AI</h1>
                  <div class="menu-toggle" onclick="Mobile_toggleMenu()">☰</div>
             </div>
-             <nav id="mobile-menu" class="hidden">
+             <nav id="mobile-menu" class="mobile-menu">
              <ul class="navbar">
              <li><a href="#"onclick="Menu_scrollToSection('landing')">Home</a></li>
              <li><a href="#" onclick="Menu_scrollToSection('Why_US_section')" aria-label="Go to Why us section">Why Us</a></li>
@@ -1400,7 +1405,7 @@
 <div class="main_logo">
     <!--<img src="Logo2.jpg" alt="Your Logo">-->
 </div>
-<nav id="mobile-menu" class="hidden">
+<nav id="mobile-menu" class="mobile-menu">
     <ul class="navbar">
         <li><a href="#"onclick="Menu_scrollToSection('landing')">Home</a></li>
         <li><a href="#" onclick="Menu_scrollToSection('Why_US_section')" aria-label="Go to Why us section">Why Us</a></li>
@@ -2437,6 +2442,39 @@ function closeDropdown(element) {
             }
         });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu-toggle"); // ☰ Button
+    const mobileMenu = document.getElementById("mobile-menu"); // Menu container
+    const menuLinks = document.querySelectorAll("#mobile-menu a"); // All menu links
+
+    // Ensure the menu starts hidden
+    mobileMenu.classList.add("hidden");
+
+    // Toggle menu visibility when ☰ button is clicked
+    menuToggle.addEventListener("click", function (event) {
+        event.stopPropagation(); // Prevents menu from closing when clicking toggle
+        mobileMenu.classList.toggle("hidden");
+
+        // Position menu directly below the toggle button
+        const toggleRect = menuToggle.getBoundingClientRect();
+        mobileMenu.style.top = `${toggleRect.bottom + window.scrollY}px`; // Aligns below toggle
+        mobileMenu.style.left = `${toggleRect.left + window.scrollX}px`; // Aligns left edge
+    });
+
+    // Close menu when clicking a menu item
+    menuLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            mobileMenu.classList.add("hidden");
+        });
+    });
+
+    // Close menu when clicking outside of it
+    document.addEventListener("click", function (event) {
+        if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+            mobileMenu.classList.add("hidden");
+        }
+    });
+});
 
 
 
