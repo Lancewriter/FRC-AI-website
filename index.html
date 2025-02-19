@@ -2448,16 +2448,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Close mobile menu when any child menu item is clicked
     menuLinks.forEach(link => {
-        link.addEventListener("click", function () {
-            mobileMenu.classList.remove("open");
+       const dropdown = element.closest(".dropdown");
+            if (dropdown) {
+                dropdown.style.display = "none"; // Hide dropdown
+                setTimeout(() => {
+                    dropdown.style.display = ""; // Reset to default (to allow hover again)
+                }, 100); // Small delay to ensure hover behaviour isn't disrupted
         });
     });
 
     // Close menu when clicking outside (only if open)
-    document.addEventListener("click", function (event) {
-        if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
-            mobileMenu.classList.remove("open");
-        }
+    document.addEventListener("click", function (event) const isDropdownClick = event.target.closest(".mobileMenu");
+            if (!isDropdownClick) {
+                document.querySelectorAll(".dropdown").forEach((dropdown) => {
+                    dropdown.style.display = "none"; // Temporarily disable hover display
+                    setTimeout(() => {
+                        dropdown.style.display = ""; // Reset to default hover behaviour
+                    }, 100);
     });
 });
 
