@@ -1082,6 +1082,7 @@
     .hidden{
     display:none;
     position:fixed;
+    top:100%
     left:0;
     top:120px;
     width: 100px;
@@ -2401,8 +2402,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function Mobile_toggleMenu() {
-    const menu = document.getElementById("mobile-menu");
-    menu.classList.toggle("hidden");
+    const menu = document.getElementById("hidden");
+    menu.classList.remove("open");
     menu.classList.toggle("open");
     const expanded = menu.classList.contains("open");
     menu.setAttribute("aria-expanded", expanded);
