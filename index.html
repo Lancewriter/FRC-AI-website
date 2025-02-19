@@ -1061,7 +1061,7 @@
         margin-left: 10px;
         cursor: pointer;
         text-align:center;
-        z-index:1000;
+        z-index:1001;
     }
     .mobile_hero{
         
@@ -1085,20 +1085,20 @@
 }
 
     # mobile-menu{
-    display:block;
-    position:fixed;
+    display:none;
+    position:absolute;
     top:100%
     left:0;
     top:120px;
     width: 100px;
     height:100%;
     background-color: white;
-    z-index: 998;
+    z-index: 1000;
     padding-right:1%;
     overflow-y:auto;
     font-size: 1px;
     }
-    .hidden.open {
+    # mobile-menu.open {
   display: block;
 }
     .hidden.menu-item.navbar a { font-size: 1px !important; }  
@@ -1405,7 +1405,9 @@
 <div class="main_logo">
     <!--<img src="Logo2.jpg" alt="Your Logo">-->
 </div>
-<nav id="mobile-menu" class="mobile-menu">
+
+
+<!--<nav id="mobile-menu" class="mobile-menu">
     <ul class="navbar">
         <li><a href="#"onclick="Menu_scrollToSection('landing')">Home</a></li>
         <li><a href="#" onclick="Menu_scrollToSection('Why_US_section')" aria-label="Go to Why us section">Why Us</a></li>
@@ -1434,7 +1436,7 @@
         </li>
         <!-- Add other links here -->
     </ul>
-</nav>
+</nav>-->
         
     </header>
     <section id="landing">
@@ -2442,39 +2444,24 @@ function closeDropdown(element) {
             }
         });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.querySelector(".menu-toggle"); // ☰ Button
-    const mobileMenu = document.getElementById("mobile-menu"); // Menu container
-    const menuLinks = document.querySelectorAll("#mobile-menu a"); // All menu links
+function Mobile_toggleMenu() {
+    const menu = document.getElementById("mobile-menu");
+    const toggleButton = document.querySelector(".menu-toggle");
 
-    // Ensure the menu starts hidden
-    mobileMenu.classList.add("hidden");
+    menu.classList.toggle("open");
 
-    // Toggle menu visibility when ☰ button is clicked
-    menuToggle.addEventListener("click", function (event) {
-        event.stopPropagation(); // Prevents menu from closing when clicking toggle
-        mobileMenu.classList.toggle("hidden");
+    // Ensure the menu opens directly below the toggle button
+    const toggleRect = toggleButton.getBoundingClientRect();
+    menu.style.top = `${toggleRect.bottom}px`; // Position menu just below the toggle
+    menu.style.left = `${toggleRect.left}px`; // Align with toggle button
 
-        // Position menu directly below the toggle button
-        const toggleRect = menuToggle.getBoundingClientRect();
-        mobileMenu.style.top = `${toggleRect.bottom + window.scrollY}px`; // Aligns below toggle
-        mobileMenu.style.left = `${toggleRect.left + window.scrollX}px`; // Aligns left edge
-    });
-
-    // Close menu when clicking a menu item
-    menuLinks.forEach(link => {
-        link.addEventListener("click", function () {
-            mobileMenu.classList.add("hidden");
-        });
-    });
-
-    // Close menu when clicking outside of it
-    document.addEventListener("click", function (event) {
-        if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
-            mobileMenu.classList.add("hidden");
+    // Close the menu when clicking outside
+    document.addEventListener("click", (event) => {
+        if (!menu.contains(event.target) && !toggleButton.contains(event.target)) {
+            menu.classList.remove("open");
         }
     });
-});
+}
 
 
 
