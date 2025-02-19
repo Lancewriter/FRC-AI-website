@@ -1034,8 +1034,8 @@
     .main_logo{display:none;}
     .mobile_title{display:block;}
     .mobile_title h1{
-        font-size:20px ;
-        font-size: 20px;
+        
+        font-size: 35px;
         font-weight: bold;
         white-space: nowrap; /* Prevent text from wrapping */
         flex: 1; /* Allow flexible resizing */
@@ -1045,10 +1045,11 @@
          height: 150px; /* Full viewport height */
         flex-direction: row; /* Keep elements side by side */
         align-items: center; /* Align title and image vertically */
-        justify-content: space-between; /* Push elements to edges */
+        justify-content: flex-start ; /* Push elements to edges */
         width: 100vw; /* Full width */
         padding: 0 10px;
         margin: 0;
+        gap:5px;
         
     }
     .menu-toggle {
@@ -1061,7 +1062,7 @@
         height: 100%;
         display:block;
         max-width: 60%;
-        min-height: 150px; /* Set a reasonable min-height */
+        min-height: 250px; /* Set a reasonable min-height */
         background-image: url("Business-Consulting-Image.jpg"); /* Replace with your actual image */
         background-size: contain; /* Ensures the full image is visible */
         background-position: center;
