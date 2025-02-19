@@ -1041,6 +1041,7 @@
         flex: 1; /* Allow flexible resizing */
     }
     .mobile_header{
+        position:relative;
          display: flex;
          height: 60vh; /* Full viewport height */
         flex-direction: row; /* Keep elements side by side */
@@ -1059,13 +1060,13 @@
         text-align:center;
     }
     .mobile_hero{
-        position:fixed;
+        position:absolute;
         top:0px;
         flex: 2; /* Allow image to take more space */
         height: 75%;
         display:block;
         max-width: 60%;
-        min-height: 650px; /* Set a reasonable min-height */
+        min-height: 550px; /* Set a reasonable min-height */
         background-image: url("Business-Consulting-Image.jpg"); /* Replace with your actual image */
         background-size: contain; /* Ensures the full image is visible */
         background-position: center;
