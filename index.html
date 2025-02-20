@@ -2230,32 +2230,32 @@
         //}
    // }
 
-        function scrollToTab(tabId, event) {
-    // Prevent default link behavior if event exists
-            if (event) {
+       function scrollToTab(tabId, event) {
+    // Prevent default link behavior (stopping the page from jumping to the top)
+    if (event) {
         event.preventDefault();
     }
-    
 
-    // Select the tab button and content
+    // Find the correct tab button and content
     const targetTabButton = document.querySelector(`.tab-button[data-tab="${tabId}"]`);
     const targetTabContent = document.getElementById(tabId);
 
     if (targetTabButton && targetTabContent) {
-        // Remove "active" class from all buttons and contents
+        // Remove "active" class from all tabs
         document.querySelectorAll(".tab-button").forEach(btn => btn.classList.remove("active"));
         document.querySelectorAll(".tab-content").forEach(content => content.classList.remove("active"));
 
-        // Activate the correct tab
+        // Activate the selected tab
         targetTabButton.classList.add("active");
         targetTabContent.classList.add("active");
 
-        // Smooth scroll to the activated tab content
+        // Scroll to the activated tab smoothly
         targetTabContent.scrollIntoView({ behavior: "smooth", block: "start" });
     } else {
         console.error(`Tab with ID '${tabId}' not found.`);
     }
 }
+
 
     
     function Menu_scrollToSection(sectionId) {
