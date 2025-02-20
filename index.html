@@ -702,7 +702,7 @@
             font-size: 60px;
             padding-bottom: 50px;
             }
-            .vulnerable-container li {font-size: 40px;}
+            .vulnerable-container li {font-size: 30px;}
 
         
 
@@ -1491,7 +1491,7 @@
             <ul>
             <p>SMEs are especially vulnerable to Economic uncertainty and AI proliferation.</p>
             
-            <li>Chat with our chatbot Beacon to determine how can FRCI-AI can help your business thrive in this new ecosystem.</li>
+            <li>Chat with our chatbot Beacon to determine how FRCI-AI can help your business thrive in this new ecosystem.</li>
                        
             </ul>
             </div>
@@ -2211,24 +2211,51 @@
     }
 
     // Scroll to and activate a specific tab
-    function scrollToTab(tabId) {
-        if (event) event.preventDefault();
-        const tabContainer = document.querySelector(".tab-content");
-        const targetTabButton = document.querySelector(`.tab-button[data-tab="${tabId}"]`);
-        const targetTabContent = document.getElementById(tabId);
+    //function scrollToTab(tabId) {
+        //if (event) event.preventDefault();
+        //const tabContainer = document.querySelector(".tab-content");
+        //const targetTabButton = document.querySelector(`.tab-button[data-tab="${tabId}"]`);
+        //const targetTabContent = document.getElementById(tabId);
 
-        if (tabContainer && targetTabButton && targetTabContent) {
+        //if (tabContainer && targetTabButton && targetTabContent) {
             // Activate the target tab
-            document.querySelectorAll(".tab-button").forEach(btn => btn.classList.remove("active"));
-            document.querySelectorAll(".tab-content").forEach(content => content.classList.remove("active"));
+           // document.querySelectorAll(".tab-button").forEach(btn => btn.classList.remove("active"));
+           // document.querySelectorAll(".tab-content").forEach(content => content.classList.remove("active"));
 
-            targetTabButton.classList.add("active");
-            targetTabContent.classList.add("active");
+           //targetTabButton.classList.add("active");
+            //targetTabContent.classList.add("active");
 
             // Scroll to the tab container
-            tabContainer.scrollIntoView({ behavior: "smooth" });
-        }
+            //tabContainer.scrollIntoView({ behavior: "smooth" });
+        //}
+   // }
+
+        function scrollToTab(tabId) {
+     Prevent default link behavior if event exists
+   if (typeof event !== "undefined") {
+       event.preventDefault();
+   }
+
+    // Select the tab button and content
+    const targetTabButton = document.querySelector(`.tab-button[data-tab="${tabId}"]`);
+    const targetTabContent = document.getElementById(tabId);
+
+    if (targetTabButton && targetTabContent) {
+        // Remove "active" class from all buttons and contents
+        document.querySelectorAll(".tab-button").forEach(btn => btn.classList.remove("active"));
+        document.querySelectorAll(".tab-content").forEach(content => content.classList.remove("active"));
+
+        // Activate the correct tab
+        targetTabButton.classList.add("active");
+        targetTabContent.classList.add("active");
+
+        // Smooth scroll to the activated tab content
+        targetTabContent.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+        console.error(`Tab with ID '${tabId}' not found.`);
     }
+}
+
     
     function Menu_scrollToSection(sectionId) {
         event.preventDefault();
