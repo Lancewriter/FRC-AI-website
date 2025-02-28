@@ -2196,7 +2196,8 @@
     });
 
     // Scroll to a specific section
-    function scrollToSection(sectionId) {
+    function scrollToSection(sectionId,event) {
+         event.preventDefault();
         const section = document.getElementById(sectionId);
         if (section) {
             const headerOffset = 250; // Adjust based on your header height
