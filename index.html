@@ -1098,7 +1098,7 @@
     overflow-y:auto;
     font-size: 1px;
     }
-.mobile-menu.open {
+#mobile-menu.open {
   display: block;
 }
     .hidden.menu-item.navbar a { font-size: 1px !important; }  
@@ -2482,7 +2482,11 @@ function closeDropdown(element) {
 
 function Mobile_toggleMenu() {
     const menu = document.getElementById("mobile-menu");
-    const toggleButton = document.querySelector(".menu-toggle");
+    if (!menu) {
+        console.error("Mobile menu not found.");
+        return;
+    }
+    //const toggleButton = document.querySelector(".menu-toggle");
 
     menu.classList.toggle("open");
 
