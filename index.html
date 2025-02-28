@@ -2259,8 +2259,8 @@
 
 
     
-    function Menu_scrollToSection(sectionId) {
-        event.preventDefault();
+    function Menu_scrollToSection(sectionId,event) {
+        if (event) event.preventDefault();
 
         const section = document.getElementById(sectionId);
         if (section) {
