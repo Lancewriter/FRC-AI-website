@@ -1074,13 +1074,13 @@
         align-items: center; /* Align title and image vertically */
         justify-content: flex-start ; /* Push elements to edges */
         width: 100vw; /* Full width */
-        padding: 0 0 15px;
+        padding: 0 15px;
         margin: 0;
-        bottom-padding:600px;
+        padding-bottom:20px;
         gap:5px;
         box-sizing:border-box;
         position:relative;
-        border:3px red;
+        border:3px solid red;
         
     }
     .menu-toggle {
@@ -1091,17 +1091,18 @@
     }
     .menu_word{ padding: 0 0 0 55px;}
     .mobile_hero{
-        top:1px;
+        top:0px;
         flex: 1.5; /* Allow image to take more space */
-        height: 325px;
+        height: 100%;
         display:block;
         max-width: 50%;
         max-height: 95%; /* Set a reasonable min-height */
         background-image: url("Business-Consulting-Image.jpg"); /* Replace with your actual image */
-        background-size: 100% 95%; /* Ensures the full image is visible */
+        background-size: cover; /* Ensures the full image is visible */
         background-position: top left;
         background-repeat: no-repeat;
-        border: 3px green;
+        border: 3px solid green;
+        overflow:hidden;
     }
 
     .hidden{
