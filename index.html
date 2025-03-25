@@ -210,17 +210,37 @@
         .hero {
             display: flex;
             height: 100vh; /* Full viewport height */
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem;
+            gap: 2rem;
+            flex-wrap: wrap;
             
         }
 
         .hero-image {
             width: 50vw; /* 50% of viewport width */
-            background-image: url('abunga business consultancy.jpg'); /* Replace with your image path */
-            background-size: cover; /* Ensure the image covers the entire section */
-            background-position: center; /* Center the image */
-            background-repeat: no-repeat;
+            flex: 1;
+            min-width: 280px;
 
         }
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+        border-radius: 12px; /* optional styling */
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* optional styling */
+        }
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
          .fraicly-image {
             width: 500px; /* 50% of viewport width */
              height:150px;
@@ -1493,7 +1513,15 @@
 
         </div>
         
-        <div class="hero-image"></div>
+        <div class="hero-image">
+            <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/SnmbyDGwaTA?si=ufpb9wZSeeAYOeUJ" title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                
+            </iframe>
+        </div>
+        </div>
     
         
     
