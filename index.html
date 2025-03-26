@@ -35,6 +35,8 @@
         .mobile_title{display:none}
         
         .section_hero {
+            position:relative;
+            overflow:hidden;
             font-family:'Trebuchet','Tahoma','Helvetica','Arial',sans-serif;
             font-size: 35px;
             width: 100%;
@@ -222,6 +224,12 @@
         }
 
         .hero-video {
+            position:absolute;
+            top: 0;
+            left: 0;
+              width: 100%;
+              height: 100%;
+              object-fit: cover
             flex:0 0 60%;
             /*max-width: 50%; /* 50% of viewport width */
             /*flex: 1.2;
