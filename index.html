@@ -1109,6 +1109,7 @@
     }
 
     header {
+
         
         flex-direction: column;
         padding: 10px;
@@ -1166,6 +1167,13 @@
         background-repeat: no-repeat;
         padding-left:10px;
         overflow:hidden;
+
+        background-image: url('Business-Consulting-Image.jpg'); /* Replace with your image path */
+        flex-direction: column;
+        padding: 10px;
+        width: 100vw;
+        color:white;
+
     }
 
     .hidden{
@@ -1407,6 +1415,67 @@
     }
     
 }
+       .results-table {
+  padding: 4rem 1rem;
+  background-color: #f9fafb;
+}
+
+.results-table h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.results-table table {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.results-table th,
+.results-table td {
+  text-align: left;
+  padding: 1rem;
+  vertical-align: top;
+}
+
+.results-table th {
+  background-color: #f3f4f6;
+  font-size: 1.2rem;
+}
+
+.results-table tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.results-table tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  .results-table table,
+  .results-table thead,
+  .results-table tbody,
+  .results-table th,
+  .results-table td,
+  .results-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .results-table th {
+    text-align: center;
+    background-color: transparent;
+    font-weight: bold;
+  }
+
+  .results-table td {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+}
 
 
     </style>
@@ -1532,10 +1601,16 @@
     
     <section class="hero">
         <div class="hero-content">
+
             <h1>We help your business manage financial risks with AI powered solutions.</h1>
             <p>SMEs face heightened risks from both AI and economic shocks. FRAICLY's AI driven insights and reporting can help. </p>
             <a href="mailto:info@FRAICLY.com?subject=Inquiry from Website" class="cta-button">Get in Touch</a>
 
+
+            <h1>Turn complexity into clarity.</h1>
+            <p>AI-powered financial & risk solutions for consultancies, contractors, and Fin-techs who are done guessing.</p>
+            <p>→ Cut costs. Forecast better. Recover faster.</p>
+            <div class="mt-4"> <button class="bg-blue-600 text-white px-6 py-3 rounded-2xl shadow-md hover:bg-blue-700"> Get Your Free Strategy Session </button> </div>
         </div>
         
         <div class="hero-video">
@@ -1634,7 +1709,39 @@
      </div>
     </div>
     </section>
-    <div class="separator"></div>
+     <div class="separator"></div>
+   <section class="results-table">
+  <h2>Real Problems. Real Results.</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Before Fraicly</th>
+        <th>With Fraicly</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>❌ Defaulting or slow-paying clients</td>
+        <td>✅ AI-powered payment forecasting and client risk analysis</td>
+      </tr>
+      <tr>
+        <td>❌ Choosing unprofitable contracts</td>
+        <td>✅Data-backed and AI driven bid evaluation and margin forecasting</td>
+      </tr>
+      <tr>
+        <td>❌ Only reacting to recessions and recoveries — a common reason companies fail</td>
+        <td>✅Early-warning scans for economic shifts to drive timely adaptation and goal-aligned planning.</td>
+      </tr>
+      <tr>
+        <td>❌ Inefficient workflows</td>
+        <td>✅ Streamlined, AI-supported finance and Operational operations</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+   <div class="separator"></div>
     <section id="Why_US_section">
         <div class="section_hero">
             <h1>Why US</h1>
@@ -1662,10 +1769,17 @@
                 <div class="Why_US_commentary"><strong>Ownership</strong></div>
         
                 <!-- Second Row: Commentary -->
+
                 <div class="Why_US_commentary">We have designed and deployed AI tools at fortune 500 companies and global organisations.</div>
                 <div class="Why_US_commentary">We have honed our expertise and experience at global companies such as Citigroup,Willis Ltd and top 4 consultancies.</div>
                 <div class="Why_US_commentary">For businesses to leverage our global expertise to achieve financial resilience, competitive advantages, and growth, because SMEs are foundational to all economies.</div>
                 <div class="Why_US_commentary">We consider ourselves the owners of our clients' resilience and AI journeys, via timely, clear communication, A+ deliverables, and dedication to the target outcome.</div>
+
+                <div class="Why_US_commentary">Trusted: We have designed and deployed AI tools at fortune 500 companies and global organisations.</div>
+                <div class="Why_US_commentary">We have honed our expetise and experience at global companies such as Citigroup, Willis Ltd and top 4 consultancies.</div>
+                <div class="Why_US_commentary">Tailored AI solutions that fit your organisaiton live a glove.</div>
+                <div class="Why_US_commentary">Focussed on measurable outcomes not buzzwords.</div>
+
             </div>
             <div class="Mobile_Why_US_grid-container">
                 <!-- Top Row: Logos -->
