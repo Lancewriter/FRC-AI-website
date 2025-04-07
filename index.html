@@ -4,8 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Financial Risk Consultants Artificial Intelligence for Medium Sized entities</title>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-13YFQW1WST"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-13YFQW1WST');
+  gtag('event', 'scroll', {
+  'event_category': 'user_engagement',
+  'event_label': 'Scrolled 50%'
+});
+</script>
+    
+    
     <style>
-        .title h1{font-size:45px ;}
+        title h1{font-size:45px ;}
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -17,12 +32,18 @@
         * {
            box-sizing: border-box; /* Ensure padding and borders are included in element width/height */
         }
+        .mobile_title{display:none}
+        
         .section_hero {
+            position:relative;
+            overflow:hidden;
             font-family:'Trebuchet','Tahoma','Helvetica','Arial',sans-serif;
             font-size: 35px;
             width: 100%;
             margin: 0 auto;
             padding: 20px;
+            padding-bottom: 10px;
+            padding-left:20px;
             align-content: center;
             justify-content: center;
             color:white;
@@ -30,6 +51,7 @@
             /*background-image: url("clean office environment.jpg");
             background-position:right ;*/
             text-align: center;
+            margin-bottom:10px;
         }
         .container {
             width: 100vw;
@@ -45,6 +67,8 @@
         }
         header {
             background-color: white;
+            height:150px;
+            max-height:150px;
             border-bottom: 1px solid #ddd;
             padding: 10px 0;
             display: flex;
@@ -54,6 +78,12 @@
             top: 0; /* Keep it at the top of the viewport */
             z-index: 1000; /* Ensures it stays above other elements */
             font-size: 8;
+        }
+         .main_logo{
+            padding-left: 20px;
+        }
+        .main_logo img {
+            height: 50px;
         }
         .logo{
             padding-left: 20px;
@@ -185,27 +215,88 @@
         .hero {
             display: flex;
             height: 100vh; /* Full viewport height */
-            
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+  
         }
 
-        .hero-image {
-            width: 50vw; /* 50% of viewport width */
-            background-image: url('Business-Consulting-Image.jpg'); /* Replace with your image path */
+        .hero-video {
+
+            flex: 0 0 60%;
+            display: flex;
+            align-items: flex-start;
+             
+           
+            /*width: 50%;
+            height: 100%;*/
+            /*object-fit:contain;*/
+            
+            /*max-width: 50%; /* 50% of viewport width */
+            /*flex: 1.2;
+            min-width: 400px;*/
+
+        }
+    .video-container {
+        position: relative;
+        aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
+        width:100%;
+        overflow: hidden;
+        
+        border-radius: 12px; /* optional styling */
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* optional styling */
+        }
+
+   .video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+    
+    }
+
+         .fraicly-image {
+            width: 500px; /* 50% of viewport width */
+             height:150px;
+            background-image: url("FRAICLY.jpg"); /* Replace with your image path */
             background-size: cover; /* Ensure the image covers the entire section */
             background-position: center; /* Center the image */
             background-repeat: no-repeat;
+            background-color:white;
+           
+        }
+         .mobile-fraicly-image {
+            width: 150px; /* 50% of viewport width */
+             height:75px;
+            background-image: url("FRAICLY.jpg"); /* Replace with your image path */
+            background-size: cover; /* Ensure the image covers the entire section */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat;
+            background-color:white;
+           
+            padding: 0 0 0 80px;
 
         }
 
+
         .hero-content {
-            width: 50vw; /* 50% of viewport width */
-            display: flex;
+            flex:0 0 35%;
+            padding-bottom: 4rem;
+            margin-bottom:4rem;
+            z-index:1;
+            padding-left: 10px;
+            /*width: 50vw; /* 50% of viewport width */
+            /*display: flex;
+            flex:1;
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
             padding-top: 1%;
             padding: 5%; /* Adjust padding as needed */
-            background-color: #f0f0f0; /* Optional: background color for contrast */
+            /*background-color: #f0f0f0; /* Optional: background color for contrast */
         }
         .sidekick-content {
             width: 100vw; /* 100% of viewport width */
@@ -219,7 +310,7 @@
             background-color: #f0f0f0; /* Optional: background color for contrast */
         }
         .sidekick-content h2 {
-            font-size: 1.5rem; /* Large heading */
+            font-size: 1rem; /* Large heading */
             margin-bottom: 1rem;
             color: #333;
             font-family:'Trebuchet','Tahoma','Helvetica','Arial', sans-serif;
@@ -230,7 +321,7 @@
 
         .hero-content h1 {
             font-size: 3rem; /* Large heading */
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             color: #333;
             font-family:'Trebuchet','Tahoma','Helvetica','Arial', sans-serif;
 
@@ -238,20 +329,22 @@
 
         .hero-content p {
             font-size: 1.5rem;
-            margin-bottom: 2rem;
+            margin-bottom: 0.5rem;
             color: #666;
             
         }
 
         .cta-button {
             display: inline-block;
-            padding: 1rem 2rem;
+            padding: 1rem 1rem;
             background-color: #007BFF; /* Button color */
             color: #ffffff;
             text-decoration: none;
             border-radius: 5px;
             font-size: 1.25rem;
             transition: background-color 0.3s ease;
+            margin-bottom:2rem;
+            margin-top:0.1rem;
         }
 
         .cta-button:hover {
@@ -301,7 +394,7 @@
             flex: 1 1 calc(45% - 20px);
             background-color: white;
             padding: 10px;
-            padding-top: 150px;
+            padding-top: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             height:30px;
@@ -324,7 +417,9 @@
             border-top: 1px solid #ddd;
         }
         @media (max-width: 100%) {
-            .title h1{font-size:20px ;}
+            .mobile_title{display:flex;}
+            .mobile_title h1{font-size:20px ;}
+            .main_logo{display:none;}
             .feature-list {
                 flex-direction: column;
                 align-items: center;
@@ -994,8 +1089,12 @@
     color: #333;
 }
 
-
-
+.mobile_header{
+    display:none;
+}
+ .mobile_hero{
+        display:none;
+    }
 
 .hidden {
     display: none;
@@ -1010,11 +1109,71 @@
     }
 
     header {
+
+        
+        flex-direction: column;
+        padding: 10px;
+        height:300px;
+        width: 100%;
+    }
+    .title {display:none ;}
+    .main_logo{display:none;}
+    .mobile_title{display:block;}
+    .mobile_title h1{
+        
+        font-size: 35px;
+        font-weight: bold;
+        white-space: nowrap; /* Prevent text from wrapping */
+        flex: 1; /* Allow flexible resizing */
+    }
+    .mobile_header{
+         top:0px;
+         display: flex;
+         height: 650px; /* Full viewport height */
+        flex-direction: row; /* Keep elements side by side */
+        align-items: center; /* Align title and image vertically */
+        justify-content: flex-start ; /* Push elements to edges */
+        width: 100%; /* Full width */
+        padding: 0 15px;
+        margin: 0;
+        padding-bottom:20px;
+        gap:0px !important;
+        box-shadow: none !important;
+        /*box-sizing:border-box;*/
+        position:relative;
+        border: none !important;
+        border-bottom: none !important;
+        
+        
+        
+    }
+    .menu-toggle {
+        font-size: 24px;
+        margin-left: 50px;
+        cursor: pointer;
+        padding: 0 0 0 60px;
+    }
+    .menu_word{ padding: 0 0 0 57px;}
+    .mobile_hero{
+        top:0px;
+        flex: 1.5; /* Allow image to take more space */
+        height: 90%;
+        display:block;
+        max-width: 50%;
+        max-height: 90%; /* Set a reasonable min-height */
+        background-image: url("abunga business consultancy.jpg"); /* Replace with your actual image */
+        background-size: cover; /* Ensures the full image is visible */
+        background-position: top left;
+        background-repeat: no-repeat;
+        padding-left:10px;
+        overflow:hidden;
+
         background-image: url('Business-Consulting-Image.jpg'); /* Replace with your image path */
         flex-direction: column;
         padding: 10px;
         width: 100vw;
         color:white;
+
     }
 
     .hidden{
@@ -1075,7 +1234,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
-            margin-top: 1px;
+            margin-top: 10px;
             padding-left: 5px;
             margin-right: 1px;
             padding-top: 1px;
@@ -1118,12 +1277,19 @@
             display:flex;
             background-color: white;
             align-content: left;
+            justify-content:flex-start;
             font-size: 35px;
-            width: 100vw;
-            padding-left: 1px;
+            width: 100%;
+            padding-left: 10px;
             padding-bottom: 350px;
             height:500px;
             }
+
+      .vulnerable-container ul {
+        padding-left: 10px; /* reduce padding for list items */
+        margin-left: 0; /* remove any default margin */
+        text-align: left;
+    }
 
     .vulnerable-container li {
            
@@ -1218,7 +1384,7 @@
         font-size: 24px;
         cursor: pointer;
         color: #333;
-        padding: 10px;
+        padding: 0 0 0 7px;
     }
 
     nav {
@@ -1313,18 +1479,53 @@
 
 
     </style>
-
+</head>
 <body>
     <header>
-        
-        <div class="logo">
-            <img src="Logo2.jpg" alt="Your Logo">
+                  
+            <div class="title">
+             <div class="fraicly-image"></div>
+            </div>
+        <div class="mobile_header">
+             
+            <div class="mobile_hero"></div>
+             <div class="mobile_title">
+                 <!--<h1>FRAICLY</h1>-->
+                 <div class="mobile-fraicly-image"></div>
+                 <div class="menu_word">menu</div>
+                 <div class="menu-toggle" onclick="Mobile_toggleMenu()">☰</div>
+            </div>
+             <nav id="mobile-menu" class="hidden">
+             <ul class="navbar">
+             <li><a href="#"onclick="Menu_scrollToSection('landing')">Home</a></li>
+             <li><a href="#" onclick="Menu_scrollToSection('Why_US_section')" aria-label="Go to Why us section">Why Us</a></li>
+       
+             <li class="menu-item">
+               <a href="#Sectors">Sectors</a>
+               <ul class="dropdown">
+                <li><a href="#" onclick="Menu_scrollToSection('Construction_cell',event);closeDropdown(this);" aria-label="Go to Construction/Contractors section"class="contact-button">Construction/Contractors</a></li>
+                        <li><a href="#" onclick="Menu_scrollToSection('Non_Finance_consultancy_cell',event);closeDropdown(this);" aria-label="Go consultancies section"class="contact-button">Consultancies</a></li>
+                        <li><a href="#" onclick="Menu_scrollToSection('Manu/Corporates-cell',event);closeDropdown(this);" aria-label="Go to manufacturers section"class="contact-button">Manufacturing/Corporates</a></li>
+                        <li><a href="#" onclick="Menu_scrollToSection('Fintech_cell',event);closeDropdown(this);" aria-label="Go to Fin-techs/start-ups section"class="contact-button">Fin-techs/Start-ups</a></li>
+                        <li><a href="#" onclick="Menu_scrollToSection('Hospitality_cell',event);closeDropdown(this);" aria-label="Go to hospitality section"class="contact-button">Hospitality/Restaurants</a></li>
+                        <li><a href="#" onclick="Menu_scrollToSection('Non-Profit_cell',event);closeDropdown(this);" aria-label="Go to Non-profits section"class="contact-button">Non-Profits</a></li>
+                 </ul>
+                </li>
+        <li class="menu-item">
+            <a href="#Services">Services</a>
+            <ul class="dropdown">
+                <li><a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('ai-services-tab',event);closeDropdown(this);" aria-label="Go to ai services Tab" class="contact-button">AI Design and Deployment</a></li>
+                        <li><a href="#" onclick="scrollToSection('Services_tabs');scrollToSection('Services_tabs');scrollToTab('financial-analysis-tab',event);closeDropdown(this);" aria-label="Go to Financial Analysis Tab"class="contact-button">Financial analysis</a></li>
+                        <li><a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('finance-projects-tab',event);closeDropdown(this);" aria-label="Go to Finance projects Tab"class="contact-button">Finance Projects(M&A/Exit)</a></li>
+                        <li><a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('economic-analysis-tab',event);closeDropdown(this);" aria-label="Go to economic analysis Tab"class="contact-button">Economic analysis</a></li>
+                        <li><a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('business_recovery-tab',event);closeDropdown(this);" aria-label="Go to business resilience Tab"class="contact-button">Business Recovery/Resilience</a></li>
                         
-        </div>
-        <div class="title">
-            <h1>FRC-AI</h1>
-        </div>
-        
+            </ul>
+        </li>
+        <!-- Add other links here -->
+    </ul>
+</nav>
+</div>
         <nav>
             <ul class="navbar">
                 <li><a href="#"onclick="Menu_scrollToSection('landing',event);">Home</a></li>
@@ -1348,19 +1549,19 @@
                         <li><a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('financial-analysis-tab',event);closeDropdown(this);" aria-label="Go to Financial Analysis Tab"class="contact-button">Financial analysis</a></li>
                         <li><a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('finance-projects-tab',event);closeDropdown(this);" aria-label="Go to Finance projects Tab"class="contact-button">Finance Projects(M&A/Exit)</a></li>
                         <li><a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('economic-analysis-tab',event);closeDropdown(this);" aria-label="Go to economic analysis Tab"class="contact-button">Economic analysis</a></li>
-                        <li><a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('business_recovery-tab',event);closeDropdown(this);" aria-label="Go to business resilence Tab"class="contact-button">Business Recovery/Resilence</a></li>
+                        <li><a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('business_recovery-tab',event);closeDropdown(this);" aria-label="Go to business resilience Tab"class="contact-button">Business Recovery/Resilience</a></li>
                         
                     </ul>
                 </li>
                 <li><a href="#" onclick="Menu_scrollToSection('Why_US_section')" aria-label="Go to Why us section">Why Us</a></li>
-                <li><a href="mailto:info@frc-ai.com?subject=Inquiry from Website" class="contact-button">Contact Us</a></li>
+                <li><a href="mailto:info@fraicly.com?subject=Inquiry from Website" class="contact-button">Contact Us</a></li>
             </ul>
         </nav>
         
         
 
-<div class="menu-toggle" onclick="Mobile_toggleMenu()">☰</div>
-<div class="logo">
+
+<div class="main_logo">
     <!--<img src="Logo2.jpg" alt="Your Logo">-->
 </div>
 <nav id="mobile-menu" class="hidden">
@@ -1380,13 +1581,13 @@
             </ul>
         </li>
         <li class="menu-item">
-            <a href="#Services">Servivces</a>
+            <a href="#Services">Services</a>
             <ul class="dropdown">
                 <li><a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('ai-services-tab',event);closeDropdown(this);" aria-label="Go to ai services Tab" class="contact-button">AI Design and Deployment</a></li>
                         <li><a href="#" onclick="scrollToSection('Services_tabs');scrollToSection('Services_tabs');scrollToTab('financial-analysis-tab',event);closeDropdown(this);" aria-label="Go to Financial Analysis Tab"class="contact-button">Financial analysis</a></li>
                         <li><a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('finance-projects-tab',event);closeDropdown(this);" aria-label="Go to Finance projects Tab"class="contact-button">Finance Projects(M&A/Exit)</a></li>
                         <li><a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('economic-analysis-tab',event);closeDropdown(this);" aria-label="Go to economic analysis Tab"class="contact-button">Economic analysis</a></li>
-                        <li><a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('business_recovery-tab',event);closeDropdown(this);" aria-label="Go to business resilence Tab"class="contact-button">Business Recovery/Resilence</a></li>
+                        <li><a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('business_recovery-tab',event);closeDropdown(this);" aria-label="Go to business resilience Tab"class="contact-button">Business Recovery/Resilience</a></li>
                         
             </ul>
         </li>
@@ -1400,13 +1601,23 @@
     
     <section class="hero">
         <div class="hero-content">
+
+            <h1>We help your business manage financial risks with AI powered solutions.</h1>
+            <p>SMEs face heightened risks from both AI and economic shocks. FRAICLY's AI driven insights and reporting can help. </p>
+            <a href="mailto:info@FRAICLY.com?subject=Inquiry from Website" class="cta-button">Get in Touch</a>
+
+
             <h1>Turn complexity into clarity.</h1>
             <p>AI-powered financial & risk solutions for consultancies, contractors, and Fin-techs who are done guessing.</p>
             <p>→ Cut costs. Forecast better. Recover faster.</p>
             <div class="mt-4"> <button class="bg-blue-600 text-white px-6 py-3 rounded-2xl shadow-md hover:bg-blue-700"> Get Your Free Strategy Session </button> </div>
         </div>
         
-        <div class="hero-image"></div>
+        <div class="hero-video">
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8I-PcHx8Ukk?si=4ukYRRFND2Tvst4V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        </div>
     
         
     
@@ -1417,12 +1628,13 @@
     
     
    
+   
     
     <div class="sidekick-content ">
         
         <h1>Take the first step to mitigate these risks and capture opportunities with the below:</h1>
-                <p> Get a <a href="mailto:info@frc-ai.com?subject=Inquiry from Website" class="narrative-button">free</a> data maturity assesment.</p>
-                <p> Get a <a href="mailto:info@frc-ai.com?subject=Inquiry from Website" class="narrative-button">free</a> marketing consultation and assesment to discover the gaps in your marketing strategy.</p>
+                <h2> Get a <a href="mailto:info@FRAICLY.com?subject=Inquiry from Website" class="narrative-button">free</a> data maturity assessment.</h2>
+                <h2> Lets talk about growing your sales pipeline for  <a href="mailto:info@FRAICLY.com?subject=Inquiry from Website" class="narrative-button">free</a>.</h2>
         
         </div>
    
@@ -1474,7 +1686,7 @@
                 <div class="Risk_journey_header-cell">Short term impact</div>
                 <div class="Risk_journey_header-cell">Medium term impact</div>
                 <div class="Risk_journey_header-cell">Long term impact</div>
-                <div class="Risk_journey_header-cell"><strong>How FRC-AI helps today</strong></div>
+                <div class="Risk_journey_header-cell"><strong>How FRAICLY helps today</strong></div>
                 
                 
                 <div class="Risk_journey_Risk-cell"><strong>AI Proliferation</strong></div>
@@ -1488,7 +1700,7 @@
                 <div class="Risk_journey_impact-cell">Low / declining revenue</div>
                 <div class="Risk_journey_impact-cell">Client defaults / Supplier failure</div>
                 <div class="Risk_journey_impact-cell">Distressed cashflows</div>
-                <div class="Risk_journey_solution-cell"><strong><a href="#" onclick="scrollToTab('business_recovery-tab')" aria-label="Go to business resilence Tab">Business Recovery/Resilence</a></strong></div>
+                <div class="Risk_journey_solution-cell"><strong><a href="#" onclick="scrollToTab('business_recovery-tab')" aria-label="Go to business resilience Tab">Business Recovery/Resilience</a></strong></div>
 
             </div>
             
@@ -1557,10 +1769,17 @@
                 <div class="Why_US_commentary"><strong>Ownership</strong></div>
         
                 <!-- Second Row: Commentary -->
+
+                <div class="Why_US_commentary">We have designed and deployed AI tools at fortune 500 companies and global organisations.</div>
+                <div class="Why_US_commentary">We have honed our expertise and experience at global companies such as Citigroup,Willis Ltd and top 4 consultancies.</div>
+                <div class="Why_US_commentary">For businesses to leverage our global expertise to achieve financial resilience, competitive advantages, and growth, because SMEs are foundational to all economies.</div>
+                <div class="Why_US_commentary">We consider ourselves the owners of our clients' resilience and AI journeys, via timely, clear communication, A+ deliverables, and dedication to the target outcome.</div>
+
                 <div class="Why_US_commentary">Trusted: We have designed and deployed AI tools at fortune 500 companies and global organisations.</div>
                 <div class="Why_US_commentary">We have honed our expetise and experience at global companies such as Citigroup, Willis Ltd and top 4 consultancies.</div>
                 <div class="Why_US_commentary">Tailored AI solutions that fit your organisaiton live a glove.</div>
                 <div class="Why_US_commentary">Focussed on measurable outcomes not buzzwords.</div>
+
             </div>
             <div class="Mobile_Why_US_grid-container">
                 <!-- Top Row: Logos -->
@@ -1575,23 +1794,25 @@
                     <img src="fortune 500.jpg" alt="Your Logo">
                 </div>
                 <div class="Why_US_commentary"><strong>Global 500 Experience</strong></div>
-                <div class="Why_US_commentary">We have honed our expetise and experience at global companies such as Citigroup,Willis Ltd and top 4 consultancies.</div>
+                <div class="Why_US_commentary">We have honed our expertise and experience at global companies such as Citigroup,Willis Ltd and top 4 consultancies.</div>
 
                 <div class="Why_US_logo" id="logo2">
                     <img src="mission.jpg"alt="Your Logo">
                 </div>
                 <div class="Why_US_commentary"><strong>Mission</strong></div>
-                <div class="Why_US_commentary">For SMEs to leverage our global expertise to acheieve financial resilence,competive advantages and growth, because SMEs are foundational to of all economies.</div>
+                <div class="Why_US_commentary">For SMEs to leverage our global expertise to achieve financial resilience, competitive advantages, and growth, because SMEs are foundational to all economies.</div>
 
                 <div class="Why_US_logo" id="logo3">
                     <img src="Ownership.jpg" alt="Your Logo">
                 </div>
                 <div class="Why_US_commentary"><strong>Ownership</strong></div>
-                <div class="Why_US_commentary">We consider ourselves the owners of our clients' resilence and AI journeys, via timely clear communication, A+ deliverables and dedication to the target outcome.</div>
+                <div class="Why_US_commentary">We consider ourselves the owners of our clients' resilience and AI journeys, via timely, clear communication, A+ deliverables, and dedication to the target outcome.</div>
             </div>
         </div>
     </section>
 
+    
+   
     <div class="separator"></div>
     <section id="sectors_section">
         <div class="section_hero">
@@ -1612,9 +1833,9 @@
                     <h3>Construction Companies</h3>
                     <div class="container2">
                         <ul>
-                        <li>Construction companies often grapple with irregular cash flows due to delayed payments from clients, unforeseen project overruns, and the need to evaluate the creditworthiness of clients and the solvency of banking partners. These challenges, coupled with the operational complexities of managing resources and costs, can hinder growth and financial stability.</li>
+                        <li>Construction companies often grapple with irregular cashflows due to delayed payments from clients, unforeseen project overruns, and the need to evaluate the creditworthiness of clients and the solvency of banking partners. These challenges, coupled with the operational complexities of managing resources and costs, can hinder growth and financial stability.</li>
                         <p></p>
-                        <li>FRC-AI provides data driven tools to optimize cash flow, assess client credit risk, evaluate banking partner reliability, and deliver actionable insights to streamline operations, reduce financial uncertainty, and support sustainable growth.</li>
+                        <li>FRAICLY provides data-driven tools to optimize cash flow, assess client credit risk, evaluate banking partner reliability, and deliver actionable insights to streamline operations, reduce financial uncertainty, and support sustainable growth.</li>
 
                     </ul>
                     </div>
@@ -1626,9 +1847,9 @@
                     <h3>Non Finance Consultancies</h3>
                     <div class="container2">
                     <ul>
-                        <li>Non Finance Consultancies such as marketing agencies, legal consultancies, and IT firms often face irregular cash flows due to delayed client payments, project overruns, or unpredictable demand. These challenges are compounded by the need to assess the credit risk of clients and the solvency of banking partners, all while striving to maintain operational efficiency in a competitive landscape.</li>
+                        <li>Non Finance Consultancies such as marketing agencies, legal consultancies, and IT firms often face irregular cashflows due to delayed client payments, project overruns, or unpredictable demand. These challenges are compounded by the need to assess the credit risk of clients and the solvency of banking partners, all while striving to maintain operational efficiency in a competitive landscape.</li>
                         <p></p>
-                        <li>FRC-AI offers methodologies and tools to forecast cash flow, evaluate client creditworthiness, assess banking partner reliability, and deliver actionable insights to streamline operations, mitigate risks, and drive sustainable growth.</li>
+                        <li>FRAICLY offers methodologies and tools to forecast cashflow, evaluate client creditworthiness, assess banking partner reliability, and deliver actionable insights to streamline operations, mitigate risks, and drive sustainable growth.</li>
                     </ul>
                     </div>
                     
@@ -1638,11 +1859,11 @@
                     <h3>Manufacturing and Corporates</h3>
                     <div class="container2">
                     <ul>
-                        <li>Manufacturing companies and corporates often struggle with supply chain disruptions, client credit risks, depository bank solvency, rising costs, and maintaining cash flow in volatile economic conditions.</li>
+                        <li>Manufacturing companies and corporates often struggle with supply chain disruptions, client credit risks, depository bank solvency, rising costs, and maintaining cashflow in volatile economic conditions.</li>
                         <p></p>
-                        <li>FRC-AI delivers data tools to optimize cash flow, assess client creditworthiness, evaluate bank solvency, and provide actionable insights to enhance operational efficiency, mitigate risks, and drive sustainable growth.</li>
+                        <li>FRAICLY delivers data-driven tools to optimize cashflow, assess client creditworthiness, evaluate bank solvency, and provide actionable insights to enhance operational efficiency, mitigate risks, and drive sustainable growth.</li>
                         <p></p>
-                        <li>FRC-AI also offers finance projects that competive advantages and financial resilience </li>
+                        <li>FRAICLY also offers finance projects that provide competitive advantages and financial resilience. We help businesses prepare for economic shocks.</li>
                         
                     </ul>
                     </div>
@@ -1657,7 +1878,7 @@
                         Fintechs and growth-stage finance providers often encounter challenges like managing liquidity constraints, evaluating client creditworthiness, mitigating default risks, and scaling operations efficiently in a rapidly evolving market.
                     </li>
                     <li>
-                        FRC-AI delivers advanced financial analytics, risk assessment tools, and AI-driven insights to optimize liquidity, evaluate client solvency, reduce credit risks, and enhance decision-making for sustainable growth and operational scalability.
+                        FRAICLY delivers advanced financial analytics, risk assessment tools, and AI-driven insights to optimize liquidity, evaluate client solvency, reduce credit risks, and enhance decision-making for sustainable growth and operational scalability.
                     </li>
                     <p></p>
                     <h2>Insurers</h2>
@@ -1666,11 +1887,11 @@
                     </li>
                     <p></p>
                     <li>
-                        FRC-AI provides advanced risk assessment tools, evaluates reinsurance solvency, optimizes liquidity management, and delivers AI-driven insights to enhance decision-making, streamline operations, and support scalable growth in a competitive market.
+                        FRAICLY provides advanced risk assessment tools, evaluates reinsurance solvency, optimizes liquidity management, and delivers AI-driven insights to enhance decision-making, streamline operations, and support scalable growth in a competitive market.
 
                     </li>
                         <li>
-                            FRC-AI can also provide guidance on optimising IFRS 17 and other finance projects.
+                            FRAICLY can also provide guidance on optimising IFRS 17 and other finance projects.
                         </li>
                     </li>
                     </ul>
@@ -1683,24 +1904,24 @@
                     <ul>
                         <h2>Hotels</h2>
                     <li>
-                        Hotels often struggle with unpredictable cash flow, inefficient operations, rising costs, and difficulty in making data-driven decisions to optimize pricing, manage resources, and meet customer expectations.
+                        Hotels often struggle with unpredictable cashflow, inefficient operations, rising costs, and difficulty in making data-driven decisions to optimize pricing, manage resources, and meet customer expectations.
                     </li>
                     <li>
-                        FRC-AI leverages advanced financial tools and AI-driven insights to optimize cash flow, streamline operations, enhance pricing strategies, reduce inefficiencies, and provide actionable customer and market intelligence for sustainable growth.
+                        FRAICLY leverages advanced financial tools and AI-driven insights to optimize cashflow, streamline operations, enhance pricing strategies, reduce inefficiencies, and provide actionable customer and market intelligence for sustainable growth.
                         
                     </li>
                     <h2>Restauraunts</h2>
                     <li>
-                        Restaurants face challenges such as managing fluctuating demand, controlling food costs, minimizing waste, ensuring consistent cash flow, and delivering personalized customer experiences in a competitive market.
+                        Restaurants face challenges such as managing fluctuating demand, controlling food costs, minimizing waste, ensuring consistent cashflow, and delivering personalized customer experiences in a competitive market.
                     </li>
                     <p></p>
                     <li>
-                        FRC-AI provides AI-driven tools to optimize menu pricing, forecast demand, streamline inventory management, reduce waste, and analyze customer preferences, enabling restaurants to increase profitability and enhance operational efficiency.
+                        FRAICLY provides AI-driven tools to optimize menu pricing, forecast demand, streamline inventory management, reduce waste, and analyze customer preferences, enabling restaurants to increase profitability and enhance operational efficiency.
     
                     </li>
                     <p></p>
                     <li>
-                        <strong>FRC-AI's Partnerships</strong> If your restaurant / club is lacking footfall we can introduce to our partners that specialise in social media marketing campaigns.
+                        <strong>FRAICLY's Partnerships</strong> If your restaurant / club is lacking footfall we can introduce to our partners that specialise in social media marketing campaigns.
     
                     </li>
                     
@@ -1714,7 +1935,7 @@
                     <ul>
                         <li>Non-profits often face inconsistent funding streams, delayed donor contributions, and challenges in evaluating the financial reliability of donors or banking partners. These issues, alongside the complexities of managing limited resources and maintaining transparency, can impede their ability to fulfill their mission effectively.</li>
                         <p></p>
-                        <li>FRC-AI offers tailored solutions to forecast cash flow, assess donor creditworthiness, evaluate banking partner solvency, and provide actionable insights to optimize resource allocation, enhance financial stability, and ensure sustainable impact.</li>
+                        <li>FRAICLY offers tailored solutions to forecast cashflow, assess donor creditworthiness, evaluate banking partner solvency, and provide actionable insights to optimize resource allocation, enhance financial stability, and ensure sustainable impact.</li>
                     </ul>
                     </div>
                     
@@ -1736,40 +1957,40 @@
             <h1>Construction Companies</h1>
         </div>
         <div class="container">
-            <p>Construction companies often face challenges like irregular cash flow, the risk of client payment defaults, uncertainty about the solvency of banking partners, and inefficiencies in manual financial/operational processes. FRC-AI addresses these issues with targeted solutions and AI tools:</p>
+            <p>Construction companies often face challenges like irregular cashflow, the risk of client payment defaults, uncertainty about the solvency of banking partners, and inefficiencies in manual financial/operational processes. FRAICLY addresses these issues with targeted solutions and AI tools:</p>
     
             <ul>
                 <h3>
                     <a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('ai-services-tab')" aria-label="Go to ai services Tab">AI Planning and Management</a>
                 </h3>
-                <li><strong>AI-Powered Process Automation:</strong> Repetitive tasks like Pipe line managemetn,site resource allocations, invoice processing, payment scheduling, and non-complex financial reporting consume significant labour hours and other resources, AI automation with a person in the loop can significantly reduce the resources needed for essential but repetitive non complex tasks, allowing your finance teams to work on value added activites like finding cost cutting efficiencies.</li>
+                <li><strong>AI-Powered Process Automation:</strong> Repetitive tasks like Pipe line management,site resource allocations, invoice processing, payment scheduling, and non-complex financial reporting consume significant labour hours and other resources, AI automation with a person in the loop can significantly reduce the resources needed for essential but repetitive non complex tasks, allowing your finance teams to work on value added activities like finding cost cutting efficiencies.</li>
                 <p></p>
-                <li><strong>Enhanced Decision-Making:</strong> Facilitates management prioritising profitable contracts while reducing the frequency and impact of loss makers. Optimal resource deployment and allocation is essential for the succces of every contractor/construction company. FRC-AI can tailor an AI solution to your need for delivering real-time, AI-generated insights to inform and augment the strategic and tactical planning process.</li>
+                <li><strong>Enhanced Decision-Making:</strong> Facilitates management prioritising profitable contracts while reducing the frequency and impact of loss makers. Optimal resource deployment and allocation is essential for the success of every contractor/construction company. FRAICLY can tailor an AI solution to your need for delivering real-time, AI-generated insights to inform and augment the strategic and tactical planning process.</li>
            
                 <h3>
                     <a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('financial-analysis-tab')" aria-label="Go to Financial Analysis Tab">Financial Analysis</a>
                 </h3>
-                <li><strong>Cash Flow Optimization:</strong> FRC-AI Provides construction companies with the means to forecast project cash flow trends, identify funding gaps, and recommend actionable strategies to ensure smooth operations and financial health throughout project lifecycles.</li>
+                <li><strong>cashflow Optimization:</strong> FRAICLY Provides construction companies with the means to forecast project cashflow trends, identify funding gaps, and recommend actionable strategies to ensure smooth operations and financial health throughout project lifecycles.</li>
                 <p></p>
-                <li><strong>Contract Financial Risk Assessment:</strong> FRC-AI's advanced models analyses the financial profiles of your major clients, and gives comfort over the risk of delayed or non-payments.</li>
+                <li><strong>Contract Financial Risk Assessment:</strong> FRAICLY's advanced models analyses the financial profiles of your major clients, and gives comfort over the risk of delayed or non-payments.</li>
                 <p></p>
-                <li><strong>Bank Solvency Vetting:</strong> FRC-AI delivers in-depth evaluations of banking partners' financial stability, ensuring secure and dependable financing solutions. </li>
+                <li><strong>Bank Solvency Vetting:</strong> FRAICLY delivers in-depth evaluations of banking partners' financial stability, ensuring secure and dependable financing solutions. </li>
                 <h3>
                     <a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('finance-projects-tab')" aria-label="Go to Finance projects Tab">Finance Projects</a>
                 </h3>
-                <li><strong>Financial Turnaround and Resilience Building:</strong> financially constrained businesses are highly vulnerable to economic and geo political shocks.FRC-AI's resilency guide provides a tailored path towards enhance resilience, to secure sustainable growth by providing financial expertise to capture optimizations, growth strategies, and liquidity guidance to weak businesses in uncertain economies. </li>
+                <li><strong>Financial Turnaround and Resilience Building:</strong> financially constrained businesses are highly vulnerable to economic and geo political shocks.FRAICLY's resilency guide provides a tailored path towards enhance resilience, to secure sustainable growth by providing financial expertise to capture optimizations, growth strategies, and liquidity guidance to weak businesses in uncertain economies. </li>
                 <p></p>
-                <li><strong>M&A financial risk management:</strong> M&A can accelerate your growth and increase profitability, but it also exposes your own business to outweighted financial risks FRC-AI can give you comfort over the valuation of your target, and insight into its financial stength and potential synergies with your business. </li>
+                <li><strong>M&A financial risk management:</strong> M&A can accelerate your growth and increase profitability, but it also exposes your own business to outweighted financial risks FRAICLY can give you comfort over the valuation of your target, and insight into its financial strength and potential synergies with your business. </li>
                 <p></p>
-                <li><strong>Confidential business sales:</strong> FRC-AI, provies a confidential service to value your business, prepare your business for sale in the short to medium term and prepare a sales prospectus. </li>
+                <li><strong>Confidential business sales:</strong> FRAICLY, provies a confidential service to value your business, prepare your business for sale in the short to medium term and prepare a sales prospectus. </li>
                 <p></p>
-                <li><strong>Transition from LIBOR to SONIA:</strong> FRC-AI, can help Construction companies to optimise cash management in the higher volatility SONIA environemt via data driven methodologies. </li>
+                <li><strong>Transition from LIBOR to SONIA:</strong> FRAICLY, can help Construction companies to optimise cash management in the higher volatility SONIA environment via data-driven methodologies. </li>
                 <h3>
                     <a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('economic-analysis-tab')" aria-label="Go to economic analysis Tab">Economic Analysis</a>
                 </h3>
-                <li><strong>Market Demand Analysis:</strong> FRC-AI can provide construction demand trends in your region, residential, commercial, and industrial construction provides necessary insight for strategic planning and realignment .</li>
+                <li><strong>Market Demand Analysis:</strong> FRAICLY can provide construction demand trends in your region, residential, commercial, and industrial construction provides necessary insight for strategic planning and realignment .</li>
                 <p></p>
-                <li><strong>Economic Feasibility Studies:</strong> FRC-AI provides large project scearios including ROI and payback period ranges. Scenarios include opportunity costs of capital and socio economic impacts </li>
+                <li><strong>Economic Feasibility Studies:</strong> FRAICLY provides large project scenarios including ROI and payback period ranges. Scenarios include opportunity costs of capital and socio economic impacts </li>
                 <p></p>
                 <li><strong>Competitive Benchmarking:</strong> Understanding how your construction business compares to peers is essential for maintaining a competitive edge. Comparatives to your peers'intrinsic advantages such as margins, market positioning, service quality, reputation, and customer satisfaction can enhance your competitiveness. </li>
                 <p></p>
@@ -1783,40 +2004,40 @@
             <h1>Non Finance Consultancies</h1>
         </div>
         <div class="container">
-            <p>Non-finance services such as marketing firms, law firms and IT firms often struggle with unpredictable income, delayed payments, vendor reliability issues, and inefficient manual processes. FRC-AI leverages tailored financial manaegement methodologies and AI-driven tools to tackle these challenges effectively:</p>
+            <p>Non-finance services such as marketing firms, law firms and IT firms often struggle with unpredictable income, delayed payments, vendor reliability issues, and inefficient manual processes. FRAICLY leverages tailored financial management methodologies and AI-driven tools to tackle these challenges effectively:</p>
     
             <ul>
                 <h3>
                     <a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('ai-services-tab')" aria-label="Go to ai services Tab">AI Planning and Management</a>
                 </h3>
-                <li><strong>AI-Powered Process Automation:</strong> Project resource allocations, and other operatinal tasks can be automated to significantly reduce the burden on management, allowing more hours of your most valuable elmployees to be allocated to billable hours.</li>
+                <li><strong>AI-Powered Process Automation:</strong> Project resource allocations, and other operatinal tasks can be automated to significantly reduce the burden on management, allowing more hours of your most valuable employees to be allocated to billable hours.</li>
                 <p></p>
                 <li><strong>Enhanced Decision-Making:</strong> Management are often charged with making routine but important decisions, which can be delegated to a machine learning tool, that can automate the routine decisions, and identify outliers for human expert attention.These tools replicate human decision in the targeted domain to a high degree of accuracy and can enhance decisions with new insights and metrics.</li>
            
                 <h3>
                     <a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('financial-analysis-tab')" aria-label="Go to Financial Analysis Tab">Financial Analysis</a>
                 </h3>
-                <li><strong>Cash Flow Optimization:</strong> FRC-AI optimizes cashflows for SME consultancies by forecasting revenue trends, analyzing cost patterns, improving client credit evaluations, automating invoicing, tracking expenses, and reducing inefficiencies to ensure consistent financial stability.</li>
+                <li><strong>cashflow Optimization:</strong> FRAICLY optimizes cashflows for SME consultancies by forecasting revenue trends, analyzing cost patterns, improving client credit evaluations, automating invoicing, tracking expenses, and reducing inefficiencies to ensure consistent financial stability.</li>
                 <p></p>
-                <li><strong>Contract Risk Assessment:</strong> FRC-AI's advanced tailored models proactively forecasts 1.the probability of profitablity of each contract, 2.the risk of a loss making contract and 3.the risk of client default or slow payments to a high degree of confidence.</li>
+                <li><strong>Contract Risk Assessment:</strong> FRAICLY's advanced tailored models proactively forecasts 1.the probability of profitablity of each contract, 2.the risk of a loss making contract and 3.the risk of client default or slow payments to a high degree of confidence.</li>
                 <p></p>
-                <li><strong>Bank Solvency Vetting:</strong> FRC-AI delivers in-depth evaluations of banking partners' financial stability, ensuring secure and dependable financing solutions. </li>
+                <li><strong>Bank Solvency Vetting:</strong> FRAICLY delivers in-depth evaluations of banking partners' financial stability, ensuring secure and dependable financing solutions. </li>
                 <h3>
                     <a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('finance-projects-tab')" aria-label="Go to Finance projects Tab">Finance Projects</a>
                 </h3>
-                <li><strong>Financial Turnaround and Resilience Building:</strong> Consultancies are often highly vulnerable in uncertain economies. FRC-AI provides work paths to enhances resilience, fostering sustainable growth, cost cutting optimizations, growth and financing strategies tailored to weak businesses.</li>
+                <li><strong>Financial Turnaround and Resilience Building:</strong> Consultancies are often highly vulnerable in uncertain economies. FRAICLY provides work paths to enhances resilience, fostering sustainable growth, cost cutting optimizations, growth and financing strategies tailored to weak businesses.</li>
                 <p></p>
-                <li><strong>M&A financial risk management:</strong> M&A can accelerate your growth and increase profitability, but also provides outsized risks given the large cash investemnts and intrinsic uncertainty, FRC-AI can give you comfort over the valuation of your target, and insight into its financial stength and potential synergies with your business. </li>
+                <li><strong>M&A financial risk management:</strong> M&A can accelerate your growth and increase profitability, but also provides outsized risks given the large cash investemnts and intrinsic uncertainty, FRAICLY can give you comfort over the valuation of your target, and insight into its financial strength and potential synergies with your business. </li>
                 <p></p>
-                <li><strong>Confidential business sales:</strong> FRC-AI offers a confidential service to fairly value your consultancy using established market methodologies, prepare your business for sale in the short to medium term, and develop a comprehensive sales prospectus. </li>
+                <li><strong>Confidential business sales:</strong> FRAICLY offers a confidential service to fairly value your consultancy using established market methodologies, prepare your business for sale in the short to medium term, and develop a comprehensive sales prospectus. </li>
                 <p></p>
                 
                 <h3>
                     <a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('economic-analysis-tab')" aria-label="Go to economic analysis Tab">Economic Analysis</a>
                 </h3>
-                <li><strong>Market Demand Analysis:</strong> FRC-AI can provide expected demand trends specific to your sector,based on macroeconomic and microeconomic conditions .</li>
+                <li><strong>Market Demand Analysis:</strong> FRAICLY can provide expected demand trends specific to your sector,based on macroeconomic and microeconomic conditions .</li>
                 <p></p>
-                <li><strong>Economic Feasibility Studies:</strong> FRC-AI provides large project scearios including ROI and payback period ranges. Scenarios include opportunity costs of capital and socio economic impacts </li>
+                <li><strong>Economic Feasibility Studies:</strong> FRAICLY provides large project scenarios including ROI and payback period ranges. Scenarios include opportunity costs of capital and socio economic impacts </li>
                 <p></p>
                 <li><strong>Competitive Benchmarking:</strong> Understanding how your construction business compares to peers is essential for maintaining a competitive edge. Comparatives to your peers'intrinsic advantages such as margins, market positioning, service quality, reputation, and customer satisfaction can enhance your competitiveness. </li>
                 <p></p>
@@ -1830,7 +2051,7 @@
             <h1>Manufacturing and Corporates</h1>
         </div>
         <div class="container">
-            <p>Manufacturing and other corporate entities face hightened liquidity constraint risks, due to cashflows trapped in receivables, inventory and equipment. Vendor reliability issues and inefficient manual processes also present potential bottlenecks. FRC-AI leverages tailored methodologies and AI-driven tools to tackle these challenges effectively:</p>
+            <p>Manufacturing and other corporate entities face hightened liquidity constraint risks, due to cashflows trapped in receivables, inventory and equipment. Vendor reliability issues and inefficient manual processes also present potential bottlenecks. FRAICLY leverages tailored methodologies and AI-driven tools to tackle these challenges effectively:</p>
     
             <ul>
                 <h3>
@@ -1842,27 +2063,27 @@
                 <h3>
                     <a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('financial-analysis-tab')" aria-label="Go to Financial Analysis Tab">Financial Analysis</a>
                 </h3>
-                <li><strong>Cash Flow Optimization:</strong> FRC-AI supports manufacturing entities by forecasting cash flow impacts of inventory holding under scenarios such as fluctuating demand or supply chain disruptions, identifying funding gaps, and recommending strategies to mitigate risks like overstocking, stockouts, or payment delays, ensuring optimal working capital and liquidity levels.</li>
+                <li><strong>cashflow Optimization:</strong> FRAICLY supports manufacturing entities by forecasting cashflow impacts of inventory holding under scenarios such as fluctuating demand or supply chain disruptions, identifying funding gaps, and recommending strategies to mitigate risks like overstocking, stockouts, or payment delays, ensuring optimal working capital and liquidity levels.</li>
                 <p></p>
-                <li><strong>Client/Counterparty risk management:</strong> FRC-AI helps businesses manage client and counterparty risks by assessing creditworthiness, forecasting payment behaviors, and identifying exposure scenarios, mitigating risks like defaults, delayed payments, or insolvency, and ensuring financial resilience.</li>
+                <li><strong>Client/Counterparty risk management:</strong> FRAICLY helps businesses manage client and counterparty risks by assessing creditworthiness, forecasting payment behaviors, and identifying exposure scenarios, mitigating risks like defaults, delayed payments, or insolvency, and ensuring financial resilience.</li>
                 <p></p>
-                <li><strong>Bank Solvency Vetting:</strong> FRC-AI delivers in-depth evaluations of banking partners' financial stability, ensuring secure and dependable financing solutions. </li>
+                <li><strong>Bank Solvency Vetting:</strong> FRAICLY delivers in-depth evaluations of banking partners' financial stability, ensuring secure and dependable financing solutions. </li>
                 <h3>
                     <a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('finance-projects-tab')" aria-label="Go to Finance projects Tab">Finance Projects</a>
                 </h3>
-                <li><strong>Financial Turnaround and Resilience Building:</strong> Weak businesses are highly vulnerable in uncertain economies;FRC-AI helps stabilize operations, enhance resilience, and secure sustainable growth by providing financial expertise, optimizations, growth strategies, and financing guidance to weak businesses in uncertain economies. </li>
+                <li><strong>Financial Turnaround and Resilience Building:</strong> Weak businesses are highly vulnerable in uncertain economies;FRAICLY helps stabilize operations, enhance resilience, and secure sustainable growth by providing financial expertise, optimizations, growth strategies, and financing guidance to weak businesses in uncertain economies. </li>
                 <p></p>
-                <li><strong>M&A financial risk management:</strong> M&A can accelerate your growth and increase profitability, given the right target, FRC-AI can give you comfort over the valuation of your target, and insight into its financial stength and potential synergies with your business. </li>
+                <li><strong>M&A financial risk management:</strong> M&A can accelerate your growth and increase profitability, given the right target, FRAICLY can give you comfort over the valuation of your target, and insight into its financial strength and potential synergies with your business. </li>
                 <p></p>
-                <li><strong>Confidential business sales:</strong> FRC-AI, can help you to fairly value your business, prepare prospectus and prepare your business for sale. </li>
+                <li><strong>Confidential business sales:</strong> FRAICLY, can help you to fairly value your business, prepare prospectus and prepare your business for sale. </li>
                 <p></p>
                 
                 <h3>
                     <a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('economic-analysis-tab')" aria-label="Go to economic analysis Tab">Economic Analysis</a>
                 </h3>
-                <li><strong>Market Demand Analysis:</strong> FRC-AI can provide demand trends in your region and sector for strategic planning and strategy realignment .</li>
+                <li><strong>Market Demand Analysis:</strong> FRAICLY can provide demand trends in your region and sector for strategic planning and strategy realignment .</li>
                 <p></p>
-                <li><strong>Economic Feasibility Studies:</strong> FRC-AI provides large project scearios including ROI and payback period ranges. Scenarios include opportunity costs of capital and socio economic impacts </li>
+                <li><strong>Economic Feasibility Studies:</strong> FRAICLY provides large project scenarios including ROI and payback period ranges. Scenarios include opportunity costs of capital and socio economic impacts </li>
                 <p></p>
                 <li><strong>Competitive Benchmarking:</strong> Understanding how your construction business compares to peers is essential for maintaining a competitive edge. Comparatives to your peers'intrinsic advantages such as margins, market positioning, service quality, reputation, and customer satisfaction can enhance your competitiveness. </li>
                 <p></p>
@@ -1877,7 +2098,7 @@
             <h1>Fin-techs and high growth Financial Services</h1>
         </div>
         <div class="container">
-            <p>Non-finance services such as marketing firms and law firms often struggle with unpredictable income, delayed payments, vendor reliability issues, and inefficient manual processes. FRC-AI leverages tailored methodologies and AI-driven tools to tackle these challenges effectively:</p>
+            <p>Non-finance services such as marketing firms and law firms often struggle with unpredictable income, delayed payments, vendor reliability issues, and inefficient manual processes. FRAICLY leverages tailored methodologies and AI-driven tools to tackle these challenges effectively:</p>
     
             <ul>
                 <h3>
@@ -1889,21 +2110,21 @@
                 <h3>
                     <a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('financial-analysis-tab')" aria-label="Go to Financial Analysis Tab">Financial Analysis</a>
                 </h3>
-                <li><strong>Cash Flow Optimization:</strong> FRC-AI facilitates consultancies with cash flow forecasts, identify funding gaps, and recommend actionable strategies to ensure optimal liqudity levels.</li>
-                <li><strong>Contract Risk Assessment:</strong> FRC-AI's advanced models analyze the financial profiles of your major clients, accurately predicting the risk of delayed or non-payments</li>
-                <li><strong>Bank Solvency Vetting:</strong> FRC-AI delivers in-depth evaluations of banking partners' financial stability, ensuring secure and dependable financing solutions. </li>
+                <li><strong>cashflow Optimization:</strong> FRAICLY facilitates consultancies with cashflow forecasts, identify funding gaps, and recommend actionable strategies to ensure optimal liquidity levels.</li>
+                <li><strong>Contract Risk Assessment:</strong> FRAICLY's advanced models analyze the financial profiles of your major clients, accurately predicting the risk of delayed or non-payments</li>
+                <li><strong>Bank Solvency Vetting:</strong> FRAICLY delivers in-depth evaluations of banking partners' financial stability, ensuring secure and dependable financing solutions. </li>
                 <h3>
                     <a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('finance-projects-tab')" aria-label="Go to Finance projects Tab">Finance Projects</a>
                 </h3>
-                <li><strong>Financial Turnaround and Resilience Building:</strong> Weak businesses are highly vulnerable in uncertain economies;FRC-AI helps stabilize operations, enhance resilience, and secure sustainable growth by providing financial expertise, optimizations, growth strategies, and financing guidance to weak businesses in uncertain economies. </li>
-                <li><strong>M&A financial risk management:</strong> M&A can accelerate your growth and increase profitability, given the right target, FRC-AI can give you comfort over the valuation of your target, and insight into its financial stength and potential synergies with your business. </li>
-                <li><strong>Confidential business sales:</strong> FRC-AI, can help you to fairly value your business, prepare prospectus and prepare your business for sale. </li>
-                <li><strong>Transition from LIBOR to SONIA:</strong> FRC-AI, can help to optimise cash management in the higher volatility SONIA environemt. </li>
+                <li><strong>Financial Turnaround and Resilience Building:</strong> Weak businesses are highly vulnerable in uncertain economies;FRAICLY helps stabilize operations, enhance resilience, and secure sustainable growth by providing financial expertise, optimizations, growth strategies, and financing guidance to weak businesses in uncertain economies. </li>
+                <li><strong>M&A financial risk management:</strong> M&A can accelerate your growth and increase profitability, given the right target, FRAICLY can give you comfort over the valuation of your target, and insight into its financial strength and potential synergies with your business. </li>
+                <li><strong>Confidential business sales:</strong> FRAICLY, can help you to fairly value your business, prepare prospectus and prepare your business for sale. </li>
+                <li><strong>Transition from LIBOR to SONIA:</strong> FRAICLY, can help to optimise cash management in the higher volatility SONIA environment. </li>
                 <h3>
                     <a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('economic-analysis-tab')" aria-label="Go to economic analysis Tab">Economic Analysis</a>
                 </h3>
-                <li><strong>Market Demand Analysis:</strong> FRC-AI can provide construction demand trends in your region, residential, commercial, and industrial construction provides necessary insight for strategic planning and realignment .</li>
-                <li><strong>Economic Feasibility Studies:</strong> FRC-AI provides large project scearios including ROI and payback period ranges. Scenarios include opportunity costs of capital and socio economic impacts </li>
+                <li><strong>Market Demand Analysis:</strong> FRAICLY can provide construction demand trends in your region, residential, commercial, and industrial construction provides necessary insight for strategic planning and realignment .</li>
+                <li><strong>Economic Feasibility Studies:</strong> FRAICLY provides large project scenarios including ROI and payback period ranges. Scenarios include opportunity costs of capital and socio economic impacts </li>
                 <li><strong>Competitive Benchmarking:</strong> Understanding how your construction business compares to peers is essential for maintaining a competitive edge. Comparatives to your peers'intrinsic advantages such as margins, market positioning, service quality, reputation, and customer satisfaction can enhance your competitiveness. </li>
                 <li><strong>Impact of Interest Rates and Credit Conditions:</strong> Assess the effect of changing interest rates on borrowing and project financing.</li>
                 </ul>
@@ -1914,7 +2135,7 @@
             <h1>Hotels and Restaurants</h1>
         </div>
         <div class="container">
-            <p>Non-finance services such as marketing firms and law firms often struggle with unpredictable income, delayed payments, vendor reliability issues, and inefficient manual processes. FRC-AI leverages tailored methodologies and AI-driven tools to tackle these challenges effectively:</p>
+            <p>Non-finance services such as marketing firms and law firms often struggle with unpredictable income, delayed payments, vendor reliability issues, and inefficient manual processes. FRAICLY leverages tailored methodologies and AI-driven tools to tackle these challenges effectively:</p>
     
             <ul>
                 <h3>
@@ -1926,21 +2147,21 @@
                 <h3>
                     <a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('financial-analysis-tab')" aria-label="Go to Financial Analysis Tab">Financial Analysis</a>
                 </h3>
-                <li><strong>Cash Flow Optimization:</strong> FRC-AI facilitates consultancies with cash flow forecasts, identify funding gaps, and recommend actionable strategies to ensure optimal liqudity levels.</li>
-                <li><strong>Contract Risk Assessment:</strong> FRC-AI's advanced models analyze the financial profiles of your major clients, accurately predicting the risk of delayed or non-payments</li>
-                <li><strong>Bank Solvency Vetting:</strong> FRC-AI delivers in-depth evaluations of banking partners' financial stability, ensuring secure and dependable financing solutions. </li>
+                <li><strong>cashflow Optimization:</strong> FRAICLY facilitates consultancies with cashflow forecasts, identify funding gaps, and recommend actionable strategies to ensure optimal liquidity levels.</li>
+                <li><strong>Contract Risk Assessment:</strong> FRAICLY's advanced models analyze the financial profiles of your major clients, accurately predicting the risk of delayed or non-payments</li>
+                <li><strong>Bank Solvency Vetting:</strong> FRAICLY delivers in-depth evaluations of banking partners' financial stability, ensuring secure and dependable financing solutions. </li>
                 <h3>
                     <a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('finance-projects-tab')" aria-label="Go to Finance projects Tab">Finance Projects</a>
                 </h3>
-                <li><strong>Financial Turnaround and Resilience Building:</strong> Weak businesses are highly vulnerable in uncertain economies;FRC-AI helps stabilize operations, enhance resilience, and secure sustainable growth by providing financial expertise, optimizations, growth strategies, and financing guidance to weak businesses in uncertain economies. </li>
-                <li><strong>M&A financial risk management:</strong> M&A can accelerate your growth and increase profitability, given the right target, FRC-AI can give you comfort over the valuation of your target, and insight into its financial stength and potential synergies with your business. </li>
-                <li><strong>Confidential business sales:</strong> FRC-AI, can help you to fairly value your business, prepare prospectus and prepare your business for sale. </li>
-                <li><strong>Transition from LIBOR to SONIA:</strong> FRC-AI, can help to optimise cash management in the higher volatility SONIA environemt. </li>
+                <li><strong>Financial Turnaround and Resilience Building:</strong> Weak businesses are highly vulnerable in uncertain economies;FRAICLY helps stabilize operations, enhance resilience, and secure sustainable growth by providing financial expertise, optimizations, growth strategies, and financing guidance to weak businesses in uncertain economies. </li>
+                <li><strong>M&A financial risk management:</strong> M&A can accelerate your growth and increase profitability, given the right target, FRAICLY can give you comfort over the valuation of your target, and insight into its financial strength and potential synergies with your business. </li>
+                <li><strong>Confidential business sales:</strong> FRAICLY, can help you to fairly value your business, prepare prospectus and prepare your business for sale. </li>
+                <li><strong>Transition from LIBOR to SONIA:</strong> FRAICLY, can help to optimise cash management in the higher volatility SONIA environment. </li>
                 <h3>
                     <a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('economic-analysis-tab')" aria-label="Go to economic analysis Tab">Economic Analysis</a>
                 </h3>
-                <li><strong>Market Demand Analysis:</strong> FRC-AI can provide construction demand trends in your region, residential, commercial, and industrial construction provides necessary insight for strategic planning and realignment .</li>
-                <li><strong>Economic Feasibility Studies:</strong> FRC-AI provides large project scearios including ROI and payback period ranges. Scenarios include opportunity costs of capital and socio economic impacts </li>
+                <li><strong>Market Demand Analysis:</strong> FRAICLY can provide construction demand trends in your region, residential, commercial, and industrial construction provides necessary insight for strategic planning and realignment .</li>
+                <li><strong>Economic Feasibility Studies:</strong> FRAICLY provides large project scenarios including ROI and payback period ranges. Scenarios include opportunity costs of capital and socio economic impacts </li>
                 <li><strong>Competitive Benchmarking:</strong> Understanding how your construction business compares to peers is essential for maintaining a competitive edge. Comparatives to your peers'intrinsic advantages such as margins, market positioning, service quality, reputation, and customer satisfaction can enhance your competitiveness. </li>
                 <li><strong>Impact of Interest Rates and Credit Conditions:</strong> Assess the effect of changing interest rates on borrowing and project financing.</li>
                 </ul>
@@ -1951,8 +2172,8 @@
             <h1>Non Profits</h1>
         </div>
         <div class="container">
-            <p>Non profits are tasked with providing essential services to society, and on limited resources, but heavy on passion and ingenuity, this leads financial resistance as esential to beneficiaries accessing the essential services provided.</p>
-            <p>Non profits serve disparate types of communites, each with unique needs and requirements. Therefore we approach Non profits with a view towards customising our services specifally to their situation.
+            <p>Non profits are tasked with providing essential services to society, and on limited resources, but heavy on passion and ingenuity, this leads financial resistance as essential to beneficiaries accessing the essential services provided.</p>
+            <p>Non profits serve disparate types of communites, each with unique needs and requirements. Therefore we approach Non profits with a view towards customising our services specifically to their situation.
     
             <ul>
                 <h3>
@@ -1965,20 +2186,20 @@
                 <h3>
                     <a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('financial-analysis-tab')" aria-label="Go to Financial Analysis Tab">Financial Analysis</a>
                 </h3>
-                <li><strong>Cash Flow Optimization:</strong> FRC-AI can help your non-profit maximise its cashflows and liqudiity for sustainability.</li>
-                <li><strong>Bank Solvency Vetting:</strong> FRC-AI delivers in-depth evaluations of banking partners' financial stability, ensuring secure and dependable financing solutions.</li>
+                <li><strong>cashflow Optimization:</strong> FRAICLY can help your non-profit maximise its cashflows and liquidity for sustainability.</li>
+                <li><strong>Bank Solvency Vetting:</strong> FRAICLY delivers in-depth evaluations of banking partners' financial stability, ensuring secure and dependable financing solutions.</li>
                 <h3>
                     <a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('finance-projects-tab')" aria-label="Go to Finance projects Tab">Finance Projects</a>
                 </h3>
-                <li><strong>Financial Turnaround and Resilience Building:</strong> Weak businesses are highly vulnerable in uncertain economies;FRC-AI helps stabilize operations, enhance resilience, and secure sustainable growth by providing financial expertise, optimizations, growth strategies, and financing guidance to weak businesses in uncertain economies. </li>
-                <li><strong>M&A financial risk management:</strong> M&A can accelerate your growth and increase profitability, given the right target, FRC-AI can give you comfort over the valuation of your target, and insight into its financial stength and potential synergies with your business. </li>
-                <li><strong>Confidential business sales:</strong> FRC-AI, can help you to fairly value your business, prepare prospectus and prepare your business for sale. </li>
-                <li><strong>Transition from LIBOR to SONIA:</strong> FRC-AI, can help to optimise cash management in the higher volatility SONIA environemt. </li>
+                <li><strong>Financial Turnaround and Resilience Building:</strong> Weak businesses are highly vulnerable in uncertain economies;FRAICLY helps stabilize operations, enhance resilience, and secure sustainable growth by providing financial expertise, optimizations, growth strategies, and financing guidance to weak businesses in uncertain economies. </li>
+                <li><strong>M&A financial risk management:</strong> M&A can accelerate your growth and increase profitability, given the right target, FRAICLY can give you comfort over the valuation of your target, and insight into its financial strength and potential synergies with your business. </li>
+                <li><strong>Confidential business sales:</strong> FRAICLY, can help you to fairly value your business, prepare prospectus and prepare your business for sale. </li>
+                <li><strong>Transition from LIBOR to SONIA:</strong> FRAICLY, can help to optimise cash management in the higher volatility SONIA environment. </li>
                 <h3>
                     <a href="#" onclick="scrollToSection('Services_tabs');scrollToTab('economic-analysis-tab')" aria-label="Go to economic analysis Tab">Economic Analysis</a>
                 </h3>
-                <li><strong>Market Demand Analysis:</strong> FRC-AI can provide construction demand trends in your region, residential, commercial, and industrial construction provides necessary insight for strategic planning and realignment .</li>
-                <li><strong>Economic Feasibility Studies:</strong> FRC-AI provides large project scearios including ROI and payback period ranges. Scenarios include opportunity costs of capital and socio economic impacts </li>
+                <li><strong>Market Demand Analysis:</strong> FRAICLY can provide construction demand trends in your region, residential, commercial, and industrial construction provides necessary insight for strategic planning and realignment .</li>
+                <li><strong>Economic Feasibility Studies:</strong> FRAICLY provides large project scenarios including ROI and payback period ranges. Scenarios include opportunity costs of capital and socio economic impacts </li>
                 <li><strong>Competitive Benchmarking:</strong> Understanding how your construction business compares to peers is essential for maintaining a competitive edge. Comparatives to your peers'intrinsic advantages such as margins, market positioning, service quality, reputation, and customer satisfaction can enhance your competitiveness. </li>
                 <li><strong>Impact of Interest Rates and Credit Conditions:</strong> Assess the effect of changing interest rates on borrowing and project financing.</li>
                 </ul>
@@ -2010,19 +2231,19 @@
                 <div id="ai-services-tab" class="tab-content active">
                     <h2>AI Planning and Deployment</h2>
                     <h3>Post 2025 SME success is dependent on the efficacy of your AI deployment. However, AI needs to be supported by a minimum level of data maturity to be effective.</h3>
-                    <p> Get a <a href="mailto:info@frc-ai.com?subject=Inquiry from Website" class="narrative-button">free</a> data maturity assesment.</p>
-                    <h4><span class="highlight">FRC-AI champions "Human in the loop" AI for appropriate monitoring and human innovation.</span></h4>
+                    <p> Get a <a href="mailto:info@FRAICLY.com?subject=Inquiry from Website" class="narrative-button">free</a> data maturity assessment.</p>
+                    <h4><span class="highlight">FRAICLY champions "Human in the loop" AI for appropriate monitoring and human innovation.</span></h4>
                     
                     <h4>Custom AI tools:</h4>
                     <p><strong>Expore:</strong>Identify high leverage areas speciic to your business for AI deployment. High leverage areas are defined by high potential time or cashlow returns and range from routine tasks for automation to decision science.</p>
                     <p><strong>Gap analysis:</strong>Compare and contrast the required data and meta data required vs what is available,and the means to close the gap.</p>
-                    <p><strong>Deffinitions:</strong>Full description of the system,human in the loop,functionalities,inputs,outputs and success relative to cash or time returns.</p>
+                    <p><strong>Definitions:</strong>Full description of the system,human in the loop,functionalities,inputs,outputs and success relative to cash or time returns.</p>
                     <p><strong>Pilot:</strong>Select the appropriate model/algorithm, and develop a pilot for testing with users, for refinement.</p>
                     <p><strong>Scale:</strong>scale the pilot to the real world use.</p>
-                    <p><strong>Parrallel run:</strong>Run the AI tool in parrallel with the human process for a predetermined time and samples to ensure efficacy .</p>
+                    <p><strong>Parallel run:</strong>Run the AI tool in parallel with the human process for a predetermined time and samples to ensure efficacy .</p>
                     <p></p>
                     <h4>Automation and LLM integration:</h4>
-                    <p>Large Language Models such as Chatgpt and Copilot can be integrated into your business prcoesses.</p>
+                    <p>Large Language Models such as Chatgpt and Copilot can be integrated into your business processes.</p>
                     <p><strong>Customer Service:</strong>AI-powered chatbots and virtual assistants handle customer inquiries, providing instant, context-aware responses.</p>
                     <p><strong>Sales and Marketing:</strong>AI personalizes marketing campaigns, analyzes customer data for targeted promotions, and automates lead generation, enhancing customer engagement.</p>
                     <p><strong>Document processing:</strong>Use AI to process documents such as invoices,sales orders and internal communications.</p>
@@ -2035,13 +2256,13 @@
     
                 <div id="financial-analysis-tab" class="tab-content">
                     <h2>Financial Analysis</h2>
-                    <p>FRC-AI provides detailed insights into your financial risk and opportunities, ensuring resilient business relationships and stability.</p>
+                    <p>FRAICLY provides detailed insights into your financial risk and opportunities, ensuring resilient business relationships and stability.</p>
                     <h3>Routine or On Demand Reporting:</h3>
                     <h4>External Focussed:</h4>
-                    <p><strong>Credit Risk:</strong> FRC-AI provides in depth reports on the finacnial strength of your most integral clients and suppliers, including an assesment if their strategies and market position.</p>
+                    <p><strong>Credit Risk:</strong> FRAICLY provides in depth reports on the finacnial strength of your most integral clients and suppliers, including an assessment if their strategies and market position.</p>
                     <h4>Internal Focussed:</h4>
                     <p><strong>Optimisation:</strong> We deliver insights into opportunities for financial optimisation based on agreed benchmarks (strategy) and competitors,with a view towards practical consistent improvement.</p>
-                    <p>We also deliver early warning reporting with respect to funding/liqudity gaps, potential financial and strategic drift driven by inflation and interest rate volatility.</p>
+                    <p>We also deliver early warning reporting with respect to funding/liquidity gaps, potential financial and strategic drift driven by inflation and interest rate volatility.</p>
                     <h3>Event and annual Reporting:</h3>
                     <p><strong>Banking risk:</strong> Sustainability reports on banks and other financiers are produced on base interest rate movements and other events.</p>
 
@@ -2051,31 +2272,31 @@
                     <p>Expert guidance for confidential M&A, shareholder exits, and other projects aimed at maximising value and streamlining operations to strategic objectives.</p>
                     <h3>Confidential services:</h3>
                     <h4>M&A</h4>
-                    <p>We can help you identify the ritght target for your strategy, including identifying and quantifying potenital strategies, and fairly valuing your targets, including financial due dilligence.</p>
+                    <p>We can help you identify the right target for your strategy, including identifying and quantifying potenital strategies, and fairly valuing your targets, including financial due dilligence.</p>
                     <h4>Shareholder exits</h4>
                     <p>We deliver a road map to prepare your business for sale. Ensuring you can extract the greatest value possible for your exit. This includes setting certain benchmarks that are attractive to potential buyers and the mechanisms to reach the benchmarks. </p>
                     <h3>Open Services:</h3>
                     <h4>Finance modernisation</h4>
-                    <p>Modernise your finance function to 2025 forward. This goes beyond introducing new systems,but also optimising procedures, refining polciies and fitting the right technology for your specific environment.</p>
+                    <p>Modernise your finance function to 2025 forward. This goes beyond introducing new systems,but also optimising procedures, refining policies and fitting the right technology for your specific environment.</p>
                     
                     
                 </div>
                 <div id="economic-analysis-tab" class="tab-content">
                     <h2>Economic Analysis</h2>
                     <p>Comprehensive economic insights to enhance resilience and drive strategic decision-making tailored to market conditions.</p>
-                    <p>The risk of an incorrect forward strategy, occurs frequently and can be debelitating to small to medium sized consultancies, who either miss opportunities in growth economies by low resource deployment or overextend themselves in contracting economies, Delivering real-time, AI-generated insights to inform strategic planning and prioritize profitable opportunities.</p>
+                    <p>The risk of an incorrect forward strategy, occurs frequently and can be debilitating to small to medium sized consultancies, who either miss opportunities in growth economies by low resource deployment or overextend themselves in contracting economies, Delivering real-time, AI-generated insights to inform strategic planning and prioritize profitable opportunities.</p>
                     <h3>Macroeconomic and Microeconomic Reporting:</h3>
                     <h4>Economic and Market Reports</h4>
                     <p>Applying economic and market conditions to your strategy is integral to your success and growth. We provide digestable economic/market reporting customised to your domain and strategy.</p>
                     <h3>Market and Sector reports</h3>
                     <h4>Competition Benchmarking</h4>
-                    <p>We provide reporting on your competitors, their strategies, advantages and shortcomings. This allows you to compete with the advantage of aysnchoronous information.</p>
+                    <p>We provide reporting on your competitors, their strategies, advantages and shortcomings. This allows you to compete with the advantage of asynchronous information.</p>
 
                 </div>
                 <div id="business_recovery-tab" class="tab-content">
-                    <h2>Business Recovery/Resilence</h2>
+                    <h2>Business Recovery/Resilience</h2>
 
-                    <p>FRC-AI treats business recovery as a process with milestones.</p>
+                    <p>FRAICLY treats business recovery as a process with milestones.</p>
                     <p>Follow our humane road map developed at global private equity firms to experience sustained business turnaround.</p>
 
                     <div class="roadmap-container">
@@ -2137,7 +2358,7 @@
                         <div>
                             <h3>Sustainable Recovery</h3>
                             <p>Increaseing sales rather than reducing expenses leads to sustained recovery.</p>
-                            <p> Get a <a href="mailto:info@frc-ai.com?subject=Inquiry from Website" class="narrative-button">free</a> marketing consultation and assesment to discover the gaps in your marketing strategy.</p>
+                            <p> Get a <a href="mailto:info@FRAICLY.com?subject=Inquiry from Website" class="narrative-button">free</a> marketing consultation and assessment to discover the gaps in your marketing strategy.</p>
                         </div>
                     </ul>
             </section>
@@ -2146,8 +2367,8 @@
     <footer>
         
         <div class="container" id="footer_section">
-            <p>&copy; 2024 FRC-AI. All rights reserved.</p>
-            <p>contact us: info@frc-ai.com</p>
+            <p>&copy; 2024 FRAICLY. All rights reserved.</p>
+            <p>contact us: info@FRAICLY.com</p>
         </div>
     </footer>
     <div class="chatbot-widget">
@@ -2332,13 +2553,15 @@ document.addEventListener("DOMContentLoaded", () => {
         { keywords: ["automation","automate"], response: "SMEs need to leverage AI to remain competitive, contact us to discuss how we can help you automate routine tasks." },
         { keywords: ["ai","aritifical","machine learning"], response: "SMEs need to leverage AI to remain competitive, contact us to discuss preparing your business for AI future." },
         { keywords: ["finance", "financial"], response: "We can assist with financial analysis, risk management, or finance projects like M&A." },
-         { keywords: ["projects","m&a","exit"], response: "Our M&A experts will help you value your target, identify synergies and prepare prospectus for financing or potential buyers" },
-        { keywords: ["recovery", "turnaround","resilence"], response: "We package our skills and services to help SMEs recover from financial weakness." },
+         { keywords: ["projects","m&a","exit"], response: "Our M&A experts will help you value your target, identify synergies and prepare prospectus for financing or potential buyers." },
+        { keywords: ["recovery", "turnaround","resilience"], response: "We package our skills and services to help SMEs recover from financial weakness." },
         { keywords: ["economic", "economy"], response: "We can assist with economic analysis and forecasts to facilitate strategy formations and update." },
         { keywords: ["acquisition","M&A"], response: "We can help you determine the fair value of acquisition targets, and identify synergies." },
         { keywords: ["pricing","price","cost"], response: "Lets have a discussion on how our interactions best fit your needs, sometimes the best fit is on a project basis or as a trusted partner." },
         { keywords: ["bye", "goodbye"], response: "Goodbye! Have a great day!" },
         { keywords: ["help", "support"], response: "I'm here to help! Please tell me what you need assistance with." },
+        { keywords: ["trump", "maga"], response: "The current US economic policies are expected to increase the cost of living and reduce the velocity of money,which is likely to slow economic growth. US poor economic performances reverburate globally. Let us colaborate to fortify your business." },
+        { keywords: ["united kingdom", "uk"], response: "The UK's economy is experiencing a slow growth period, which is likely to slow further given the expected weakness of the US economy. Email us to start a discussion on how FRAICLY can help your business thrive in this recessionary environment" },
         { keywords: ["default"], response: "I'm not sure I understand. Can you rephrase?" }
     ];
 
@@ -2383,7 +2606,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const sendWelcomeMessage = () => {
         if (!chatbotBody.classList.contains("opened")) {
             chatbotBody.classList.add("opened"); // Track if the chatbot has been opened
-            setTimeout(() => displayMessage("Welcome to FRC-AI ! I am a chatbot! let me know the service you interested in and I will assist you.", "bot"), 300); // Delay to simulate typing
+            setTimeout(() => displayMessage("Welcome to FRAICLY ! I am a chatbot! let me know the service you interested in and I will assist you.", "bot"), 300); // Delay to simulate typing
         }
     };
 
