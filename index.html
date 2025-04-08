@@ -613,6 +613,7 @@
         }
 
         .Journey_large-cell,.Right-Journey_large-cell {
+            display:none;
             /*background-image: url("The image features reports.jpg");*/
             background-size: cover;
             background-repeat: no-repeat;
@@ -654,7 +655,7 @@
         }
 
         .Risk_Journey {
-
+          
             background-color:#88bbf27e;/*rgba(77, 137, 240, 0.534);*/
 
             position: relative;
@@ -671,6 +672,7 @@
         }
         @media (max-width: 768px) {
     .Risk_journey-grid-container {
+        display:none;
         grid-template-columns: 1fr; /* One column for mobile */
         grid-template-rows: auto;
         gap: 10px; /* Smaller gap for mobile */
@@ -695,7 +697,8 @@
         }
 
         .Risk_journey-grid-container {
-            display:grid;
+            /*display:grid;*/
+            display:none;
             grid-template-columns: repeat(5, 1fr);
             grid-template-rows: auto auto auto;
             gap: 20px;
@@ -759,6 +762,7 @@
     }
 
     .Risk_journey-grid-container {
+        display:none;
         grid-template-columns: 1fr; /* Single column */
         gap: 5px; /* Tighten gaps further */
 
