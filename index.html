@@ -1415,66 +1415,68 @@
     }
     
 }
-       .results-table {
-  padding: 4rem 1rem;
-  background-color: #f9fafb;
-}
-
-.results-table h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.results-table table {
+       /* Modal Background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
   width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  border-collapse: collapse;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
 }
 
-.results-table th,
-.results-table td {
-  text-align: left;
-  padding: 1rem;
-  vertical-align: top;
+/* Modal Box */
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.results-table th {
-  background-color: #f3f4f6;
-  font-size: 1.2rem;
+/* Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.results-table tr:nth-child(even) {
-  background-color: #f9fafb;
+.close:hover {
+  color: #000;
 }
 
-.results-table tr:nth-child(odd) {
-  background-color: #ffffff;
+/* Form Fields (optional: match your strategy-form styles here) */
+.modal-content input,
+.modal-content textarea,
+.modal-content select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
 }
 
-@media (max-width: 600px) {
-  .results-table table,
-  .results-table thead,
-  .results-table tbody,
-  .results-table th,
-  .results-table td,
-  .results-table tr {
-    display: block;
-    width: 100%;
-  }
+.modal-content button[type="submit"] {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
 
-  .results-table th {
-    text-align: center;
-    background-color: transparent;
-    font-weight: bold;
-  }
-
-  .results-table td {
-    padding: 0.5rem 1rem;
-    border-bottom: 1px solid #e5e7eb;
-  }
+.modal-content button[type="submit"]:hover {
+  background-color: #1e40af;
 }
 
 
@@ -1491,7 +1493,11 @@
             <div class="mobile_hero"></div>
              <div class="mobile_title">
                  <!--<h1>FRAICLY</h1>-->
-                 <div class="mobile-fraicly-image"></div>
+                 <div class="hero-video">
+                  <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8I-PcHx8Ukk?si=4ukYRRFND2Tvst4V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            </div>
                  <div class="menu_word">menu</div>
                  <div class="menu-toggle" onclick="Mobile_toggleMenu()">☰</div>
             </div>
@@ -1601,16 +1607,19 @@
     
     <section class="hero">
         <div class="hero-content">
-
+           <!---
             <h1>We help your business manage financial risks with AI powered solutions.</h1>
             <p>SMEs face heightened risks from both AI and economic shocks. FRAICLY's AI driven insights and reporting can help. </p>
             <a href="mailto:info@FRAICLY.com?subject=Inquiry from Website" class="cta-button">Get in Touch</a>
-
+            -->
 
             <h1>Turn complexity into clarity.</h1>
             <p>AI-powered financial & risk solutions for consultancies, contractors, and Fin-techs who are done guessing.</p>
             <p>→ Cut costs. Forecast better. Recover faster.</p>
-            <div class="mt-4"> <button class="bg-blue-600 text-white px-6 py-3 rounded-2xl shadow-md hover:bg-blue-700"> Get Your Free Strategy Session </button> </div>
+            <div class="mt-4"> <button id="openModal" class="bg-blue-600 text-white px-6 py-3 rounded-2xl shadow-md hover:bg-blue-700">
+              Get Your Free Strategy Session
+            </button>
+        </div>
         </div>
         
         <div class="hero-video">
@@ -2654,6 +2663,26 @@ function closeDropdown(element) {
                 });
             }
         });
+
+
+        <script>
+  document.getElementById('openModal').addEventListener('click', function () {
+    document.getElementById('strategyModal').style.display = 'block';
+  });
+
+  document.querySelector('.close').addEventListener('click', function () {
+    document.getElementById('strategyModal').style.display = 'none';
+  });
+
+  // Optional: Close modal when clicking outside the modal content
+  window.onclick = function(event) {
+    const modal = document.getElementById('strategyModal');
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+</script>
+
 
 </script>
 
