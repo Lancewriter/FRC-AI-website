@@ -564,6 +564,7 @@
 
         /* Buttons */
         .small-cell button {
+            display:none;
             margin-top: 10px;
             background-color: #007bff;
             color: white;
@@ -580,7 +581,7 @@
 
          /* Grid container styling */
          .Risk_grid-container {
-            display:grid;
+            display:none;
             grid-template-columns: repeat(5, 1fr);
             grid-template-rows: auto auto auto;
             gap: 20px;
@@ -592,7 +593,7 @@
 
          /* Grid container styling */
          .Journey_grid-container {
-            display:grid;   
+            display:none;   
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: auto auto;
             gap: 10px;
@@ -602,6 +603,7 @@
         }
         @media (max-width: 768px) {
             .Journey_grid-container {
+                display:none;
                 padding-bottom:550px;
                 height:200px;
                 
@@ -655,6 +657,7 @@
         }
 
         .Risk_Journey {
+            display:none;
           
             background-color:#88bbf27e;/*rgba(77, 137, 240, 0.534);*/
 
@@ -682,6 +685,7 @@
 }
 
         .Risk_Journey::before {
+            display:none;
             content: "";
             position: absolute;
             top: 0;
@@ -713,6 +717,7 @@
         }
 
         .Risk_journey_header-cell {
+        display:none;
         font-weight: bold;
         background-color: #8282847c;
         padding: 10px;
@@ -758,6 +763,7 @@
 
         @media (max-width: 480px) {
     .Risk_Journey {
+        display:none;
         padding: 10px; /* Reduce padding for extra-small screens */
     }
 
@@ -1608,13 +1614,14 @@
             </button>
 
         </div>
-        </div>
+        
         
         <div class="hero-video">
         <div class="video-container">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/8I-PcHx8Ukk?si=4ukYRRFND2Tvst4V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         </div>
+    </div>
     
         
     
@@ -1708,7 +1715,10 @@
     </section>
      <div class="separator"></div>
    <section class="results-table">
-  <h2>Real Problems. Real Results.</h2>
+    <div class="section_hero">
+            <h1>Real Problems Real Results</h1>
+        </div>
+  
 
   <table>
     <thead>
