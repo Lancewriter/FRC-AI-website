@@ -1407,7 +1407,107 @@
     }
     
 }
+/* Modal Overlay */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+}
 
+/* Modal Box */
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+/* Form Elements */
+.modal-content input,
+.modal-content textarea,
+.modal-content select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Submit Button */
+.modal-content button[type="submit"] {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+
+.modal-content button[type="submit"]:hover {
+  background-color: #1e40af;
+}
+
+/* Modal Header */
+.modal-content h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #111827;
+}
+
+/* Mobile-Specific Tweaks */
+@media (max-width: 480px) {
+  .modal-content {
+    margin: 2rem auto;
+    padding: 1.5rem 1rem;
+    width: 95%;
+  }
+
+  .modal-content h2 {
+    font-size: 1.25rem;
+  }
+
+  .modal-content input,
+  .modal-content textarea,
+  .modal-content select {
+    font-size: 1rem;
+    padding: 0.7rem;
+  }
+
+  .modal-content button[type="submit"] {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  .close {
+    font-size: 24px;
+  }
+}
 
     </style>
 </head>
@@ -1534,7 +1634,10 @@
         <div class="hero-content">
             <h1>We help your business manage financial risks with AI powered solutions.</h1>
             <p>SMEs face heightened risks from both AI and economic shocks. FRAICLY's AI driven insights and reporting can help. </p>
-            <a href="mailto:info@FRAICLY.com?subject=Inquiry from Website" class="cta-button">Get in Touch</a>
+          <button id="openModal" class="bg-blue-600 text-white px-6 py-3 rounded-2xl shadow-md hover:bg-blue-700">
+          Get Your Free Strategy Session
+          </button>
+
 
         </div>
         
@@ -2268,6 +2371,43 @@
             </div>
         </div>
     </div>
+    <!-- Place this inside your <body> -->
+<section class="strategy-form">
+  <h2>Book Your Free Strategy Session</h2>
+  <form action="/submit" method="POST">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="company">Company</label>
+    <input type="text" id="company" name="company" required>
+
+    <label for="position">Position / Role</label>
+    <input type="text" id="position" name="position" required>
+
+    <label for="email">Work Email Address</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="objective">What would you like to achieve?</label>
+    <textarea id="objective" name="objective" rows="4" required></textarea>
+
+    <label for="meeting-type">Preferred Meeting Type</label>
+    <select id="meeting-type" name="meeting_type">
+      <option value="video">Video Call</option>
+      <option value="phone">Phone Call</option>
+      <option value="email">Email Follow-up</option>
+    </select>
+
+    <label for="timeline">Timeline</label>
+    <select id="timeline" name="timeline">
+      <option value="asap">ASAP</option>
+      <option value="1month">Within 1 Month</option>
+      <option value="exploring">Just Exploring</option>
+    </select>
+
+    <button type="submit">Submit Request</button>
+  </form>
+</section>
+
     <script>
        
     document.addEventListener("DOMContentLoaded", () => {
@@ -2540,6 +2680,25 @@ function closeDropdown(element) {
                 });
             }
         });
+
+// form creator
+  document.getElementById('openModal').addEventListener('click', function () {
+    document.getElementById('strategyModal').style.display = 'block';
+  });
+
+  document.querySelector('.close').addEventListener('click', function () {
+    document.getElementById('strategyModal').style.display = 'none';
+  });
+
+  // Optional: Close modal when clicking outside the modal content
+  window.onclick = function(event) {
+    const modal = document.getElementById('strategyModal');
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+
+
 
 </script>
 
