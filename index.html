@@ -257,6 +257,41 @@
   height: 100%;
     
     }
+     .mobile-hero-video {
+
+            flex: 0 0 60%;
+            display: none;
+            align-items: flex-start;
+             
+           
+            /*width: 50%;
+            height: 100%;*/
+            /*object-fit:contain;*/
+            
+            /*max-width: 50%; /* 50% of viewport width */
+            /*flex: 1.2;
+            min-width: 400px;*/
+
+        }
+    .mobile-video-container {
+        position: relative;
+        aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
+        width:100%;
+        overflow: hidden;
+        
+        border-radius: 12px; /* optional styling */
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* optional styling */
+        }
+
+   .mobile-video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+    
+    }
+
 
          .fraicly-image {
             width: 500px; /* 50% of viewport width */
@@ -674,6 +709,48 @@
             box-sizing: border-box;
         }
         @media (max-width: 768px) {
+
+            hero-video {
+
+            flex: 0 0 60%;
+            display:none;
+            }
+        
+        .mobile-hero-video {
+
+            flex: 0 0 60%;
+            display: flex;
+            align-items: flex-start;
+             
+           
+            /*width: 50%;
+            height: 100%;*/
+            /*object-fit:contain;*/
+            
+            /*max-width: 50%; /* 50% of viewport width */
+            /*flex: 1.2;
+            min-width: 400px;*/
+
+        }
+    .mobile-video-container {
+        position: relative;
+        aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
+        width:100%;
+        overflow: hidden;
+        
+        border-radius: 12px; /* optional styling */
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* optional styling */
+        }
+
+   .mobile-video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+    
+    }
+
     .Risk_journey-grid-container {
         display:none;
         grid-template-columns: 1fr; /* One column for mobile */
@@ -1551,7 +1628,7 @@
             <!--<div class="mobile_hero"></div>-->
              <div class="mobile_title">
                  <!--<h1>FRAICLY</h1>-->
-                 <div class="hero-video">
+                 <div class="mobile-hero-video">
                   <div class="video-container">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/8I-PcHx8Ukk?si=4ukYRRFND2Tvst4V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
