@@ -1239,7 +1239,8 @@
         cursor: pointer;
         padding: 0 0 0 90px;
     }
-    .menu_word{ padding: 0 0 0 105px;}
+    .menu_word{ font-size:16px;
+               padding: 0 0 0 90px;}
     
     .mobile_hero{
         top:0px;
@@ -1584,35 +1585,52 @@
 }
 
     @media (max-width: 768px) {
-  .results-table table,
-  .results-table thead,
-  .results-table tbody,
-  .results-table th,
-  .results-table td,
-  .results-table tr {
+    .results-table td:first-child::before {
+    content: "Before:";
+    font-weight: bold;
+    color: #dc2626;
     display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .results-table td:last-child::before {
+    content: "With Fraicly:";
+    font-weight: bold;
+    color: #16a34a;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  .results-table table {
     width: 100%;
+    border-collapse: collapse;
   }
 
   .results-table thead {
-    display: none; /* Hide table headers on mobile */
-  }
-
-  .results-table td {
-    padding: 1rem;
-    position: relative;
-    text-align: left;
-    border-bottom: 1px solid #e5e7eb;
-    background-color: #ffffff;
+    display: none; /* Still hide headers on mobile */
   }
 
   .results-table tr {
-    margin-bottom: 2rem;
-    border-radius: 8px;
+    display: flex;
+    flex-direction: row; /* Keep it horizontal */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
     background-color: #f9fafb;
+    padding: 1rem;
+    border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   }
-}
+
+  .results-table td {
+    width: 48%;  /* Two columns */
+    padding: 1rem;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+  }
 @media (max-width: 768px) {
   .mobile_header {
     flex-direction: row !important; /* Stack vertically on mobile */
@@ -1655,10 +1673,7 @@
             <div class="menu-toggle" onclick="Mobile_toggleMenu()">☰</div>
           </div>
 
-          <div class="mobile-hero-video">
-            <div class="mobile-video-container">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/8I-PcHx8Ukk?si=4ukYRRFND2Tvst4V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
+          
   </div>
 </div>
              
