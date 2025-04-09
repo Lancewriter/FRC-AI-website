@@ -312,7 +312,7 @@
         .sidekick-content h2 {
             font-size: 2rem; /* Large heading */
             margin-bottom: 1rem;
-            color: red;
+            color: #708090;
             font-family:'Trebuchet','Tahoma','Helvetica','Arial', sans-serif;
 
         }
@@ -341,7 +341,7 @@
             color: #ffffff;
             text-decoration: none;
             border-radius: 5px;
-            font-size: 1.25rem;
+            font-size: 2rem;
             transition: background-color 0.3s ease;
             margin-bottom:2rem;
             margin-top:0.1rem;
@@ -1477,14 +1477,22 @@
       box-sizing: border-box;
     }
 
-    button[type="submit"] {
-      background-color: #2563eb;
+    .modal-content button[type="submit"] {
+      background-color: #64748b;  /* slate-500 */
       color: white;
       border: none;
       cursor: pointer;
+      padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;               /* Optional: full width button */
+  transition: background-color 0.3s ease
     }
 
-    button[type="submit"]:hover {
+    .modal-content button[type="submit"]:hover {
       background-color: #1e40af;
     }
    
