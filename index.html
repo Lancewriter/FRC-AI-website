@@ -310,9 +310,9 @@
             background-color: #f0f0f0; /* Optional: background color for contrast */
         }
         .sidekick-content h2 {
-            font-size: 1rem; /* Large heading */
+            font-size: 2rem; /* Large heading */
             margin-bottom: 1rem;
-            color: #333;
+            color: red;
             font-family:'Trebuchet','Tahoma','Helvetica','Arial', sans-serif;
 
         }
@@ -1251,6 +1251,9 @@
             padding:1px; /* Adjust padding as needed */
             background-color: #f0f0f0; /* Optional: background color for contrast */
         }
+         .sidekick-content h2{font-size: 0.8rem;
+            color: #555;
+            font-style: italic;}
 
     .grid-container {
         grid-template-columns: 1fr; /* Single-column layout */
@@ -1425,54 +1428,66 @@
     }
     
 }
-   .modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.5);
-  overflow-y: auto;
-}
+        /* Modal Background */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background-color: rgba(0, 0, 0, 0.5);
+      overflow-y: auto;
+    }
 
-.modal.active {
-  display: block;
-}
+    /* Modal Visible */
+    .modal.active {
+      display: block;
+    }
 
-.modal-content {
-  background: white;
-  margin: 10% auto;
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 600px;
-  width: 90%;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
+    /* Modal Content */
+    .modal-content {
+      background: white;
+      margin: 10% auto;
+      padding: 2rem;
+      border-radius: 10px;
+      max-width: 600px;
+      width: 90%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
 
-.close {
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  color: #aaa;
-  cursor: pointer;
-}
+    .close {
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      color: #aaa;
+      cursor: pointer;
+    }
 
-.close:hover {
-  color: #000;
-}
+    .close:hover {
+      color: #000;
+    }
 
-.modal-content input,
-.modal-content textarea,
-.modal-content button {
-  width: 100%;
-  margin-bottom: 1rem;
-  padding: 0.75rem;
-  font-size: 1rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
+    input, textarea, button {
+      width: 100%;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
 
+    button[type="submit"] {
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
 
-
+    button[type="submit"]:hover {
+      background-color: #1e40af;
+    }
+   
     </style>
 </head>
 <body>
@@ -1609,9 +1624,7 @@
             <h1>AI-Powered Financial and Cash Flow Risk Management.</h1>
             <p>AI-powered financial risk solutions for consultancies, contractors, and Fin-techs who are done guessing.</p>
             <p>→ Cut costs. Forecast better. Recover faster.</p>
-            <button id="openModalBtn" class="bg-blue-600 text-white px-6 py-3 rounded-2xl shadow-md hover:bg-blue-700">
-              Get Your Free Strategy Session
-            </button>
+            <button id="openModalBtn">Get Your Free Strategy Session</button>
 
         </div>
         
@@ -1637,7 +1650,7 @@
     <div class="sidekick-content ">
         
         <h1>Take the first step to mitigate these risks and capture opportunities with the below:</h1>
-                <h2> Get a <a href="mailto:info@FRAICLY.com?subject=Inquiry from Website" class="narrative-button">free</a> data maturity assessment.</h2>
+                <h2> Get your <a href="mailto:info@FRAICLY.com?subject=Inquiry from Website" class="narrative-button">free</a> AI-readiness assessment — see where your data stands.</h2>
                 <h2> Lets talk about growing your sales pipeline for  <a href="mailto:info@FRAICLY.com?subject=Inquiry from Website" class="narrative-button">free</a>.</h2>
         
         </div>
@@ -1648,7 +1661,7 @@
    
     <section id="Risk_Journey_section",class="Risk_Journey">
         <div class="Journey-content">
-            
+        <!---    
         <div class="section_hero">
             <h1>Your Journey</h1>
         </div>
@@ -1684,7 +1697,7 @@
           </ul>
             
             <div class="Risk_journey-grid-container">
-                <!-- Top Row: Logos -->
+                <!-- Top Row: Logos 
 
                 <div class="Risk_journey_header-cell"><strong>Risk</strong></div>
                 <div class="Risk_journey_header-cell">Short term impact</div>
@@ -1699,7 +1712,7 @@
                 <div class="Risk_journey_impact-cell">Distressed / failed business</div>
                 <div class="Risk_journey_solution-cell"><strong><a href="#" onclick="scrollToTab('ai-services-tab')" aria-label="Go to ai services Tab">AI Design and Deployment</a></strong></div>
                 
-                <!-- Second Row: Commentary -->
+                <!-- Second Row: Commentary 
                 <div class="Risk_journey_Risk-cell"><strong>Economic downturns</strong></div>
                 <div class="Risk_journey_impact-cell">Low / declining revenue</div>
                 <div class="Risk_journey_impact-cell">Client defaults / Supplier failure</div>
@@ -1713,6 +1726,7 @@
      </div>
     </div>
     </section>
+    --->
      <div class="separator"></div>
    <section class="results-table">
     <div class="section_hero">
@@ -2390,32 +2404,28 @@
         </div>
     </div>
 
-<div id="strategyModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Book Your Free Strategy Session</h2>
-    <form>
-      <!-- Form fields -->
-      <label for="name">Full Name</label>
-      <input type="text" id="name" required>
+<!-- Modal -->
+  <div id="strategyModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Book Your Free Strategy Session</h2>
+      <form>
+        <label for="name">Name</label>
+        <input id="name" required>
 
-      <label for="company">Company</label>
-      <input type="text" id="company" required>
+        <label for="company">Company</label>
+        <input id="company" required>
 
-      <label for="position">Position / Role</label>
-      <input type="text" id="position" required>
+        <label for="email">Email</label>
+        <input id="email" type="email" required>
 
-      <label for="email">Work Email</label>
-      <input type="email" id="email" required>
+        <label for="objective">Objective</label>
+        <textarea id="objective" rows="4" required></textarea>
 
-      <label for="objective">Your Objective</label>
-      <textarea id="objective" rows="4" required></textarea>
-
-      <button type="submit">Submit</button>
-    </form>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
   </div>
-</div>
-
     <script>
        
     document.addEventListener("DOMContentLoaded", () => {
@@ -2691,21 +2701,23 @@ function closeDropdown(element) {
 
 
     
-  document.getElementById('openModal').addEventListener('click', function () {
-    document.getElementById('strategyModal').style.display = 'block';
-  });
+ const modal = document.getElementById('strategyModal');
+    const openBtn = document.getElementById('openModalBtn');
+    const closeBtn = document.querySelector('.close');
 
-  document.querySelector('.close').addEventListener('click', function () {
-    document.getElementById('strategyModal').style.display = 'none';
-  });
+    openBtn.addEventListener('click', () => {
+      modal.classList.add('active');
+    });
 
-  // Optional: Close modal when clicking outside the modal content
-  window.onclick = function(event) {
-    const modal = document.getElementById('strategyModal');
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
-  };
+    closeBtn.addEventListener('click', () => {
+      modal.classList.remove('active');
+    });
+
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+      }
+    });
 
 
 
