@@ -1616,6 +1616,27 @@
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   }
 }
+@media (max-width: 768px) {
+  .mobile_header {
+    flex-direction: column !important; /* Stack vertically on mobile */
+    align-items: center; /* Optional: center elements horizontally */
+    text-align: center;  /* Optional: center text/content */
+  }
+
+  .mobile_title,
+  .mobile-hero-video,
+  .menu_word,
+  .menu-toggle {
+    width: 100%; /* Make each section take full width */
+    margin-bottom: 1rem; /* Optional spacing between stacked elements */
+  }
+
+  .video-container iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9; /* Responsive video sizing */
+  }
+}
 
    
     </style>
@@ -1630,7 +1651,7 @@
              
             <!--<div class="mobile_hero"></div>-->
              <div class="mobile_title">
-                 <div class="fraicly-image"></div>
+                 <div class="mobile-fraicly-image"></div>
                  <!--<h1>FRAICLY</h1>-->
              </div>
                  <div class="mobile-hero-video">
