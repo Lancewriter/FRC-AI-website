@@ -1495,6 +1495,46 @@
     .modal-content button[type="submit"]:hover {
       background-color: #1e40af;
     }
+    .results-table {
+  min-height: 75vh; /* 75% of the viewport height */
+  padding: 5rem 1.5rem;
+  background-color: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+    @media (max-width: 768px) {
+  .results-table table,
+  .results-table thead,
+  .results-table tbody,
+  .results-table th,
+  .results-table td,
+  .results-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .results-table thead {
+    display: none; /* Hide table headers on mobile */
+  }
+
+  .results-table td {
+    padding: 1rem;
+    position: relative;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+    background-color: #ffffff;
+  }
+
+  .results-table tr {
+    margin-bottom: 2.5rem;
+    border-radius: 8px;
+    background-color: #f9fafb;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+}
+
    
     </style>
 </head>
@@ -1738,7 +1778,7 @@
      <div class="separator"></div>
    <section class="results-table">
     <div class="section_hero">
-            <h1>Real Problems Real Results</h1>
+            <h1>Your Real Problems: Fraicly's Real Results</h1>
         </div>
   
 
@@ -1759,8 +1799,8 @@
         <td>✅Data-backed and AI driven bid evaluation and margin forecasting</td>
       </tr>
       <tr>
-        <td>❌ Only reacting to recessions and recoveries — a common reason companies fail</td>
-        <td>✅Early-warning scans for economic shifts to drive timely adaptation and goal-aligned planning.</td>
+        <td>❌Reacting late to cycles is why many companies fail</td>
+        <td>✅Early-warning economic signals -> timely adaptation and economic-aligned goals</td>
       </tr>
       <tr>
         <td>❌ Inefficient workflows</td>
