@@ -1240,7 +1240,7 @@
         padding: 0 0 0 90px;
     }
     .menu_word{ font-size:16px;
-               padding: 0 0 0 80px;}
+               padding: 0 0 0 75px;}
     
     .mobile_hero{
         top:0px;
@@ -1611,7 +1611,9 @@
 
   .results-table tr {
     display: flex;
+     
     flex-direction: row; /* Keep it horizontal */
+    font-size:1rem;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 1rem;
@@ -1623,12 +1625,19 @@
   }
 
   .results-table td {
-    width: 45%;  /* Two columns */
-    padding: 1rem;
+    width: 100%;  /* Two columns */
+    flex: 1 1 45%;
+    padding: 0.5rem 0.75rem;
     background-color: #ffffff;
     border: 1px solid #e5e7eb;
     border-radius: 6px;
     box-sizing: border-box;
+    line-height: 1.4;             /* More compact than default (1.6–1.8) */
+    vertical-align: top; 
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
   }
 @media (max-width: 768px) {
@@ -1920,10 +1929,6 @@
     </thead>
     <tbody>
         <tr>
-        <td>❌ Your Real World Problems</td>
-        <td>✅ Fraicly's Real World Solutions</td>
-      </tr>
-      <tr>
         <td>❌ Defaulting or slow-paying clients</td>
         <td>✅ AI-powered payment forecasting and client risk analysis</td>
       </tr>
