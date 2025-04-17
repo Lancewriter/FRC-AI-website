@@ -10,7 +10,7 @@ from datetime import datetime
 """import requests"""
 from openai import OpenAI
 
-client = OpenAI(api_key='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')
+client = OpenAI(api_key=os.environ["OpenAI_Key"])
 MAKE_WEBHOOK_URL = os.environ.get("MAKE_WEBHOOK_URL")
 
 # Preloaded conversation history to guide Beacon’s tone and flow
