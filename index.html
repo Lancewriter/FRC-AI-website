@@ -1077,7 +1077,7 @@
 }
 
 .chatbot-button {
-  background-color: #073b4c;
+  background-color: #0d4e66;
   padding: 10px;
   border-radius: 50%;
   cursor: pointer;
@@ -1106,15 +1106,22 @@
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-.chatbot-header {
-  background-color: #073b4c;
+ .chatbot-header {
+  background-color: #0d4e66;
   color: #ffffff;
   padding: 12px;
   font-size: 1rem;
   font-weight: bold;
   text-align: center;
 }
-
+.chatbot-close-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  float: right;
+  cursor: pointer;
+}
 .chatbot-messages {
   flex: 1;
   padding: 12px;
@@ -2639,7 +2646,12 @@
   </div>
 
   <div class="chatbot-body">
-    <div class="chatbot-header">Fraicly Chat</div>
+    <div class="chatbot-header">      
+  Fraicly Chat
+  <button class="chatbot-close-btn" aria-label="Close chatbot">×</button>
+</div>
+
+    </div>
     <div id="chat-messages" class="chatbot-messages"></div>
     <div class="chatbot-input">
       <input id="chat-input" type="text" placeholder="Type your message...">
