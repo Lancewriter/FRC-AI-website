@@ -1108,11 +1108,14 @@
 
  .chatbot-header {
   background-color: #4a6eff;
-  color: #ffffff;
-  padding: 12px;
-  font-size: 1rem;
-  font-weight: bold;
-  text-align: center;
+  color: #fff;
+  padding: 8px 12px;  /* reduced padding */
+  font-weight: 600;
+  font-size: 14px;    /* smaller text */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;       /* fix height */
 }
 .chatbot-close-btn {
   background: none;
@@ -2633,7 +2636,7 @@
 
   <div class="chatbot-body">
     <div class="chatbot-header">      
-    BEACON CHATBOT
+    <span>Beacon Chatbot</span>
   <button class="chatbot-close-btn" aria-label="Close chatbot">×</button>
 </div>
 
@@ -2958,98 +2961,109 @@ const removeTyping = () => {
     });
 });*/
 //chat bot with chatgpt engine
+<script>
 document.addEventListener("DOMContentLoaded", () => {
-    const chatbotButton = document.querySelector(".chatbot-button");
-    const chatbotBody = document.querySelector(".chatbot-body");
-    const chatMessages = document.getElementById("chat-messages");
-    const chatInput = document.getElementById("chat-input");
-    const sendBtn = document.getElementById("chat-send-btn");
-    const closeBtn = document.querySelector(".chatbot-close-btn");
+  const openBtn = document.getElementById("open-chatbot");
+  const chatbotBody = document.getElementById("chatbot-body");
+  const closeBtn = document.querySelector(".chatbot-close-btn");
+  const chatMessages = document.getElementById("chat-messages");
+  const chatInput = document.getElementById("chat-input");
+  const sendBtn = document.getElementById("chat-send-btn");
 
-    const saveToHistory = (userMsg, botMsg) => {
-        const chatHistory = JSON.parse(localStorage.getItem("fraiclyChatHistory")) || [];
-        chatHistory.push({ user: userMsg, bot: botMsg });
-        localStorage.setItem("fraiclyChatHistory", JSON.stringify(chatHistory));
-
-     document.querySelector(".chatbot-close-btn").addEventListener("click", () => {
-  chatbotBody.style.display = "none";
-});
-    };
-
-    const loadChatHistory = () => {
-        const chatHistory = JSON.parse(localStorage.getItem("fraiclyChatHistory")) || [];
-        chatHistory.forEach(pair => {
-            displayMessage(pair.user, "user");
-            displayMessage(pair.bot, "bot");
-        });
-    };
-
-    const displayMessage = (message, sender) => {
-        const messageDiv = document.createElement("div");
-        messageDiv.classList.add("message", sender);
-        messageDiv.textContent = message;
-        chatMessages.appendChild(messageDiv);
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-    };
-
-    const showTyping = () => {
-        const typingDiv = document.createElement("div");
-        typingDiv.classList.add("message", "bot", "typing");
-        typingDiv.textContent = "Beacon is typing...";
-        chatMessages.appendChild(typingDiv);
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-    };
-
-    const removeTyping = () => {
-        const typingDiv = chatMessages.querySelector(".typing");
-        if (typingDiv) typingDiv.remove();
-    };
-
-    const sendMessage = () => {
-        const userText = chatInput.value.trim();
-        if (!userText) return;
-
-        displayMessage(userText, "user");
-        chatInput.value = "";
-        showTyping();
-
-        fetch("/chat", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ message: userText })
-        })
-        .then(response => response.json())
-        .then(data => {
-            removeTyping();
-            if (data.reply) {
-                displayMessage(data.reply, "bot");
-                saveToHistory(userText, data.reply);
-            } else {
-                displayMessage("Sorry, something went wrong.", "bot");
-            }
-        })
-        .catch(err => {
-            console.error("Chat error:", err);
-            removeTyping();
-            displayMessage("Oops! Something went wrong. Please try again later.", "bot");
-        });
-    };
-
-    sendBtn.addEventListener("click", sendMessage);
-    chatInput.addEventListener("keydown", (e) => {
-        if (e.key === "Enter") sendMessage();
+  // Load any previous chat history
+  const loadChatHistory = () => {
+    const history = JSON.parse(localStorage.getItem("fraiclyChatHistory")) || [];
+    history.forEach(({ user, bot }) => {
+      displayMessage(user, "user");
+      displayMessage(bot, "bot");
     });
+  };
 
-    chatbotButton.addEventListener("click", () => {
-        const isVisible = chatbotBody.style.display === "block";
-        chatbotBody.style.display = isVisible ? "none" : "block";
-        if (!isVisible && chatMessages.childElementCount === 0) {
-            setTimeout(() => displayMessage("I'm Beacon from Fraicly. What can I help you with?", "bot"), 300);
-        }
+  // Save to local history
+  const saveToHistory = (user, bot) => {
+    const history = JSON.parse(localStorage.getItem("fraiclyChatHistory")) || [];
+    history.push({ user, bot });
+    localStorage.setItem("fraiclyChatHistory", JSON.stringify(history));
+  };
+
+  // Display message in chat
+  const displayMessage = (message, sender) => {
+    const messageDiv = document.createElement("div");
+    messageDiv.classList.add("message", sender);
+    messageDiv.textContent = message;
+    chatMessages.appendChild(messageDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  };
+
+  // Show typing indicator
+  const showTyping = () => {
+    const typingDiv = document.createElement("div");
+    typingDiv.classList.add("message", "bot", "typing");
+    typingDiv.textContent = "Beacon is typing...";
+    chatMessages.appendChild(typingDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  };
+
+  // Remove typing indicator
+  const removeTyping = () => {
+    const typingDiv = chatMessages.querySelector(".typing");
+    if (typingDiv) typingDiv.remove();
+  };
+
+  // Send user message to server and handle response
+  const sendMessage = () => {
+    const userText = chatInput.value.trim();
+    if (!userText) return;
+
+    displayMessage(userText, "user");
+    chatInput.value = "";
+    showTyping();
+
+    fetch("/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message: userText })
+    })
+    .then(res => res.json())
+    .then(data => {
+      removeTyping();
+      if (data.reply) {
+        displayMessage(data.reply, "bot");
+        saveToHistory(userText, data.reply);
+      } else {
+        displayMessage("Sorry, something went wrong.", "bot");
+      }
+    })
+    .catch(error => {
+      console.error("Chat error:", error);
+      removeTyping();
+      displayMessage("Oops! Something went wrong. Please try again later.", "bot");
     });
+  };
 
-    loadChatHistory();
+  // === Event Listeners ===
+
+  // Open chatbot on widget click
+  openBtn.addEventListener("click", () => {
+    chatbotBody.style.display = "block";
+  });
+
+  // Close chatbot
+  closeBtn.addEventListener("click", () => {
+    chatbotBody.style.display = "none";
+  });
+
+  // Send on click or Enter key
+  sendBtn.addEventListener("click", sendMessage);
+  chatInput.addEventListener("keydown", e => {
+    if (e.key === "Enter") sendMessage();
+  });
+
+  // Load stored messages
+  loadChatHistory();
 });
+</script>
+
 
 
 
