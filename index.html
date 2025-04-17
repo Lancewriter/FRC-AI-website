@@ -1077,7 +1077,7 @@
 }
 
 .chatbot-button {
-  background-color: #0d4e66;
+  background-color: #2ec4d6;
   padding: 10px;
   border-radius: 50%;
   cursor: pointer;
@@ -1096,7 +1096,7 @@
 .chatbot-body {
   display: none;
   width: 320px;
-  height: 420px;
+  height: 220px;
   background: #ffffff;
   border: 1px solid #ccc;
   border-radius: 16px;
@@ -1107,7 +1107,7 @@
 }
 
  .chatbot-header {
-  background-color: #0d4e66;
+  background-color: #2ec4d6;
   color: #ffffff;
   padding: 12px;
   font-size: 1rem;
@@ -2741,6 +2741,11 @@
             });
         });
     });
+
+  document.querySelector(".chatbot-close-btn").addEventListener("click", () => {
+  chatbotBody.style.display = "none";
+});
+
 
     // Scroll to a specific section
     function scrollToSection(sectionId) {
