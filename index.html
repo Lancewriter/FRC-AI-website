@@ -1077,7 +1077,7 @@
 }
 
 .chatbot-button {
-  background-color: #2ec4d6;
+  background-color: #00bfff;
   padding: 10px;
   border-radius: 50%;
   cursor: pointer;
@@ -1097,7 +1097,7 @@
   display: none;
   width: 320px;
   height: 220px;
-  background: #ffffff;
+  background: #00bfff;
   border: 1px solid #ccc;
   border-radius: 16px;
   overflow: hidden;
@@ -1107,7 +1107,7 @@
 }
 
  .chatbot-header {
-  background-color: #2ec4d6;
+  background-color: #00bfff;
   color: #ffffff;
   padding: 12px;
   font-size: 1rem;
@@ -2729,9 +2729,7 @@
         });
     });
 
-  document.querySelector(".chatbot-close-btn").addEventListener("click", () => {
-  chatbotBody.style.display = "none";
-});
+ 
 
 
     // Scroll to a specific section
@@ -2972,6 +2970,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const chatHistory = JSON.parse(localStorage.getItem("fraiclyChatHistory")) || [];
         chatHistory.push({ user: userMsg, bot: botMsg });
         localStorage.setItem("fraiclyChatHistory", JSON.stringify(chatHistory));
+
+     document.querySelector(".chatbot-close-btn").addEventListener("click", () => {
+  chatbotBody.style.display = "none";
+});
     };
 
     const loadChatHistory = () => {
