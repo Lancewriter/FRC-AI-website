@@ -1097,7 +1097,7 @@
   display: none;
   width: 320px;
   height: 220px;
-  background: #00bfff;
+  background: #4a6eff;
   border: 1px solid #ccc;
   border-radius: 16px;
   overflow: hidden;
@@ -1107,7 +1107,7 @@
 }
 
  .chatbot-header {
-  background-color: #00bfff;
+  background-color: #4a6eff;
   color: #ffffff;
   padding: 12px;
   font-size: 1rem;
@@ -1126,7 +1126,7 @@
   flex: 1;
   padding: 12px;
   overflow-y: auto;
-  background-color: #f7f9fb;
+  background-color: #4a6eff;
 }
 
 .message {
@@ -2628,13 +2628,12 @@
         </div>
     </footer>
 <div class="chatbot-widget">
-  <div class="chatbot-button" aria-label="Open Fraicly Chatbot">
-    
-  </div>
+  <button class="chatbot-button" id="open-chatbot" aria-label="Open chat">💬 Chat</button>
+
 
   <div class="chatbot-body">
     <div class="chatbot-header">      
-    FRAICLY's BEACONBOT
+    BEACON CHATBOT
   <button class="chatbot-close-btn" aria-label="Close chatbot">×</button>
 </div>
 
@@ -2965,6 +2964,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const chatMessages = document.getElementById("chat-messages");
     const chatInput = document.getElementById("chat-input");
     const sendBtn = document.getElementById("chat-send-btn");
+    const closeBtn = document.querySelector(".chatbot-close-btn");
 
     const saveToHistory = (userMsg, botMsg) => {
         const chatHistory = JSON.parse(localStorage.getItem("fraiclyChatHistory")) || [];
