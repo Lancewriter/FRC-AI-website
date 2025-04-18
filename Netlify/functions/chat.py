@@ -1,4 +1,14 @@
-   import json
+import json
+
+def handler(event, context):
+    return {
+        "statusCode": 200,
+        "body": json.dumps({"reply": "✅ Beacon function is working!"})
+    }
+
+  
+  
+""" import json
 import os
 import openai
 
@@ -32,4 +42,4 @@ def handler(event, context):
     return {
         "statusCode": 200,
         "body": json.dumps({"reply": reply})
-    }
+    }"""
