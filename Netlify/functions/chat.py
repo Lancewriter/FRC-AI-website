@@ -2,7 +2,7 @@ import os
 import json
 from openai import OpenAI
 
-client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+client = OpenAI(api_key=os.environ["OpenAI_KEY"])
 
 def handler(event, context):
     body = json.loads(event.get("body", "{}"))
@@ -14,7 +14,13 @@ def handler(event, context):
     chat_response = client.chat.completions.create(
         model="gpt-4",
         messages=[
-            {"role": "system", "content": "You are Beacon, a professional and financial risk assistant created by Fraicly."},
+            {
+                "role": "system",
+                "content": (
+                    "You are Beacon, a professional and financial risk assistant created by Fraicly. "
+                    "Introduce yourself, ask for the user's company name, market and country, and then give tailored insights."
+                )
+            },
             {"role": "user", "content": message}
         ]
     )
