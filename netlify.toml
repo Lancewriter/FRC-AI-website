@@ -1,5 +1,4 @@
 [build]
-  base = "FRC-AI-website"
   functions = "netlify/functions"
   publish = "."
 
