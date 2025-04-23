@@ -1068,7 +1068,7 @@
                 opacity: 1;
             }
         }
-        .chatbot-widget {
+.chatbot-widget {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -2950,7 +2950,7 @@ const removeTyping = () => {
             chatbotBody.classList.add("opened"); // Track if the chatbot has been opened
             setTimeout(() => displayMessage("Welcome to FRAICLY ! I am a chatbot! let me know the service you interested in and I will assist you.", "bot"), 300); // Delay to simulate typing
         }
-    };
+    };*/
 
     // Toggle chatbot visibility and trigger welcome message
     chatbotButton.addEventListener("click", () => {
@@ -2958,7 +2958,7 @@ const removeTyping = () => {
         chatbotBody.style.display = isChatVisible ? "none" : "block";
         if (!isChatVisible) sendWelcomeMessage(); // Send welcome message if opening
     });
-});*/
+});
 //chat bot with chatgpt engine
 
 const webhookURL ="https://hook.us2.make.com/59wyr2t4qe8l4emks24jhhxkl8sbmkle"
