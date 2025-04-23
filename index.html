@@ -2630,24 +2630,24 @@
             <p>contact us: info@FRAICLY.com</p>
         </div>
     </footer>
-<div class="chatbot-widget">
-  <button class="chatbot-button" id="open-chatbot">💬 Chat</button>
+<!-- Chatbot Widget -->
+  <div class="chatbot-widget">
+    <button class="chatbot-button" id="open-chatbot">💬 Chat</button>
 
-  <div class="chatbot-body" id="chatbot-body" style="display: none;">
-    <div class="chatbot-header">
-      BEACON CHATBOT
-      <button class="chatbot-close-btn" aria-label="Close chatbot">×</button>
-    </div>
+    <div class="chatbot-body" id="chatbot-body" style="display: none;">
+      <div class="chatbot-header">
+        BEACON CHATBOT
+        <button class="chatbot-close-btn" id="chatbot-close-btn" aria-label="Close chatbot">×</button>
+      </div>
 
-    <div id="chat-messages" class="chatbot-messages"></div>
+      <div id="chat-messages" class="chatbot-messages"></div>
 
-    <div class="chatbot-input">
-      <input id="chat-input" type="text" placeholder="Type your message...">
-      <button onclick="sendMessage()"id="chat-send-btn">Send</button>
+      <div class="chatbot-input">
+        <input id="chat-input" type="text" placeholder="Type your message...">
+        <button id="chat-send-btn">Send</button>
+      </div>
     </div>
   </div>
-</div>
-
 
 <!-- Modal
   <div id="strategyModal" class="modal">
@@ -2869,183 +2869,72 @@
 
         //chatbot
        // Chatbot functionality
-/*document.addEventListener("DOMContentLoaded", () => {
-    const chatbotButton = document.querySelector(".chatbot-button");
-    const chatbotBody = document.querySelector(".chatbot-body");
-    const chatMessages = document.getElementById("chat-messages");
-    const chatInput = document.getElementById("chat-input");
-    const sendBtn = document.getElementById("chat-send-btn");
 
-    // Keywords and responses
-    const keywordResponses = [
-        { keywords: ["hello", "hi", "hey"], response: "Hello! How can I assist you today?" },
-        { keywords: ["automation","automate"], response: "SMEs need to leverage AI to remain competitive, contact us to discuss how we can help you automate routine tasks." },
-        { keywords: ["ai","aritifical","machine learning"], response: "SMEs need to leverage AI to remain competitive, contact us to discuss preparing your business for AI future." },
-        { keywords: ["finance", "financial"], response: "We can assist with financial analysis, risk management, or finance projects like M&A." },
-         { keywords: ["projects","m&a","exit"], response: "Our M&A experts will help you value your target, identify synergies and prepare prospectus for financing or potential buyers." },
-        { keywords: ["recovery", "turnaround","resilience"], response: "We package our skills and services to help SMEs recover from financial weakness." },
-        { keywords: ["economic", "economy"], response: "We can assist with economic analysis and forecasts to facilitate strategy formations and update." },
-        { keywords: ["acquisition","M&A"], response: "We can help you determine the fair value of acquisition targets, and identify synergies." },
-        { keywords: ["pricing","price","cost"], response: "Lets have a discussion on how our interactions best fit your needs, sometimes the best fit is on a project basis or as a trusted partner." },
-        { keywords: ["bye", "goodbye"], response: "Goodbye! Have a great day!" },
-        { keywords: ["help", "support"], response: "I'm here to help! Please tell me what you need assistance with." },
-        { keywords: ["trump", "maga"], response: "The current US economic policies are expected to increase the cost of living and reduce the velocity of money,which is likely to slow economic growth. US poor economic performances reverburate globally. Let us colaborate to fortify your business." },
-        { keywords: ["united kingdom", "uk"], response: "The UK's economy is experiencing a slow growth period, which is likely to slow further given the expected weakness of the US economy. Email us to start a discussion on how FRAICLY can help your business thrive in this recessionary environment" },
-        { keywords: ["default"], response: "I'm not sure I understand. Can you rephrase?" }
-    ];
+document.addEventListener("DOMContentLoaded", () => {
+  const chatbotButton = document.getElementById("open-chatbot");
+  const chatbotBody = document.getElementById("chatbot-body");
+  const closeBtn = document.getElementById("chatbot-close-btn");
+  const sendBtn = document.getElementById("chat-send-btn");
+  const chatInput = document.getElementById("chat-input");
+  const chatMessages = document.getElementById("chat-messages");
 
-    // Function to match keywords in user input
-    const getBotResponse = (userText) => {
-        const cleanedText = userText.toLowerCase().replace(/[^\w\s]/gi, ""); // Normalize input
-        for (const { keywords, response } of keywordResponses) {
-            if (keywords.some(keyword => cleanedText.includes(keyword))) {
-                return response;
-            }
-        }
-        return keywordResponses.find(k => k.keywords.includes("default")).response; // Default response
-    };
+  const webhookURL = "/.netlify/functions/chat"; // or your Make webhook
 
-    const showTyping = () => {
-    const typingDiv = document.createElement("div");
-    typingDiv.classList.add("message", "bot", "typing");
-    typingDiv.textContent = "FraiclyBot is typing...";
-    chatMessages.appendChild(typingDiv);
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-};
-
-const removeTyping = () => {
-    const typingDiv = chatMessages.querySelector(".typing");
-    if (typingDiv) typingDiv.remove();
-};
-
-    // Function to display a message in the chat
-    const displayMessage = (message, sender) => {
-        const messageDiv = document.createElement("div");
-        messageDiv.classList.add("message", sender);
-        messageDiv.textContent = message;
-        chatMessages.appendChild(messageDiv);
-        chatMessages.scrollTop = chatMessages.scrollHeight; // Auto-scroll to the latest message
-    };
-
-    // Send message function
-    const sendMessage = () => {
-        const userText = chatInput.value.trim();
-        if (!userText) return;
-
-        displayMessage(userText, "user"); // Display user message
-        const botReply = getBotResponse(userText); // Get bot response
-        setTimeout(() => displayMessage(botReply, "bot"), 500); // Simulate bot typing delay
-        chatInput.value = ""; // Clear input field
-    };
-
-    // Event listeners
-    sendBtn.addEventListener("click", sendMessage);
-    chatInput.addEventListener("keydown", (e) => {
-        if (e.key === "Enter") sendMessage();
-    });
-
-    // Trigger a welcome message when the chatbot is opened
-    const sendWelcomeMessage = () => {
-        if (!chatbotBody.classList.contains("opened")) {
-            chatbotBody.classList.add("opened"); // Track if the chatbot has been opened
-            setTimeout(() => displayMessage("Welcome to FRAICLY ! I am a chatbot! let me know the service you interested in and I will assist you.", "bot"), 300); // Delay to simulate typing
-        }
-    };*/
-
-    // Toggle chatbot visibility and trigger welcome message
-    chatbotButton.addEventListener("click", () => {
-        const isChatVisible = chatbotBody.style.display === "block";
-        chatbotBody.style.display = isChatVisible ? "none" : "block";
-        if (!isChatVisible) sendWelcomeMessage(); // Send welcome message if opening
-    });
-});
-//chat bot with chatgpt engine
-
-const webhookURL ="https://hook.us2.make.com/59wyr2t4qe8l4emks24jhhxkl8sbmkle"
-
-    async function sendMessage() {
-      const input = document.getElementById("userInput");
-      const message = input.value.trim();
-      if (!message) return;
-
-      appendMessage("You", message, "user");
-      input.value = "";
-
-      try {
-        const res = await fetch(webhookURL, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ user_input: message })
-        });
-
-        const data = await res.json();
-        appendMessage("Beacon", data.reply, "bot");
-
-      } catch (err) {
-        appendMessage("System", "Sorry, something went wrong.", "bot");
-        console.error("Chatbot error:", err);
-      }
-    }
-
-    function appendMessage(sender, text, cls) {
-      const msg = document.createElement("div");
-      msg.className = `message ${cls}`;
-      msg.textContent = `${sender}: ${text}`;
-      document.getElementById("messages").appendChild(msg);
-    }
-/*
-  // === Display Messages ===
-  const displayMessage = (message, sender) => {
-    const msgDiv = document.createElement("div");
-    msgDiv.classList.add("message", sender);
-    msgDiv.textContent = message;
-    chatMessages.appendChild(msgDiv);
+  const appendMessage = (sender, text, cls) => {
+    const msg = document.createElement("div");
+    msg.className = `message ${cls}`;
+    msg.textContent = `${sender}: ${text}`;
+    chatMessages.appendChild(msg);
     chatMessages.scrollTop = chatMessages.scrollHeight;
   };
 
-  // === Typing Indicator ===
   const showTyping = () => {
-    const typingDiv = document.createElement("div");
-    typingDiv.classList.add("message", "bot", "typing");
-    typingDiv.textContent = "Beacon is typing...";
-    chatMessages.appendChild(typingDiv);
+    const typing = document.createElement("div");
+    typing.className = "message bot typing";
+    typing.textContent = "Beacon is typing...";
+    typing.id = "typing-indicator";
+    chatMessages.appendChild(typing);
     chatMessages.scrollTop = chatMessages.scrollHeight;
   };
 
   const removeTyping = () => {
-    const typing = chatMessages.querySelector(".typing");
+    const typing = document.getElementById("typing-indicator");
     if (typing) typing.remove();
   };
 
-  // === Send Message to Backend ===
-  const sendMessage = () => {
+  const sendMessage = async () => {
     const userText = chatInput.value.trim();
     if (!userText) return;
 
-    displayMessage(userText, "user");
+    appendMessage("You", userText, "user");
     chatInput.value = "";
     showTyping();
 
-    fetch('/.netlify/functions/chat', {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message: userText })
-    })
-      .then(res => res.json())
-      .then(data => {
-        removeTyping();
-        displayMessage(data.reply || "Sorry, something went wrong.", "bot");
-      })
-      .catch(err => {
-        console.error("Chat error:", err);
-        removeTyping();
-        displayMessage("Oops! Something went wrong. Please try again later.", "bot");
+    try {
+      const res = await fetch(webhookURL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: userText })
       });
+
+      const data = await res.json();
+      removeTyping();
+      appendMessage("Beacon", data.reply || "Sorry, something went wrong.", "bot");
+    } catch (err) {
+      removeTyping();
+      appendMessage("Beacon", "Oops! Something went wrong. Please try again later.", "bot");
+      console.error("Chatbot error:", err);
+    }
   };
 
-  // === Event Listeners ===
-  openBtn.addEventListener("click", () => {
-    chatbotBody.style.display = "block";
+  // Event listeners
+  chatbotButton.addEventListener("click", () => {
+    chatbotBody.style.display = chatbotBody.style.display === "block" ? "none" : "block";
+    if (chatbotBody.style.display === "block") {
+      setTimeout(() => {
+        appendMessage("Beacon", "Welcome to FRAICLY! Let me know what you’re interested in.", "bot");
+      }, 300);
+    }
   });
 
   closeBtn.addEventListener("click", () => {
@@ -3058,8 +2947,6 @@ const webhookURL ="https://hook.us2.make.com/59wyr2t4qe8l4emks24jhhxkl8sbmkle"
   });
 });
 
-
-*/
 
 
 
