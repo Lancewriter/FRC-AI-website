@@ -2643,7 +2643,7 @@
 
     <div class="chatbot-input">
       <input id="chat-input" type="text" placeholder="Type your message...">
-      <button id="chat-send-btn">Send</button>
+      <button onclick="sendMessage()"id="chat-send-btn">Send</button>
     </div>
   </div>
 </div>
@@ -2961,99 +2961,38 @@ const removeTyping = () => {
 });*/
 //chat bot with chatgpt engine
 
-document.addEventListener("DOMContentLoaded", () => {
-  const chatbotBody = document.getElementById("chatbot-body");
-  const openBtn = document.getElementById("open-chatbot");
-  const closeBtn = document.querySelector(".chatbot-close-btn");
-  const sendBtn = document.getElementById("chat-send-btn");
-  const chatInput = document.getElementById("chat-input");
-  const chatMessages = document.getElementById("chat-messages");
+const webhookURL ="https://hook.us2.make.com/59wyr2t4qe8l4emks24jhhxkl8sbmkle"
 
-  // Keywords and responses
-    const keywordResponses = [
-        { keywords: ["hello", "hi", "hey"], response: "Hello! How can I assist you today?" },
-        { keywords: ["automation","automate"], response: "SMEs need to leverage AI to remain competitive, contact us to discuss how we can help you automate routine tasks." },
-        { keywords: ["ai","aritifical","machine learning"], response: "SMEs need to leverage AI to remain competitive, contact us to discuss preparing your business for AI future." },
-        { keywords: ["finance", "financial"], response: "We can assist with financial analysis, risk management, or finance projects like M&A." },
-         { keywords: ["projects","m&a","exit"], response: "Our M&A experts will help you value your target, identify synergies and prepare prospectus for financing or potential buyers." },
-        { keywords: ["recovery", "turnaround","resilience"], response: "We package our skills and services to help SMEs recover from financial weakness." },
-        { keywords: ["economic", "economy"], response: "We can assist with economic analysis and forecasts to facilitate strategy formations and update." },
-        { keywords: ["acquisition","M&A"], response: "We can help you determine the fair value of acquisition targets, and identify synergies." },
-        { keywords: ["pricing","price","cost"], response: "Lets have a discussion on how our interactions best fit your needs, sometimes the best fit is on a project basis or as a trusted partner." },
-        { keywords: ["bye", "goodbye"], response: "Goodbye! Have a great day!" },
-        { keywords: ["help", "support"], response: "I'm here to help! Please tell me what you need assistance with." },
-        { keywords: ["trump", "maga"], response: "The current US economic policies are expected to increase the cost of living and reduce the velocity of money,which is likely to slow economic growth. US poor economic performances reverburate globally. Let us colaborate to fortify your business." },
-        { keywords: ["united kingdom", "uk"], response: "The UK's economy is experiencing a slow growth period, which is likely to slow further given the expected weakness of the US economy. Email us to start a discussion on how FRAICLY can help your business thrive in this recessionary environment" },
-        { keywords: ["default"], response: "I'm not sure I understand. Can you rephrase?" }
-    ];
+    async function sendMessage() {
+      const input = document.getElementById("userInput");
+      const message = input.value.trim();
+      if (!message) return;
 
-    // Function to match keywords in user input
-    const getBotResponse = (userText) => {
-        const cleanedText = userText.toLowerCase().replace(/[^\w\s]/gi, ""); // Normalize input
-        for (const { keywords, response } of keywordResponses) {
-            if (keywords.some(keyword => cleanedText.includes(keyword))) {
-                return response;
-            }
-        }
-        return keywordResponses.find(k => k.keywords.includes("default")).response; // Default response
-    };
+      appendMessage("You", message, "user");
+      input.value = "";
 
-    const showTyping = () => {
-    const typingDiv = document.createElement("div");
-    typingDiv.classList.add("message", "bot", "typing");
-    typingDiv.textContent = "FraiclyBot is typing...";
-    chatMessages.appendChild(typingDiv);
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-};
+      try {
+        const res = await fetch(webhookURL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ user_input: message })
+        });
 
-const removeTyping = () => {
-    const typingDiv = chatMessages.querySelector(".typing");
-    if (typingDiv) typingDiv.remove();
-};
+        const data = await res.json();
+        appendMessage("Beacon", data.reply, "bot");
 
-    // Function to display a message in the chat
-    const displayMessage = (message, sender) => {
-        const messageDiv = document.createElement("div");
-        messageDiv.classList.add("message", sender);
-        messageDiv.textContent = message;
-        chatMessages.appendChild(messageDiv);
-        chatMessages.scrollTop = chatMessages.scrollHeight; // Auto-scroll to the latest message
-    };
+      } catch (err) {
+        appendMessage("System", "Sorry, something went wrong.", "bot");
+        console.error("Chatbot error:", err);
+      }
+    }
 
-    // Send message function
-    const sendMessage = () => {
-        const userText = chatInput.value.trim();
-        if (!userText) return;
-
-        displayMessage(userText, "user"); // Display user message
-        const botReply = getBotResponse(userText); // Get bot response
-        setTimeout(() => displayMessage(botReply, "bot"), 500); // Simulate bot typing delay
-        chatInput.value = ""; // Clear input field
-    };
-
-    // Event listeners
-    sendBtn.addEventListener("click", sendMessage);
-    chatInput.addEventListener("keydown", (e) => {
-        if (e.key === "Enter") sendMessage();
-    });
-
-    // Trigger a welcome message when the chatbot is opened
-    const sendWelcomeMessage = () => {
-        if (!chatbotBody.classList.contains("opened")) {
-            chatbotBody.classList.add("opened"); // Track if the chatbot has been opened
-            setTimeout(() => displayMessage("Welcome to FRAICLY ! I am a chatbot! let me know the service you interested in and I will assist you.", "bot"), 300); // Delay to simulate typing
-        }
-    };
-
-    // Toggle chatbot visibility and trigger welcome message
-    chatbotButton.addEventListener("click", () => {
-        const isChatVisible = chatbotBody.style.display === "block";
-        chatbotBody.style.display = isChatVisible ? "none" : "block";
-        if (!isChatVisible) sendWelcomeMessage(); // Send welcome message if opening
-    });
-});
-
-
+    function appendMessage(sender, text, cls) {
+      const msg = document.createElement("div");
+      msg.className = `message ${cls}`;
+      msg.textContent = `${sender}: ${text}`;
+      document.getElementById("messages").appendChild(msg);
+    }
 /*
   // === Display Messages ===
   const displayMessage = (message, sender) => {
