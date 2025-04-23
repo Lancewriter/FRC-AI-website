@@ -1094,16 +1094,19 @@
 
 
 .chatbot-body {
-  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
   width: 320px;
-  height: 220px;
-  background: #4a6eff;
+  max-height: 80vh;
+  background: #ffffff;
   border: 1px solid #ccc;
   border-radius: 16px;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  z-index: 10000;
 }
 
  .chatbot-header {
@@ -1129,7 +1132,8 @@
   flex: 1;
   padding: 12px;
   overflow-y: auto;
-  background-color: #4a6eff;
+  background-color: #f4f4f4;
+  scroll-behavior: smooth;
 }
 
 .message {
@@ -1513,10 +1517,16 @@
     }
 
     .chatbot-body {
-        width: 60%;
-        height: 300px;
-        bottom: 70px; /* Adjust height for smaller screens */
+       width: 95vw;
+    bottom: 80px;
+    right: 2.5vw;
+    max-height: 80vh;
     }
+
+     .chatbot-button {
+    bottom: 20px;
+    right: 20px;
+  }
 
     .menu-toggle {
         display: block; /* Show hamburger menu on mobile */
