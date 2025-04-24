@@ -1131,6 +1131,23 @@
   gap: 12px;
   scroll-behavior: smooth;
 }
+.chatbot-messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chatbot-messages::-webkit-scrollbar-thumb {
+  background-color: #0078ff;
+  border-radius: 4px;
+}
+
+.chatbot-messages::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+.chatbot-messages {
+  -webkit-overflow-scrolling: touch; /* Enables smooth scroll on iOS */
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
 
 .message {
   padding: 10px 12px;
@@ -1521,6 +1538,9 @@
      .chat-messages {
     max-height: 200px;
     font-size: 0.85rem;}
+
+     .chatbot-messages::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
 
      .chatbot-button {
     bottom: 20px;
