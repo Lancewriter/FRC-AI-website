@@ -2921,7 +2921,7 @@ document.addEventListener("DOMContentLoaded", () => {
     showTyping();
 
     try {
-      const res = await fetch(webhookURL, {
+      const res = await fetch("https://hook.us2.make.com/59wyr2t4qe8l4emks24jhhxkl8sbmkle", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: userText })
