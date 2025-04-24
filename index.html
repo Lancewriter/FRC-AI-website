@@ -2881,6 +2881,7 @@
         //chatbot
        // Chatbot functionality
 
+<script>
 document.addEventListener("DOMContentLoaded", () => {
   const chatbotButton = document.getElementById("open-chatbot");
   const chatbotBody = document.getElementById("chatbot-body");
@@ -2889,79 +2890,55 @@ document.addEventListener("DOMContentLoaded", () => {
   const chatInput = document.getElementById("chat-input");
   const chatMessages = document.getElementById("chat-messages");
 
-  const webhookURL = "/.netlify/functions/chat"; // or your Make webhook
+  const webhookURL = "https://hook.us2.make.com/YOUR_WEBHOOK_ID"; // Replace with your working URL
 
   const appendMessage = (sender, text, cls) => {
     const msg = document.createElement("div");
     msg.className = `message ${cls}`;
     msg.textContent = `${sender}: ${text}`;
     chatMessages.appendChild(msg);
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-    chat.scrollTop = chat.scrollHeight;
-  };
 
-  const showTyping = () => {
-    const typing = document.createElement("div");
-    typing.className = "message bot typing";
-    typing.textContent = "Beacon is typing...";
-    typing.id = "typing-indicator";
-    chatMessages.appendChild(typing);
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-  };
-
-setTimeout(() => {
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-  }, 50);
-
-  const removeTyping = () => {
-    const typing = document.getElementById("typing-indicator");
-    if (typing) typing.remove();
+    setTimeout(() => {
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }, 50);
   };
 
   const sendMessage = async () => {
-    const userText = chatInput.value.trim();
-    if (!userText) return;
+    const message = chatInput.value.trim();
+    if (!message) return;
 
-    appendMessage("You", userText, "user");
+    appendMessage("You", message, "user");
     chatInput.value = "";
-    showTyping();
 
     try {
-      const res = await fetch("https://hook.us2.make.com/59wyr2t4qe8l4emks24jhhxkl8sbmkle", {
+      const response = await fetch(webhookURL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: userText })
+        body: JSON.stringify({ message })
       });
 
-      const data = await res.json();
-      removeTyping();
-      appendMessage("Beacon", data.reply || "Sorry, something went wrong.", "bot");
-    } catch (err) {
-      removeTyping();
-      appendMessage("Beacon", "Oops! Something went wrong. Please try again later.", "bot");
-      console.error("Chatbot error:", err);
+      const data = await response.json();
+      appendMessage("Beacon", data.reply || "No response", "bot");
+    } catch (error) {
+      console.error("Chat error:", error);
+      appendMessage("System", "Something went wrong", "bot");
     }
   };
-
-  // Event listeners
-  chatbotButton.addEventListener("click", () => {
-    chatbotBody.style.display = chatbotBody.style.display === "block" ? "none" : "block";
-    if (chatbotBody.style.display === "block") {
-      setTimeout(() => {
-        appendMessage("Beacon", "Welcome to FRAICLY! Let me know what you’re interested in.", "bot");
-      }, 300);
-    }
-  });
-
-  closeBtn.addEventListener("click", () => {
-    chatbotBody.style.display = "none";
-  });
 
   sendBtn.addEventListener("click", sendMessage);
   chatInput.addEventListener("keydown", (e) => {
     if (e.key === "Enter") sendMessage();
   });
+
+  chatbotButton.addEventListener("click", () => {
+    chatbotBody.style.display = "block";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    chatbotBody.style.display = "none";
+  });
 });
+</script>
 
 
 
