@@ -2940,11 +2940,11 @@ document.addEventListener("DOMContentLoaded", () => {
         body: JSON.stringify({ message })
       });
 
-      const text = await response.text();
+      const text = await response;
       appendMessage("Beacon", text || "No response", "bot");
     } catch (error) {
       console.error("Chat error:", error);
-      appendMessage("System", error, text, "Something went wrong", "bot");
+      appendMessage("System",text, "Something went wrong", "bot");
     }
   };
 
