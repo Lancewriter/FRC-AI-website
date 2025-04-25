@@ -2918,7 +2918,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const appendMessage = (sender, text, cls) => {
     const msg = document.createElement("div");
     msg.className = `message ${cls}`;
-    msg.textContent = `${sender}: ${text}`;
+    msg.textContent = text;
     chatMessages.appendChild(msg);
 
     setTimeout(() => {
