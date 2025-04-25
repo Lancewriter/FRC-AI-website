@@ -1202,6 +1202,8 @@
 }
 
 .chatbot-input {
+  
+  left:0;
   display: flex;
   padding: 10px;
   border-top: 1px solid #ccc;
@@ -1209,6 +1211,8 @@
 }
 
 #chat-input {
+  position:fixed;
+  bottom:0;
   flex: 1;
   padding: 8px;
   border: 1px solid #ccc;
@@ -2668,12 +2672,14 @@
       <button class="chatbot-close-btn" id="chatbot-close-btn" aria-label="Close chatbot">×</button>
     </div>
 
+    <div id="chat-messages" class="chatbot-messages"></div>
+
     <div class="chatbot-input">
       <input id="chat-input" type="text" placeholder="Type your message...">
       <button id="chat-send-btn">Send</button>
     </div>
 
-    <div id="chat-messages" class="chatbot-messages"></div>
+   
 
    
   </div>
