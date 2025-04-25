@@ -2947,7 +2947,7 @@ document.addEventListener("DOMContentLoaded", () => {
       appendMessage("Beacon", data.reply || "No response", "bot");
     } catch (error) {
       console.error("Chat error:", error);
-      appendMessage("System", error, "Something went wrong", "bot");
+      appendMessage("System", error, data.reply, "Something went wrong", "bot");
     }
   };
 
