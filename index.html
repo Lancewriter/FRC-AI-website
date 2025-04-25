@@ -1093,6 +1093,8 @@
 
 
 .chatbot-body {
+  box-sizing: border-box;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   width: 320px;
@@ -1130,6 +1132,7 @@
   flex-direction: column;
   gap: 12px;
   scroll-behavior: smooth;
+  min-height: 0;
 }
 .chatbot-messages::-webkit-scrollbar {
   width: 8px;
