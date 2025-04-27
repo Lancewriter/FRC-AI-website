@@ -1652,72 +1652,109 @@
     .modal-content button[type="submit"]:hover {
       background-color: #1e40af;
     }
-    .results-table {
-  min-height: 75vh; /* 75% of the viewport height */
- font-size: 2rem;
-  padding: 5rem 1.5rem;
+   .results-table {
   background-color: #f9fafb;
+  padding: 5rem 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
 
-    @media (max-width: 768px) {
-    .results-table td:first-child::before {
+.results-table .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.results-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+.results-table table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 1rem;
+}
+
+.results-table thead th {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #111827;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 8px 8px 0 0;
+  font-weight: bold;
+}
+
+.results-table tbody tr {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.results-table tbody td {
+  padding: 1.25rem 1.5rem;
+  font-size: 1.1rem;
+  color: #374151;
+  text-align: left;
+  vertical-align: top;
+}
+
+.results-table td:first-child {
+  border-right: 1px solid #e5e7eb;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .results-table table, 
+  .results-table tbody, 
+  .results-table tr, 
+  .results-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .results-table thead {
+    display: none;
+  }
+
+  .results-table tbody tr {
+    margin-bottom: 2rem;
+    padding: 1rem;
+  }
+
+  .results-table td {
+    background-color: #ffffff;
+    border: none;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-radius: 6px;
+  }
+
+  .results-table td:first-child::before {
     content: "Before Fraicly:";
+    display: block;
     font-weight: bold;
     color: #dc2626;
-    display: flex;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
   }
 
   .results-table td:last-child::before {
     content: "With Fraicly:";
+    display: block;
     font-weight: bold;
     color: #16a34a;
-    display: flex;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
   }
-  .results-table table {
-    width: 100%;
-    border-collapse: collapse;
-  }
+}
 
-  .results-table thead {
-    display: none; /* Still hide headers on mobile */
-  }
-
-  .results-table tr {
-    display: flex;
-     
-    flex-direction: row; /* Keep it horizontal */
-    font-size:1rem;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    background-color: #f9fafb;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  }
-
-  .results-table td {
-    width: 100%;  /* Two columns */
-    flex: 1 1 45%;
-    padding: 0.5rem 0.75rem;
-    background-color: #ffffff;
-    border: 1px solid #e5e7eb;
-    border-radius: 6px;
-    box-sizing: border-box;
-    line-height: 1.4;             /* More compact than default (1.6–1.8) */
-    vertical-align: top; 
-    box-sizing: border-box;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-  }
-  }
 /* Style the dropdown (select input) */
 .form-control {
   width: 100%;
@@ -2068,35 +2105,38 @@ select.form-control {
     </section>
     --->
      <div class="separator"></div>
-   <section class="results-table">
-    
-  <table>
-    <thead>
-      <tr>
-        <th>Before Fraicly</th>
-        <th>With Fraicly</th>
-      </tr>
-    </thead>
-    <tbody>
+  <section class="results-table">
+  <div class="container">
+    <h2 class="results-title">How Fraicly Transforms Your Outcomes</h2>
+    <table>
+      <thead>
         <tr>
-        <td>❌ Defaulting or slow-paying clients</td>
-        <td>✅ AI-powered payment forecasting and client risk analysis</td>
-      </tr>
-      <tr>
-        <td>❌ Choosing unprofitable contracts</td>
-        <td>✅Data-backed and AI driven bid evaluation and margin forecasting</td>
-      </tr>
-      <tr>
-        <td>❌Reacting late to cycles is why many companies fail</td>
-        <td>✅Early-warning economic signals -> timely adaptation and economic-aligned goals</td>
-      </tr>
-      <tr>
-        <td>❌ Inefficient workflows</td>
-        <td>✅ Streamlined, AI-supported finance and Operational operations</td>
-      </tr>
-    </tbody>
-  </table>
+          <th>Before Fraicly</th>
+          <th>With Fraicly</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>❌ Defaulting or slow-paying clients</td>
+          <td>✅ AI-powered payment forecasting and client risk analysis</td>
+        </tr>
+        <tr>
+          <td>❌ Choosing unprofitable contracts</td>
+          <td>✅ Data-backed and AI-driven bid evaluation and margin forecasting</td>
+        </tr>
+        <tr>
+          <td>❌ Reacting late to economic cycles</td>
+          <td>✅ Early-warning economic signals for timely adaptation and aligned goals</td>
+        </tr>
+        <tr>
+          <td>❌ Inefficient workflows</td>
+          <td>✅ Streamlined, AI-supported finance and operational processes</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </section>
+
 
    <div class="separator"></div>
     <section id="Why_US_section">
