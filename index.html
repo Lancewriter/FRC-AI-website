@@ -1653,62 +1653,54 @@
       background-color: #1e40af;
     }
    /* Desktop: side-by-side */
-.fraicly-results-table table {
+.fraicly-impact-tables {
+  background-color: #f9fafb;
+  padding: 5rem 1rem;
+}
+
+.fraicly-impact-wrapper {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap; /* allows stacking on mobile */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.fraicly-impact-table {
+  flex: 1;
+  min-width: 300px;
+}
+
+.fraicly-impact-table h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #1f2937;
+}
+
+.fraicly-impact-table table {
   width: 100%;
-  background:white;
   border-collapse: separate;
-  border-spacing: 2rem 1.5rem; /* horizontal space = 2rem */
+  border-spacing: 0 1rem; /* vertical spacing between rows */
 }
 
-.fraicly-results-table th,
-.fraicly-results-table td {
-  padding: 1rem;
-  background: white;
+.fraicly-impact-table td {
+  background-color: #ffffff;
+  padding: 1.2rem;
+  font-size: 1.3rem;
   border-radius: 8px;
-  font-size: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   text-align: left;
+  line-height: 1.4;
 }
 
-/* Spacer column smaller */
-.fraicly-results-table th:nth-child(2),
-.fraicly-results-table td:nth-child(2) {
-  width: 15%;
-  background: white;
-}
-
-/* Mobile behavior */
+/* Mobile: stack tables */
 @media (max-width: 768px) {
-  .fraicly-results-table table, 
-  .fraicly-results-table tbody, 
-  .fraicly-results-table tr, 
-  .fraicly-results-table th, 
-  .fraicly-results-table td {
-    display: block;
-    width: 100%;
-  }
-
-  .fraicly-results-table thead {
-    display: none;
-  }
-
-  .fraicly-results-table td:nth-child(2) {
-    display: none; /* hide spacer column on mobile */
-  }
-
-  .fraicly-results-table td:first-child::before {
-    content: "Before Fraicly:";
-    font-weight: bold;
-    color: #dc2626;
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-
-  .fraicly-results-table td:last-child::before {
-    content: "With Fraicly:";
-    font-weight: bold;
-    color: #16a34a;
-    display: block;
-    margin-bottom: 0.5rem;
+  .fraicly-impact-wrapper {
+    flex-direction: column;
+    gap: 3rem;
   }
 }
 
@@ -2063,38 +2055,36 @@ select.form-control {
     --->
      <div class="separator"></div>
 <section class="fraicly-results-table">
-  <table>
-    <thead>
-      <tr>
-        <th>Before Fraicly</th>
-        <th></th> <!-- spacer column -->
-        <th>With Fraicly</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>❌ Defaulting or slow-paying clients</td>
-        <td></td>
-        <td>✅ AI-powered payment forecasting and client risk analysis</td>
-      </tr>
-      <tr>
-        <td>❌ Choosing unprofitable contracts</td>
-        <td></td>
-        <td>✅ Data-driven bid evaluation and margin forecasting</td>
-      </tr>
-      <tr>
-        <td>❌ Reacting late to economic cycles</td>
-        <td></td>
-        <td>✅ Early-warning economic signals for strategic adaptation</td>
-      </tr>
-      <tr>
-        <td>❌ Inefficient workflows</td>
-        <td></td>
-        <td>✅ AI-enhanced finance and operational workflows</td>
-      </tr>
-    </tbody>
-  </table>
+ 
+  <div class="fraicly-impact-wrapper">
+
+    <div class="fraicly-impact-table">
+      <h3>Before Fraicly</h3>
+      <table>
+        <tbody>
+          <tr><td>❌ Defaulting or slow-paying clients</td></tr>
+          <tr><td>❌ Choosing unprofitable contracts</td></tr>
+          <tr><td>❌ Reacting late to economic cycles</td></tr>
+          <tr><td>❌ Inefficient workflows</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="fraicly-impact-table">
+      <h3>With Fraicly</h3>
+      <table>
+        <tbody>
+          <tr><td>✅ AI-powered payment forecasting and client risk analysis</td></tr>
+          <tr><td>✅ Data-driven bid evaluation and margin forecasting</td></tr>
+          <tr><td>✅ Early-warning economic signals for strategic adaptation</td></tr>
+          <tr><td>✅ AI-enhanced finance and operational workflows</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
 </section>
+
 
 
 
