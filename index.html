@@ -1653,109 +1653,68 @@
       background-color: #1e40af;
     }
    /* Desktop: side-by-side */
-.fraicly-impact-section {
+.fraicly-results-table {
   background-color: #f9fafb;
   padding: 5rem 1rem;
 }
 
-.fraicly-impact-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+.fraicly-results-table table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 1.5rem;
 }
 
-.fraicly-impact-heading {
+.fraicly-results-table th {
+  background-color: #ffffff;
   text-align: center;
-  font-size: 2.5rem;
-  color: #1f2937;
-  margin-bottom: 3rem;
-}
-
-.fraicly-impact-columns {
-  display: flex;
-  gap: 4rem;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.fraicly-impact-block {
-  flex: 1;
-  min-width: 300px;
-}
-
-.fraicly-impact-block h3 {
-  text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  color: #111827;
-}
-
-.fraicly-impact-block ul {
-  list-style: none;
-  padding: 0;
-}
-
-.fraicly-impact-block li {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-  line-height: 1.5;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .fraicly-impact-columns {
-    flex-direction: column;
-  }
-
-  .fraicly-impact-block {
-    width: 100%;
-  }
-}
-
-
-.results-grid {
-  display: flex;
-  gap: 4rem;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.results-column {
-  flex: 1;
-  min-width: 300px;
-}
-
-.results-column h3 {
-  text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
+  padding: 1rem;
+  font-size: 1.5rem;
   color: #1f2937;
 }
 
-.results-column ul {
-  list-style: none;
-  padding: 0;
-}
-
-.results-column li {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
+.fraicly-results-table td {
+  background-color: #ffffff;
+  padding: 1.25rem;
   font-size: 1.1rem;
-  line-height: 1.5;
+  vertical-align: top;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* Mobile Responsive */
+/* Mobile responsive fix */
 @media (max-width: 768px) {
-  .results-grid {
-    flex-direction: column;
-  }
-  .results-column {
+  .fraicly-results-table table, 
+  .fraicly-results-table thead, 
+  .fraicly-results-table tbody, 
+  .fraicly-results-table th, 
+  .fraicly-results-table td, 
+  .fraicly-results-table tr {
+    display: block;
     width: 100%;
+  }
+
+  .fraicly-results-table thead {
+    display: none;
+  }
+
+  .fraicly-results-table td {
+    margin-bottom: 1rem;
+  }
+
+  .fraicly-results-table td::before {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .fraicly-results-table td:first-child::before {
+    content: "Before Fraicly";
+    color: #dc2626;
+  }
+
+  .fraicly-results-table td:last-child::before {
+    content: "With Fraicly";
+    color: #16a34a;
   }
 }
 
@@ -2041,9 +2000,9 @@ select.form-control {
     
     <div class="separator"></div>
    
-    <section id="Risk_Journey_section",class="Risk_Journey">
+    <!-- <section id="Risk_Journey_section",class="Risk_Journey">
         <div class="Journey-content">
-        <!---    
+      
         <div class="section_hero">
             <h1>Your Journey</h1>
         </div>
@@ -2110,36 +2069,34 @@ select.form-control {
     </section>
     --->
      <div class="separator"></div>
-<section class="fraicly-impact-section">
-  <div class="fraicly-impact-wrapper">
-    <h2 class="fraicly-impact-heading">Fraicly Impact: Before and After</h2>
-
-    <div class="fraicly-impact-columns">
-      
-      <div class="fraicly-impact-block fraicly-impact-before">
-        <h3>Before Fraicly</h3>
-        <ul>
-          <li>❌ Defaulting or slow-paying clients</li>
-          <li>❌ Choosing unprofitable contracts</li>
-          <li>❌ Reacting late to economic cycles</li>
-          <li>❌ Inefficient workflows</li>
-        </ul>
-      </div>
-
-      <div class="fraicly-impact-block fraicly-impact-after">
-        <h3>With Fraicly</h3>
-        <ul>
-          <li>✅ AI-powered payment forecasting and client risk analysis</li>
-          <li>✅ Data-driven bid evaluation and margin forecasting</li>
-          <li>✅ Early-warning economic signals for strategic adaptation</li>
-          <li>✅ AI-enhanced finance and operational workflows</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
+<section class="fraicly-results-table">
+  <table>
+    <thead>
+      <tr>
+        <th>Before Fraicly</th>
+        <th>With Fraicly</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>❌ Defaulting or slow-paying clients</td>
+        <td>✅ AI-powered payment forecasting and client risk analysis</td>
+      </tr>
+      <tr>
+        <td>❌ Choosing unprofitable contracts</td>
+        <td>✅ Data-driven bid evaluation and margin forecasting</td>
+      </tr>
+      <tr>
+        <td>❌ Reacting late to economic cycles</td>
+        <td>✅ Early-warning economic signals for strategic adaptation</td>
+      </tr>
+      <tr>
+        <td>❌ Inefficient workflows</td>
+        <td>✅ AI-enhanced finance and operational workflows</td>
+      </tr>
+    </tbody>
+  </table>
 </section>
-
 
 
 
