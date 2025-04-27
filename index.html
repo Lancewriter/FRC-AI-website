@@ -1653,54 +1653,35 @@
       background-color: #1e40af;
     }
    /* Desktop: side-by-side */
-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 3rem 1.5rem; /* 3rem = horizontal space, 1.5rem = vertical space */
-}
-
-th, td {
-  padding: 1rem;
-  background: white;
-  border-radius: 8px;
-}
-
-.fraicly-results-table {
-  background-color: #f9fafb;
-  padding: 5rem 1rem;
-}
-
 .fraicly-results-table table {
   width: 100%;
   border-collapse: separate;
-  border-spacing: 0 1.5rem;
+  border-spacing: 2rem 1.5rem; /* horizontal space = 2rem */
 }
 
-.fraicly-results-table th {
-  background-color: #ffffff;
-  text-align: center;
-  padding: 1rem;
-  font-size: 1.5rem;
-  color: #1f2937;
-}
-
+.fraicly-results-table th,
 .fraicly-results-table td {
-  background-color: #ffffff;
-  padding: 1.25rem;
-  font-size: 1.1rem;
-  vertical-align: top;
+  padding: 1rem;
+  background: white;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-size: 1.1rem;
+  text-align: left;
 }
 
-/* Mobile responsive fix */
+/* Spacer column smaller */
+.fraicly-results-table th:nth-child(2),
+.fraicly-results-table td:nth-child(2) {
+  width: 5%;
+  background: transparent;
+}
+
+/* Mobile behavior */
 @media (max-width: 768px) {
   .fraicly-results-table table, 
-  .fraicly-results-table thead, 
   .fraicly-results-table tbody, 
+  .fraicly-results-table tr, 
   .fraicly-results-table th, 
-  .fraicly-results-table td, 
-  .fraicly-results-table tr {
+  .fraicly-results-table td {
     display: block;
     width: 100%;
   }
@@ -1709,27 +1690,26 @@ th, td {
     display: none;
   }
 
-  .fraicly-results-table td {
-    margin-bottom: 1rem;
-  }
-
-  .fraicly-results-table td::before {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+  .fraicly-results-table td:nth-child(2) {
+    display: none; /* hide spacer column on mobile */
   }
 
   .fraicly-results-table td:first-child::before {
-    content: "Before Fraicly";
+    content: "Before Fraicly:";
+    font-weight: bold;
     color: #dc2626;
+    display: block;
+    margin-bottom: 0.5rem;
   }
 
   .fraicly-results-table td:last-child::before {
-    content: "With Fraicly";
+    content: "With Fraicly:";
+    font-weight: bold;
     color: #16a34a;
+    display: block;
+    margin-bottom: 0.5rem;
   }
 }
-
 
 /* Style the dropdown (select input) */
 .form-control {
@@ -2086,30 +2066,34 @@ select.form-control {
     <thead>
       <tr>
         <th>Before Fraicly</th>
+        <th></th> <!-- spacer column -->
         <th>With Fraicly</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>❌ Defaulting or slow-paying clients</td>
+        <td></td>
         <td>✅ AI-powered payment forecasting and client risk analysis</td>
       </tr>
       <tr>
         <td>❌ Choosing unprofitable contracts</td>
+        <td></td>
         <td>✅ Data-driven bid evaluation and margin forecasting</td>
       </tr>
       <tr>
         <td>❌ Reacting late to economic cycles</td>
+        <td></td>
         <td>✅ Early-warning economic signals for strategic adaptation</td>
       </tr>
       <tr>
         <td>❌ Inefficient workflows</td>
+        <td></td>
         <td>✅ AI-enhanced finance and operational workflows</td>
       </tr>
     </tbody>
   </table>
 </section>
-
 
 
 
