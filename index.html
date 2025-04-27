@@ -1653,45 +1653,61 @@
       background-color: #1e40af;
     }
    /* Desktop: side-by-side */
-.results-table .results-grid {
+.results-table {
+  background-color: #f9fafb;
+  padding: 5rem 1rem;
+}
+
+.results-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.results-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #475569;
+}
+
+.results-grid {
   display: flex;
-  gap: 4rem; /* Space between columns */
+  gap: 4rem;
   justify-content: center;
 }
 
-/* Each column */
-.results-table .results-column {
+.results-column {
   flex: 1;
   min-width: 280px;
 }
 
-/* Mobile behavior */
+.results-column h3 {
+  text-align: center;
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.results-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.results-column li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Mobile view */
 @media (max-width: 768px) {
-  .results-table .results-grid {
+  .results-grid {
     flex-direction: column;
-    gap: 2.5rem; /* Space between stacked columns */
   }
 
-  .results-table .results-column {
+  .results-column {
     width: 100%;
-  }
-
-  .results-table .results-column h3 {
-    text-align: center;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-  }
-
-  .results-table .results-column li {
-    font-size: 1rem;
-    margin-bottom: 1.25rem;
-    line-height: 1.5;
-  }
-
-  .results-table .icon {
-    width: 24px;
-    height: 24px;
-    flex-shrink: 0;
   }
 }
 
@@ -2048,85 +2064,34 @@ select.form-control {
  <section class="results-table">
   <div class="results-container">
     <h2 class="results-title">Fraicly Impact: Before and After</h2>
+
     <div class="results-grid">
+      
       <div class="results-column before">
         <h3>Before Fraicly</h3>
         <ul>
-          <li>
-            <span class="icon">
-              <svg viewBox="0 0 20 20" fill="#dc2626" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M10 8.586l4.95-4.95 1.414 1.414L11.414 10l4.95 4.95-1.414 1.414L10 11.414l-4.95 4.95-1.414-1.414L8.586 10l-4.95-4.95 1.414-1.414L10 8.586z" clip-rule="evenodd"/>
-              </svg>
-            </span>
-            Defaulting or slow-paying clients
-          </li>
-          <li>
-            <span class="icon">
-              <svg viewBox="0 0 20 20" fill="#dc2626" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M10 8.586l4.95-4.95 1.414 1.414L11.414 10l4.95 4.95-1.414 1.414L10 11.414l-4.95 4.95-1.414-1.414L8.586 10l-4.95-4.95 1.414-1.414L10 8.586z" clip-rule="evenodd"/>
-              </svg>
-            </span>
-            Choosing unprofitable contracts
-          </li>
-          <li>
-            <span class="icon">
-              <svg viewBox="0 0 20 20" fill="#dc2626" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M10 8.586l4.95-4.95 1.414 1.414L11.414 10l4.95 4.95-1.414 1.414L10 11.414l-4.95 4.95-1.414-1.414L8.586 10l-4.95-4.95 1.414-1.414L10 8.586z" clip-rule="evenodd"/>
-              </svg>
-            </span>
-            Reacting late to economic cycles
-          </li>
-          <li>
-            <span class="icon">
-              <svg viewBox="0 0 20 20" fill="#dc2626" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M10 8.586l4.95-4.95 1.414 1.414L11.414 10l4.95 4.95-1.414 1.414L10 11.414l-4.95 4.95-1.414-1.414L8.586 10l-4.95-4.95 1.414-1.414L10 8.586z" clip-rule="evenodd"/>
-              </svg>
-            </span>
-            Inefficient workflows
-          </li>
+          <li>❌ Defaulting or slow-paying clients</li>
+          <li>❌ Choosing unprofitable contracts</li>
+          <li>❌ Reacting late to economic cycles</li>
+          <li>❌ Inefficient workflows</li>
         </ul>
       </div>
 
       <div class="results-column after">
         <h3>With Fraicly</h3>
         <ul>
-          <li>
-            <span class="icon">
-              <svg viewBox="0 0 20 20" fill="#16a34a" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414-1.414l-7.586 7.586-3.293-3.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8z" clip-rule="evenodd"/>
-              </svg>
-            </span>
-            AI-powered payment forecasting and client risk analysis
-          </li>
-          <li>
-            <span class="icon">
-              <svg viewBox="0 0 20 20" fill="#16a34a" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414-1.414l-7.586 7.586-3.293-3.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8z" clip-rule="evenodd"/>
-              </svg>
-            </span>
-            Data-driven bid evaluation and margin forecasting
-          </li>
-          <li>
-            <span class="icon">
-              <svg viewBox="0 0 20 20" fill="#16a34a" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414-1.414l-7.586 7.586-3.293-3.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8z" clip-rule="evenodd"/>
-              </svg>
-            </span>
-            Early-warning economic signals for strategic adaptation
-          </li>
-          <li>
-            <span class="icon">
-              <svg viewBox="0 0 20 20" fill="#16a34a" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414-1.414l-7.586 7.586-3.293-3.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8z" clip-rule="evenodd"/>
-              </svg>
-            </span>
-            AI-enhanced finance and operational workflows
-          </li>
+          <li>✅ AI-powered payment forecasting and client risk analysis</li>
+          <li>✅ Data-driven bid evaluation and margin forecasting</li>
+          <li>✅ Early-warning economic signals for strategic adaptation</li>
+          <li>✅ AI-enhanced finance and operational workflows</li>
         </ul>
       </div>
-    </div>
-  </div>
+
+    </div> <!-- End of .results-grid -->
+
+  </div> <!-- End of .results-container -->
 </section>
+
 
 
 
