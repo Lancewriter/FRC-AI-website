@@ -1663,13 +1663,13 @@
   gap: 4rem;
   justify-content: center;
   align-items: flex-start;
-  flex-wrap: wrap; /* allows stacking on mobile */
+  flex-wrap: nowrap; /* allows stacking on mobile */
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .fraicly-impact-table {
-  flex: 1;
+  flex: 0 0 45%; /* 45% width for each table */
   min-width: 300px;
 }
 
@@ -1699,10 +1699,13 @@
 /* Mobile: stack tables */
 @media (max-width: 768px) {
   .fraicly-impact-wrapper {
-    flex-direction: column;
-    gap: 3rem;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+  }
+  .fraicly-impact-table {
+    flex: 0 0 100%; /* Full width stacking */
   }
 }
+
 
 /* Style the dropdown (select input) */
 .form-control {
