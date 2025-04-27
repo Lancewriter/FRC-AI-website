@@ -1718,6 +1718,60 @@
     hyphens: auto;
   }
   }
+/* Style the dropdown (select input) */
+.form-control {
+  width: 100%;
+  max-width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  color: #333;
+  background-color: #fff;
+  appearance: none; /* Remove default browser styles */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2212%22%20height%3D%227%22%20viewBox%3D%220%200%2012%207%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M6%207l6-7H0z%22%20fill%3D%22%23333%22/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 12px 7px;
+  cursor: pointer;
+}
+
+/* On focus */
+.form-control:focus {
+  border-color: #0056d2;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 86, 210, 0.2);
+}
+
+/* Optional: Make the select height match the input fields nicely */
+select.form-control {
+  height: 50px;
+}
+.form-control:hover {
+  border-color: #0056d2;
+}
+/* Form Row - group fields */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Columns inside rows */
+.form-row .col {
+  flex: 1 1 100%; /* Mobile first: full width */
+}
+
+/* Buttons */
+.btn-block {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+
 @media (max-width: 768px) {
   .mobile_header {
     flex-direction: row !important; /* Stack vertically on mobile */
@@ -1741,6 +1795,19 @@
   width: 100px;
   height: auto;
 }
+
+.form-row .col {
+    flex: 1 1 30%;
+  }
+
+  .form-control {
+    font-size: 1rem;
+  }
+
+  .btn-block {
+    font-size: 1rem;
+  }
+
 
 /*  .video-container iframe {
     display:none;
@@ -1896,7 +1963,7 @@
             <h1>AI-Powered Financial and Cash Flow Risk Management.</h1>
             <p>AI-powered financial risk solutions for consultancies, contractors, and Fin-techs who are done guessing.</p>
             <p>→ Cut costs. Forecast better. Recover faster.</p>
-            <button id="openModalBtn" class="contact-button">Get Fraicly's free economic upate newletter </button>
+            <button id="openModalBtn" class="contact-button">Stay Ahead: Get Free Economic Updates by Fraicly</button>
 
         </div>
         
@@ -1920,8 +1987,9 @@
    
     
     <div class="sidekick-content ">
-        
-        <h1>Take the first step to mitigate these risks and capture opportunities with the below:</h1>
+        <div class=sidekick-containter>
+        <h2>How Exposed Is Your Business to Financial Risk and AI Disruption?:</h2>
+        <p>Get a personalized snapshot of your vulnerabilities — and learn how to future-proof your cash flow and operations with Fraicly’s expertise.</p>
                 <h2> Get your <a href="mailto:info@FRAICLY.com?subject=Inquiry from Website" class="narrative-button">free</a> AI-readiness assessment — see where your data stands.</h2>
                 <h2> Lets talk about growing your sales pipeline for  <a href="mailto:info@FRAICLY.com?subject=Inquiry from Website" class="narrative-button">free</a>.</h2>
         
@@ -2708,7 +2776,7 @@
  <div id="strategyModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
-  <h1>Get a FREE financial and Cashflow Risk Management Guide</h1>
+  <h1>Get Your Free Insight or Assessment from Fraicly</h1>
   <form target="_blank" action="https://hook.us2.make.com/84lf8ghwcenu765dymmc4to6k9jz8t3n" method="POST">
     <div class="form-group">
       <div class="form-row">
@@ -2735,7 +2803,13 @@
       </div>
     </div>
     <div class="form-group">
-      <textarea placeholder="Your Objective" class="form-control" name="message" rows="10" required></textarea>
+      <select name="message" class="form-control" required>
+          <option value="">Select What You Are Requesting</option>
+          <option value="Weekly Economic Update Newsletter Signup">Weekly Economic Update Newsletter Signup</option>
+          <option value="AI Readiness / Data Maturity Assessment">AI Readiness / Data Maturity Assessment</option>
+          <option value="Cash Flow Resilience Assessment">Cash Flow Resilience Assessment</option>
+          <option value="Other (please specify)">Other (please contact me)</option>
+        </select>
     </div>
     <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
   </form>
