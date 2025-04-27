@@ -1653,23 +1653,68 @@
       background-color: #1e40af;
     }
    /* Desktop: side-by-side */
-.results-table {
+.fraicly-impact-section {
   background-color: #f9fafb;
   padding: 5rem 1rem;
 }
 
-.results-container {
+.fraicly-impact-wrapper {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
-.results-title {
+.fraicly-impact-heading {
   text-align: center;
   font-size: 2.5rem;
-  color: #475569;
+  color: #1f2937;
   margin-bottom: 3rem;
 }
+
+.fraicly-impact-columns {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.fraicly-impact-block {
+  flex: 1;
+  min-width: 300px;
+}
+
+.fraicly-impact-block h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #111827;
+}
+
+.fraicly-impact-block ul {
+  list-style: none;
+  padding: 0;
+}
+
+.fraicly-impact-block li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .fraicly-impact-columns {
+    flex-direction: column;
+  }
+
+  .fraicly-impact-block {
+    width: 100%;
+  }
+}
+
 
 .results-grid {
   display: flex;
@@ -2065,13 +2110,13 @@ select.form-control {
     </section>
     --->
      <div class="separator"></div>
-<section class="results-table">
-  <div class="results-container">
-    <h2 class="results-title">Fraicly Impact: Before and After</h2>
+<section class="fraicly-impact-section">
+  <div class="fraicly-impact-wrapper">
+    <h2 class="fraicly-impact-heading">Fraicly Impact: Before and After</h2>
 
-    <div class="results-grid">
+    <div class="fraicly-impact-columns">
       
-      <div class="results-column before">
+      <div class="fraicly-impact-block fraicly-impact-before">
         <h3>Before Fraicly</h3>
         <ul>
           <li>❌ Defaulting or slow-paying clients</li>
@@ -2081,7 +2126,7 @@ select.form-control {
         </ul>
       </div>
 
-      <div class="results-column after">
+      <div class="fraicly-impact-block fraicly-impact-after">
         <h3>With Fraicly</h3>
         <ul>
           <li>✅ AI-powered payment forecasting and client risk analysis</li>
@@ -2091,9 +2136,10 @@ select.form-control {
         </ul>
       </div>
 
-    </div> <!-- End .results-grid -->
-  </div> <!-- End .results-container -->
+    </div>
+  </div>
 </section>
+
 
 
 
