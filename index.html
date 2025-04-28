@@ -1251,7 +1251,7 @@
 .hidden {
     display: none;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
 
     
     body {
@@ -1282,7 +1282,7 @@
          top:0px;
          display: flex;
          height: 650px; /* Full viewport height */
-        flex-direction: column; /* Keep elements side by side */
+        flex-direction: row; /* column Keep elements side by side */
         align-items: center; /* Align title and image vertically */
         justify-content: flex-start ; /* Push elements to edges */
         width: 100%; /* Full width */
@@ -1734,13 +1734,8 @@ select.form-control {
 }
 
 
-@media (max-width: 576px) {
-  .mobile_header {
-    flex-direction: row !important; /* Stack vertically on mobile */
-    align-items: center; /* Optional: center elements horizontally */
-    text-align: center;  /* Optional: center text/content */
-  }
-
+@media (max-width: 768px) {
+  
   .mobile_title,
   .mobile-hero-video  
   {
@@ -1749,10 +1744,7 @@ select.form-control {
     flex:1;
   }
 
- .mobile_header {
-    flex-direction: row;
-    justify-content: space-between;
-  }
+
   .chatbot-button svg {
   width: 100px;
   height: auto;
@@ -1796,20 +1788,8 @@ select.form-control {
           
   </div>
 </div>
-             
-            <!--<div class="mobile_hero"></div>
-             <div class="mobile_title">
-                 <div class="mobile-fraicly-image"></div>
-                 <!--<h1>FRAICLY</h1>
-             </div>
-                 <div class="mobile-hero-video">
-                  <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/8I-PcHx8Ukk?si=4ukYRRFND2Tvst4V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            
-                 <div class="menu_word">menu</div>
-                 <div class="menu-toggle" onclick="Mobile_toggleMenu()">☰</div>
-            </div>-->
+            <!-- 
+           
              <nav id="mobile-menu" class="hidden">
              <ul class="navbar">
              <li><a href="#"onclick="Menu_scrollToSection('landing')">Home</a></li>
@@ -1837,10 +1817,10 @@ select.form-control {
                         
             </ul>
         </li>
-        <!-- Add other links here -->
+        
     </ul>
 </nav>
-</div>
+</div>-->
         <nav>
             <ul class="navbar">
                 <li><a href="#"onclick="Menu_scrollToSection('landing',event);">Home</a></li>
