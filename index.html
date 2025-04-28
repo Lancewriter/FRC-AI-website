@@ -1548,22 +1548,19 @@
 
      .chatbot-messages::-webkit-scrollbar {
     display: none; /* Chrome/Safari */
-
+     }
      .chatbot-button {
     bottom: 20px;
     right: 20px;
   }
-    .main-menu{display:none;}
+    .main-menu{display:none;
+              z-index:0;}
+     #main-menu{display:none;
+              z-index:0;}
 
    .nav {
         display: none; /* Hide the full menu by default */
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 10px;
-        background: white;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
+       
     }
     .navbar ul li a {
             text-decoration: none;
