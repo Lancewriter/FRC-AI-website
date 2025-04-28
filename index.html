@@ -514,7 +514,7 @@
             display: block;
 
         }
-        @media (max-width: 768px) {
+        @media (max-width: 576px) {
             .tab-content.active {
                 width:120%;
             
@@ -630,7 +630,7 @@
             padding-bottom: 900px;
             height: 5px;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 576px) {
             .Journey_grid-container {
                 display:none;
                 padding-bottom:550px;
@@ -702,7 +702,7 @@
 
             box-sizing: border-box;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 576px) {
 
             hero-video {
 
@@ -782,7 +782,7 @@
             padding-bottom: 150px;
             height: 10px;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 576px) {
          .Risk_journey-grid-container {
           display: none; /* Hide the table on screens 768px or smaller */
          }
@@ -806,7 +806,7 @@
         word-wrap: break-word;
         font-size: 14px;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 576px) {
     .Risk_journey_header-cell, 
     .Risk_journey_Risk-cell, 
     .Risk_journey_impact-cell, 
@@ -833,7 +833,7 @@
             background-color: #259fd3;
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 576px) {
     .Risk_Journey {
         display:none;
         padding: 10px; /* Reduce padding for extra-small screens */
@@ -904,7 +904,7 @@
 
         }
 
-        @media (max-width: 480px){
+        @media (max-width: 576px){
 
         .Why_US_grid-container{
                 display:none;
@@ -1251,7 +1251,7 @@
 .hidden {
     display: none;
 }
-        @media (max-width: 768px) {
+        @media (max-width: 576px) {
 
     
     body {
@@ -1697,9 +1697,31 @@
 }
 
 /* Mobile: stack tables */
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   
+.modal-content {
+    width: 95% !important;       /* almost full width, with 5% margin on each side */
+    max-width: none !important;   /* override the 600px cap */
+    margin: 5% auto;              /* smaller top/bottom gaps */
+    padding: 1rem !important;     /* less padding so fields fit */
+    box-sizing: border-box;       /* include padding in the width calculation */
+  }
 
+  /* Stack your form‐rows vertically so inputs don’t squeeze side by side */
+  .form-row {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+  }
+
+  .form-row .col {
+    flex: 1 1 100% !important;
+  }
+
+  /* Shrink the submit button padding slightly */
+  .btn-block {
+    padding: 0.6rem 1rem !important;
+    font-size: 1rem !important;
+  }
 
 /* Style the dropdown (select input) */
 .form-control {
@@ -1753,13 +1775,15 @@ select.form-control {
   font-weight: bold;
   border-radius: 8px;
 }
+}
+            
 /* Force the modal to show when “active” on all screen sizes */
 .modal.active {
   display: block !important;
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .mobile_header {
     flex-direction: row !important; /* Stack vertically on mobile */
     align-items: center; /* Optional: center elements horizontally */
@@ -1986,75 +2010,8 @@ select.form-control {
  
     <div class="separator"></div>
    
-    <!-- <section id="Risk_Journey_section",class="Risk_Journey">
-        <div class="Journey-content">
-      
-        <div class="section_hero">
-            <h1>Your Journey</h1>
-        </div>
-        <div class="Journey_grid-container">
+   
 
-            
-                    
-             
-        <div class="Journey_large-cell">
-            
-            <div class="vulnerable-container">
-            <ul>
-            <p>SMEs are especially vulnerable to Economic uncertainty and AI proliferation.</p>
-            
-            <li>Have a look at the <a href="#" onclick="toggleSectorsMenu(); return false;">Sectors</a> we provide our <a href="#" onclick="toggleServicesMenu(); return false;">Services</a> to.</li>
-                       
-            </ul>
-            </div>
-            
-        </div>
-
-            
-               
-        
-        <div class="Right-Journey_large-cell">
-            <ul> <li class="arrow-container"><h2>The table below demonstrates how these risks to SMEs escalate over time <div class="arrow"></div>
-                <div class="arrow"></div>
-                <div class="arrow"></div>
-                <div class="arrow"></div>
-            </li> 
-          </h2>
-          </li>
-          </ul>
-            
-            <div class="Risk_journey-grid-container">
-                <!-- Top Row: Logos 
-
-                <div class="Risk_journey_header-cell"><strong>Risk</strong></div>
-                <div class="Risk_journey_header-cell">Short term impact</div>
-                <div class="Risk_journey_header-cell">Medium term impact</div>
-                <div class="Risk_journey_header-cell">Long term impact</div>
-                <div class="Risk_journey_header-cell"><strong>How FRAICLY helps today</strong></div>
-                
-                
-                <div class="Risk_journey_Risk-cell"><strong>AI Proliferation</strong></div>
-                <div class="Risk_journey_impact-cell">Miss customer expectations</div>
-                <div class="Risk_journey_impact-cell">Can't Compete</div>
-                <div class="Risk_journey_impact-cell">Distressed / failed business</div>
-                <div class="Risk_journey_solution-cell"><strong><a href="#" onclick="scrollToTab('ai-services-tab')" aria-label="Go to ai services Tab">AI Design and Deployment</a></strong></div>
-                
-                <!-- Second Row: Commentary 
-                <div class="Risk_journey_Risk-cell"><strong>Economic downturns</strong></div>
-                <div class="Risk_journey_impact-cell">Low / declining revenue</div>
-                <div class="Risk_journey_impact-cell">Client defaults / Supplier failure</div>
-                <div class="Risk_journey_impact-cell">Distressed cashflows</div>
-                <div class="Risk_journey_solution-cell"><strong><a href="#" onclick="scrollToTab('business_recovery-tab')" aria-label="Go to business resilience Tab">Business Recovery/Resilience</a></strong></div>
-
-            </div>
-            
-        </div>
-        </div>
-     </div>
-    </div>
-    </section>
-    --->
-     <div class="separator"></div>
 
 <div class="container">
             <div class="Why_US_grid-container">
