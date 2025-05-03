@@ -327,24 +327,52 @@
             padding: 5%; /* Adjust padding as needed */
             /*background-color: #f0f0f0; /* Optional: background color for contrast */
         }
-        .sidekick-content {
-            width: 100vw; /* 100% of viewport width */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            margin-top: 1%;
-            padding-top: 1%;
-            padding: 5%; /* Adjust padding as needed */
-            background-color: #f0f0f0; /* Optional: background color for contrast */
-        }
-        .sidekick-content h2 {
-            font-size: 2rem; /* Large heading */
-            margin-bottom: 1rem;
-            color: #708090;
-            font-family:'Trebuchet','Tahoma','Helvetica','Arial', sans-serif;
+       .sidekick-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 40px 24px;
+    background-color: #f8f9fa; /* Light gray with a modern tone */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
 
-        }
+.sidekick-content h2 {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.sidekick-content p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.sidekick-content .cta-button {
+    background-color: #007bff; /* Or your brand's primary color */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+}
+
+.sidekick-content .cta-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
 
 
 
