@@ -937,13 +937,25 @@
         @media (max-width: 576px){
 
         .Why_US_grid-container{
-                display:none;
+                /*display:none;
                 height: flex;
-                width:flex;
+                width:90%;
                 padding-bottom: 650px;
                 margin-bottom: 150px;
-                font-size: 8px;
-            }
+                font-size: 8px;*/
+           
+        display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 24px;
+    background-color: #fff;
+    font-size: 1rem;
+    line-height: 1.5;
+        
+        }
 
         .Mobile_Why_US_grid-container{
 
@@ -1988,7 +2000,7 @@ select.form-control {
      
     <div class="sidekick-content ">
        
-        <h2>Is Your Business at Risk from AI Disruption or Unreliable Partners?</h2>
+        <h2>Is Your Business at Risk from Cash-Strapped business Partners or AI Disruption?</h2>
   <p>
     Get a tailored snapshot of your vulnerabilities — and learn how to future-proof your cash flow with Fraicly’s strategic insights.
   </p>
@@ -2003,7 +2015,7 @@ select.form-control {
     Book a no-cost consultation and explore how Fraicly can help you scale smarter.
   </p>
 
-  <a href="#" class="cta-button">Book Free Assessment</a>
+  <a href="mailto:info@fraicly.com?subject=Inquiry from Website" class="contact-button" class="cta-button">Book Free Assessment</a>
     </div>
    
     
