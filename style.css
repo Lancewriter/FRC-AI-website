@@ -453,7 +453,7 @@
             border-top: 1px solid #ddd;
         }
         @media (max-width: 768px) {
-                 .video-container { margin-bottom: 150px;}
+                 .video-container { margin-bottom: 170px;}
             .mobile_title{display:flex;}
             .mobile_title h1{font-size:20px ;}
             .main_logo{display:none;}
@@ -475,7 +475,7 @@
                 z-index: 1000;
             }
             header h1{font-size: 35px;}
-            .video-container{padding-bottom:120px}
+           /* .video-container{padding-bottom:150px}*/
         }
          /* Tab container */
         .tab-container {
