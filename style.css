@@ -452,6 +452,7 @@
             padding-top: 20px;
             border-top: 1px solid #ddd;
         }
+        @media (max-width: 568px) { .video-container{padding-bottom:140px}}
         @media (max-width: 768px) {
                  .video-container { margin-bottom: 170px;}
             .mobile_title{display:flex;}
