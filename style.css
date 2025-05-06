@@ -452,11 +452,7 @@
             padding-top: 20px;
             border-top: 1px solid #ddd;
         }
-        @media (max-width: 568px) { .video-container{
-                padding-bottom:100px;
-                 margin-bottom:100px;
-                }
-                }
+       
         @media (max-width: 768px) {
                  .video-container { margin-bottom: 170px;}
             .mobile_title{display:flex;}
@@ -482,6 +478,11 @@
             header h1{font-size: 35px;}
            .video-container{padding-bottom:170px}
         }
+         @media (max-width: 568px) { .video-container{
+                padding-bottom:0px;
+                 margin-bottom:100px;
+                }
+                }
          /* Tab container */
         .tab-container {
             margin-top: 30px;
