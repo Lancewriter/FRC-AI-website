@@ -453,8 +453,8 @@
             border-top: 1px solid #ddd;
         }
         @media (max-width: 568px) { .video-container{
-                padding-bottom:140px;
-                 margin-bottom:140px;
+                padding-bottom:100px;
+                 margin-bottom:100px;
                 }
                 }
         @media (max-width: 768px) {
