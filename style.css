@@ -480,7 +480,7 @@
         }
          @media (max-width: 568px) { .video-container{
                 padding-bottom:100px;
-                 margin-bottom:0px;
+                 margin-bottom:100px;
                 }
                 }
          /* Tab container */
