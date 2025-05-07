@@ -483,9 +483,10 @@
                  margin-bottom:120px;
                 }
         .Why_US_grid-container {
-            grid-template-columns: 1fr;
-             gap: 10px;
-             padding-bottom: 20px;
+                display: flex;
+  flex-direction: column;
+  gap: 12px;              /* spacing between rows */
+  padding: 10px;
         }  
 
         .Why_US_logo {
