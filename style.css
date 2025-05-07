@@ -479,7 +479,12 @@
            .video-container{padding-bottom:170px}
         }
          @media (max-width: 568px) {
-                 #features {
+        .sidekick-content {
+  margin-bottom: 0 !important;
+  padding-bottom: 12px !important;
+    }
+                
+        #features {
             padding: 10px 0;
             text-align: center;
         }
