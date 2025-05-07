@@ -478,7 +478,21 @@
             header h1{font-size: 35px;}
            .video-container{padding-bottom:170px}
         }
-         @media (max-width: 568px) { .video-container{
+         @media (max-width: 568px) { 
+
+                 .section_hero {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.container, .container2, .vulnerable-container {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+                 
+                 
+                 .video-container{
                 padding-bottom:120px;
                  margin-bottom:120px;
                 }
