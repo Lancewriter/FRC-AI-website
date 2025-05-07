@@ -488,11 +488,13 @@
         }
 
         .Why_US_logo {
+                display:none;
                  width: 100%;
                  margin: 0 auto;
                  padding-bottom: 100px;
             }
         .Why_US_logo img {
+                display:none;
              max-width: 90%;
             height: auto;
         }
