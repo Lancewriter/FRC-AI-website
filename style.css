@@ -426,7 +426,7 @@
             text-align: center;
             width: 100%;
         }
-        .separator {
+        .separator,Why_US_separator {
             flex: 1 1 calc(45% - 20px);
             background-color: white;
             padding: 10px;
@@ -479,7 +479,7 @@
            .video-container{padding-bottom:170px}
         }
          @media (max-width: 568px) {
-
+                 .Why_US_separator{display:none;}
                  .Why_US_section_hero{ display:none;}
                  .Mobile_Why_US_grid-container{display:none;}
 
