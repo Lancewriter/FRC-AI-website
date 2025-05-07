@@ -433,7 +433,7 @@
             padding-top: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            height:30px;
+            height:10px;
            
         }
         .feature h3 {
@@ -479,10 +479,34 @@
            .video-container{padding-bottom:170px}
         }
          @media (max-width: 568px) {
+                 #features {
+            padding: 10px 0;
+            text-align: center;
+        }
+        .feature h1 {
+            color: #333;
+            text-align: center;
+            padding-top: 10px;
+        .feature-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .feature {
+            flex: 1 1 calc(45% - 20px);
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            height:100px;
+            text-align: center;
+            width: 100%;
+        }
                  .Why_US_separator{display:none;}
                  .Why_US_section_hero{ display:none;}
                  .Mobile_Why_US_grid-container{display:none;}
-                 .separator{height:10px;}
+                 .separator{display:none;}
                  .section_hero {
   padding-bottom: 0 !important;
   margin-bottom: 0 !important;
