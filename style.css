@@ -485,21 +485,21 @@
         .Wcontainer{
                 display:none;
                 gap:12px;
-                padding-bottom:10px;
-                margin-bottom:10px;
+                padding-bottom:0px;
+                margin-bottom:0px;
         }
         .Why_US_grid-container {
                 display: flex;
   flex-direction: column;
   gap: 12px;              /* spacing between rows */
-  padding: 10px;
+  padding: 0px;
         }  
 
         .Why_US_logo {
                 display:none !important;
                  width: 100%;
                  margin: 0 auto;
-                 padding-bottom: 10px;
+                 padding-bottom: 0px;
             }
         .Why_US_logo img {
                 display:none;
@@ -510,8 +510,8 @@
         .Why_US_commentary {
             display:none;
             text-align: center;
-            padding-bottom:20px;
-            margin-bottom:20px;
+            padding-bottom:0px;
+            margin-bottom:0px;
             font-size: 16px;
             color: #333;
         }
