@@ -508,6 +508,7 @@
         }
 
         .Why_US_commentary {
+            display:none;
             text-align: center;
             padding-bottom:120px;
             margin-bottom:120px;
