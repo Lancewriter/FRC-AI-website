@@ -483,13 +483,13 @@
                  margin-bottom:120px;
                 }
         .Why_US_grid-container {
-             display:none;
-             grid-template-columns: 1fr;
-            padding-bottom: 100px;
-        }
+            grid-template-columns: 1fr;
+             gap: 10px;
+             padding-bottom: 20px;
+        }  
 
         .Why_US_logo {
-                display:none;
+                display:none !important;
                  width: 100%;
                  margin: 0 auto;
                  padding-bottom: 100px;
