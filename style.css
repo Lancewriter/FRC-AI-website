@@ -481,6 +481,7 @@
          @media (max-width: 568px) {
 
                  .Why_US_section_hero{ display:none;}
+                 .Mobile_Why_US_grid-container{display:none;}
 
                  .section_hero {
   padding-bottom: 0 !important;
