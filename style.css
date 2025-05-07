@@ -13,7 +13,7 @@
         }
         .mobile_title{display:none}
         
-        .section_hero {
+        .section_hero, .Why_US_section_hero{
             position:relative;
             overflow:hidden;
             font-family:'Trebuchet','Tahoma','Helvetica','Arial',sans-serif;
