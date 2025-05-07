@@ -482,7 +482,27 @@
                 padding-bottom:120px;
                  margin-bottom:120px;
                 }
-                }
+        .Why_US_grid-container {
+             grid-template-columns: 1fr;
+            padding-bottom: 20px;
+        }
+
+        .Why_US_logo {
+                 width: 100%;
+                 margin: 0 auto;
+            }
+        .Why_US_logo img {
+             max-width: 90%;
+            height: auto;
+        }
+
+        .Why_US_commentary {
+            text-align: center;
+            padding: 2px;
+            font-size: 16px;
+            color: #333;
+        }
+         }
          /* Tab container */
         .tab-container {
             margin-top: 30px;
