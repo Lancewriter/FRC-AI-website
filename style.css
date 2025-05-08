@@ -1020,9 +1020,9 @@
         
         }
 
-        .Mobile_Why_US_grid-container{
+        .fraicly-impact-wrapper{
 
-            display:none!important;
+            display:flex;
             grid-template-columns: repeat(1, 1fr);
             grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto;
             gap: 20px;
