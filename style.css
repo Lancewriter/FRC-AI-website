@@ -1030,11 +1030,25 @@
             font-size:1rem;
             padding-top: 5px;  /* Less padding at the top */
             padding-left:10px;
-            margin-bottom: 150px;
+            margin-bottom: 200px;
             height: 50px;
             width:90%;
 
         }
+        .fraicly-impact-table {
+                 /* both columns take equal width */
+         flex: 1 1 48%;       /* ✅ Force equal width (2 columns, with slight gap) */
+    min-width: 140px;
+    max-width: 48%;
+    box-sizing: border-box;
+    text-align: left;
+    padding: 8px;
+        }
+        .fraicly-impact-table h3 {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
 
         }
 
