@@ -1078,7 +1078,7 @@
   font-size: 14px;
   color: #333;
   line-height: 1;
-  margin-left: 10px;
+  margin: 0px;
   padding-right: 10px;
   font-weight: 500;
   text-transform: lowercase; /* optional styling */
