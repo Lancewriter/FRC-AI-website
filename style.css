@@ -1026,9 +1026,11 @@
             grid-template-columns: repeat(1, 1fr);
             grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto;
             gap: 20px;
+            justify-content: center;
+            font-size:1rem;
             padding-top: 5px;  /* Less padding at the top */
-            padding-bottom: 1675px;
-            height: 550px;
+            padding-bottom: 15px;
+            height: 50px;
             width:90%;
 
         }
