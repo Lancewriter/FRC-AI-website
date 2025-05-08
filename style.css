@@ -1065,8 +1065,8 @@
         
     }
         .mobile_menu_group {
-  display: flex;
-  flex-direction: column;     /* Stack menu + icon */
+  display: flex !important;
+  flex-direction: column !important;     /* Stack menu + icon */
   align-items: center;        /* Center horizontally */
   justify-content: center;    /* Center vertically in parent */
   gap: 4px;                   /* Space between word and icon */
