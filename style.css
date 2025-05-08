@@ -1078,7 +1078,7 @@
   font-size: 14px;
   color: #333;
   line-height: 1;
-  margin: 0;
+  margin-left: 10px;
   padding: 0;
   font-weight: 500;
   text-transform: lowercase; /* optional styling */
@@ -1088,7 +1088,7 @@
   font-size: 24px;
   cursor: pointer;
   line-height: 1;
-  margin: 0;
+  margin-left: 10px;
   padding: 0;
   color: #333;
 }
