@@ -481,7 +481,7 @@
         }
          @media (max-width: 568px) {
                   .mobile-fraicly-image {
-                
+            display:block;  
             width: 100%; /* 0% of viewport width */
              height:100px;
             background-image: url("FRAICLY.jpg"); /* Replace with your image path */
@@ -1523,6 +1523,19 @@
         color:white;
 
     }
+         .mobile-fraicly-image {
+            display:block;  
+            width: 100%; /* 0% of viewport width */
+             height:100px;
+            background-image: url("FRAICLY.jpg"); /* Replace with your image path */
+            background-size: cover; /* Ensure the image covers the entire section */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat;
+            background-color:white;
+           
+            padding: 0 0 0 80px;
+
+        }
 
     .hidden{
     display:none;
