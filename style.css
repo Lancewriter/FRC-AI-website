@@ -484,32 +484,35 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto auto auto;
-  gap: 20px;
-  padding-top: 5px;         /* Less padding at the top */
-  padding-bottom: 350px;
-  width: 90%;
-  height: 10px;
+  gap: 24px;
+ padding: 20px 40px;                    /* ⬅ adds space on left/right */
+  width: 100%;
+  box-sizing: border-box;
+  align-items: start;
 }
 
  .Why_US_logo {
-                
-                 width: 100%;
-                 margin: 0 auto;
-                 padding-bottom: 0px;
+         display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+                       
             }
         .Why_US_logo img {
-                
-             max-width: 90%;
-            height: auto;
+                max-width: 70%;   /* ⬅️ reduce image width */
+                height: auto;
+                display: block;
+             
         }
 
         .Why_US_commentary {
-            display:flex;
             text-align: center;
-            padding-bottom:0px;
-            margin-bottom:0px;
-            font-size: 16px;
-            color: #333;
+          font-size: 1rem;
+          padding: 8px;
+          color: #333;
         }
 
 
@@ -1046,54 +1049,53 @@
 
         @media (max-width: 576px){
          .mobile_header{
-         top:5px;
-         display: flex;
-         height: 650px; /* Full viewport height */
-        flex-direction: row; /* column Keep elements side by side */
-        align-items: center; /* Align title and image vertically */
-        justify-content: flex-start ; /* Push elements to edges */
-        width: 100%; /* Full width */
-        padding: 0 15px;
-        margin: 0;
-        padding-bottom:20px;
-        gap:0px !important;
-        box-shadow: none !important;
-        /*box-sizing:border-box;*/
-        position:relative;
-        border: none !important;
-        border-bottom: none !important;
-               
+         top: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; /* fix: push logo left, menu right */
+    width: 100%;
+    padding: 10px 16px;
+    margin: 0;
+    height: auto;/* fix: remove 650px */
+    min-height:65px;
+    box-shadow: none !important;
+    position: relative;
+    border: none !important;
+        
     }
-.mobile_menu_group {
-  display: block;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+        .mobile_menu_group {
+  display: flex;
+  flex-direction: column;     /* Stack menu + icon */
+  align-items: center;        /* Center horizontally */
+  justify-content: center;    /* Center vertically in parent */
+  gap: 4px;                   /* Space between word and icon */
+  padding: 0;
+  margin: 0;
 }
-    .menu-toggle {
-        display: block !important;
-        font-size: 24px;
-        margin-left: 50px;
-        cursor: pointer;
-        padding: 0 0 0 60px
-        z-index:1000;
-    }
-    .menu_word{ 
-        display:block !important;
-        font-size:16px;
-        padding: 0 0 0 63px;
-        z-index:1000;
-         
-    }
+
+.menu_word {
+  font-size: 14px;
+  color: #333;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  text-transform: lowercase; /* optional styling */
+}
+
+.menu-toggle {
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
 
         .Why_US_grid-container{
-                /*display:none;
-                height: flex;
-                width:90%;
-                padding-bottom: 650px;
-                margin-bottom: 150px;
-                font-size: 8px;*/
-           
+                          
        display: none !important; 
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* wider min column width */
     gap: 24px;
