@@ -479,6 +479,19 @@
             header h1{font-size: 35px;}
            .video-container{padding-bottom:170px}
         }
+
+       .Why_US_grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto auto;
+  gap: 20px;
+  padding-top: 5px;         /* Less padding at the top */
+  padding-bottom: 350px;
+  width: 90%;
+  height: 10px;
+}
+
+
          @media (max-width: 568px) {
                   .mobile-fraicly-image {
             display:block !important;  
