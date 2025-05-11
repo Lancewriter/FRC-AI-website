@@ -2122,5 +2122,26 @@ select.form-control {
             background-color: #007bff
         }
 
-   
+@media (max-width: 768px) {
+         .hidden{
+    display:none;}
+.grid-container {
+        grid-template-columns: 1fr; /* Single-column layout */
+    }
+
+    .large-cell {display:none}
+
+    .small-cell {
+        width: 100%;
+        margin: 0;
+        writing-mode:horizontal-tb;
+    }
+    .large-cell h3 {
+            font-size: 3rem ;
+            color: white;   
+            margin-bottom: 15px;
+            writing-mode:horizontal-tb;
+            transform: scaleX(-1);
+        }
+}
 
