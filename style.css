@@ -2322,4 +2322,75 @@ select.form-control {
 #chat-send-btn:hover {
   background-color: #0e6e8e;
 }
+ /* Modal Background */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background-color: rgba(0, 0, 0, 0.5);
+      overflow-y: auto;
+    }
+
+    /* Modal Visible */
+    .modal.active {
+      display: block;
+    }
+
+    /* Modal Content */
+    .modal-content {
+      background: white;
+      margin: 10% auto;
+      padding: 2rem;
+      border-radius: 10px;
+      max-width: 600px;
+      width: 90%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .close {
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      color: #aaa;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #000;
+    }
+
+    input, textarea {
+      width: 100%;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+
+    .hero-content button[type="submit"] {
+      background-color: #007BFF; /* Button color */
+      color: #ffffff;;  /* slate-500 */
+      
+      border: none;
+      cursor: pointer;
+      padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;               /* Optional: full width button */
+  transition: background-color 0.3s ease
+    }
+
+    .modal-content button[type="submit"]:hover {
+      background-color: #1e40af;
+    }
+}
+
+
 
