@@ -1589,6 +1589,9 @@
     }
     .hidden.open {
   display: block;
+   background-color: #007bff;
+  color:white;
+            
 }
     .hidden.menu-item.navbar a { font-size: 1px !important; }  
     .logo{
