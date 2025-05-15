@@ -2392,5 +2392,49 @@ select.form-control {
     }
 }
 
+ .tab-container {
+            margin-top: 30px;
+            max-width: 100%;
+            margin-bottom: 50px;
+        }
 
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid #ddd;
+            color:#007bff;
+        }
+
+        .tabs button {
+            flex: 1;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            color:#007bff;
+        }
+
+        .tabs button.active {
+            background-color:  #007bff;
+            color: white;
+        }
+
+        .tabs button:hover {
+            background-color: #ddd;
+        }
+
+        /* Tab content */
+        .tab-content {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-top: none;
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+
+        }
 
