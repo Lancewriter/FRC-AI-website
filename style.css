@@ -547,6 +547,11 @@
         color:white;
         border-radius: 5px;
         }
+         .navbar li a:{
+        color:white;
+        border-radius: 5px;
+        }
+        
 
         .sidekick-content {
   margin-bottom: 0 !important;
