@@ -529,6 +529,10 @@
             padding: 0 0 0 80px;
 
         }
+         .navbar {
+          background-color:#007BFF; /* Required for positioning the dropdown */
+          color:white;
+        }
         .sidekick-content {
   margin-bottom: 0 !important;
   padding-bottom: 12px !important;
