@@ -516,7 +516,7 @@
         }
 
 
-         @media (max-width: 768px),(max-width: 568px) {
+         @media (max-width: 568px) {
                   .mobile-fraicly-image {
             display:block !important;  
             width: 100%; /* 0% of viewport width */
@@ -2495,3 +2495,29 @@ select.form-control {
     display: block !important;
   }
 }
+/* Tablet / small-desktop (up to 768px) */
+@media (max-width: 768px) {
+  .hero { flex-direction: column; }
+  .hero-video, .hero-content {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .video-container {
+    margin-bottom: 1rem;
+    padding-bottom: 0;
+  }
+
+  .tab-content.active {
+    width: 100%;
+  }
+
+  /* your mobile menu / chatbot overrides… */
+}
+
+/* Phone only (up to 576px) */
+@media (max-width: 576px) {
+  /* even smaller tweaks */
+}
+
