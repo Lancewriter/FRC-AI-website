@@ -515,7 +515,7 @@
           color: #333;
         }
 
-
+}
          @media (max-width: 568px) {
                   .mobile-fraicly-image {
             display:block !important;  
@@ -2497,27 +2497,32 @@ select.form-control {
 }
 /* Tablet / small-desktop (up to 768px) */
 @media (max-width: 768px) {
-  .hero { flex-direction: column; }
-  .hero-video, .hero-content {
-    flex: none;
-    width: 100%;
-    max-width: 100%;
+        /* Hero area: text on top, video below */
+  .hero {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch;
+  }
+  .hero-content,
+  .hero-video {
+    flex: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
   }
 
-  .video-container {
-    margin-bottom: 1rem;
-    padding-bottom: 0;
+  /* If you have any grid containers, collapse them to one column */
+  .grid-container,
+  .Why_US_grid-container,
+  .Landing_grid-container {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
   }
 
+  /* And make sure any “tab-content” or other wide blocks don’t overflow */
   .tab-content.active {
-    width: 100%;
+    width: 100% !important;
   }
-
-  /* your mobile menu / chatbot overrides… */
 }
-
-/* Phone only (up to 576px) */
-@media (max-width: 576px) {
-  /* even smaller tweaks */
-}
-
+  
