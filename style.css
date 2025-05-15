@@ -517,7 +517,9 @@
 
 }
          @media (max-width: 568px) {
-                  .mobile-fraicly-image {
+            
+                 
+            .mobile-fraicly-image {
             display:block !important;  
             width: 100%; /* 0% of viewport width */
             min-height:100px;
@@ -2525,4 +2527,22 @@ select.form-control {
     width: 100% !important;
   }
 }
-  
+/* hide everywhere by default */
+.mobile-fraicly-image {
+  display: none;
+}
+
+/* show only on phones (≤568px) */
+@media (max-width: 568px) {
+  .mobile-fraicly-image {
+    display: block !important;
+    width: 100%;
+    min-height: 100px;
+    background-image: url("FRAICLY.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-left: 80px;
+  }
+}
+ 
