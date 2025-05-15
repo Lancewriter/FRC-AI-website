@@ -516,7 +516,7 @@
         }
 
 
-         @media (max-width: 568px) {
+         @media (max-width: 768px),(max-width: 568px) {
                   .mobile-fraicly-image {
             display:block !important;  
             width: 100%; /* 0% of viewport width */
@@ -2463,3 +2463,35 @@ select.form-control {
 
         }
 
+      /* Mobile menu styling at both 768px and 568px breakpoints */
+@media (max-width: 768px), (max-width: 568px) {
+  /* When the menu is “open” (you already use nav.open to show it) */
+  nav.open {
+    background-color: #4F73FE;    /* Fraicly blue */
+    border-radius: 8px;           /* rounded corners */
+    padding: 10px;                /* optional inner spacing */
+  }
+
+  /* All links inside the open menu */
+  nav.open a {
+    color: #fff !important;       /* force white text */
+    border-radius: 4px;           /* slightly rounded link blocks */
+    margin: 2px 0;                /* small vertical gap between items */
+  }
+
+  /* Hover state for items */
+  nav.open a:hover {
+    background-color: rgba(255,255,255,0.1);
+  }
+.chatbot-widget {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    bottom: 20px;    /* your preferred offset */
+    right: 20px;     /* your preferred offset */
+    z-index: 9999;
+  }
+  .chatbot-button {
+    display: block !important;
+  }
+}
