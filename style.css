@@ -120,7 +120,7 @@
         color:#333 ; /* Replace with your desired color */
         }
         nav ul li a:hover {
-            background-color: #ddd;
+            background-color: #007bff;
             border-radius: 5px;
         }
         /* Dropdown Menu Styles */
@@ -1574,7 +1574,7 @@
         }
 
     .hidden{
-    display:none;
+    display:none !important;
     position:fixed;
     left:0;
     top:120px;
@@ -1591,6 +1591,7 @@
   display: block;
    background-color: #007bff;
   color:white;
+  padding-right:80px;
             
 }
     .hidden.menu-item.navbar a { font-size: 1px !important; }  
