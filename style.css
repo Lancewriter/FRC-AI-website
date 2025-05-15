@@ -2501,6 +2501,7 @@ select.form-control {
 @media (max-width: 768px) {
         /* Hero area: text on top, video below */
   .hero {
+    width:100% !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: stretch;
