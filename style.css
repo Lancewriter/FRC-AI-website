@@ -533,6 +533,21 @@
           background-color:#007BFF; /* Required for positioning the dropdown */
           color:white;
         }
+         .navbar a {
+        text-decoration: none;
+        color:  white;
+        padding: 10px 15px;
+        display: block;
+        transition: background-color 0.3s;
+        font-size: 20px; /* Adjust font size here */
+        }
+
+        .navbar a:hover {
+        background-color: #007bff;
+        color:white;
+        border-radius: 5px;
+        }
+
         .sidekick-content {
   margin-bottom: 0 !important;
   padding-bottom: 12px !important;
