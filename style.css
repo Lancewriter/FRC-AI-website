@@ -1992,7 +1992,68 @@
     nav.open {
         display: flex;
     }
-    
+    .menu-toggle {
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+  margin: 0px;
+  padding-right: 20px;
+  color: #333;
+}
+
+
+        .Why_US_grid-container{
+                          
+       display: none !important; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* wider min column width */
+    gap: 24px;
+    width: 95%;                /* wider than before */
+    max-width: 1400px;         /* stretch the max width if needed */
+    margin: 40px auto;
+    padding: 24px;
+    background-color: #fff;
+    font-size: 1rem;
+    line-height: 1.5;
+
+        
+        }
+
+        .fraicly-impact-wrapper{
+
+            display:flex;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto;
+            gap: 15px;
+            justify-content: center;
+            font-size:0.75rem;
+            padding-top: 5px;  /* Less padding at the top */
+            padding-left:10px;
+            margin-bottom: 220px;
+            height: 50px;
+            width:90%;
+
+        }
+        .fraicly-impact-table {
+                 /* both columns take equal width */
+         flex: 1 1 48%;       /* ✅ Force equal width (2 columns, with slight gap) */
+    min-width: 140px;
+    max-width: 48%;
+    box-sizing: border-box;
+    text-align: left;
+    padding: 8px;
+        }
+        .fraicly-impact-table h3 {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+   .Why_US_section_hero{
+           height:35px;
+           font-size:2rem;
+           margin-bottom:1px;
+
+        }
+
     
 }
         /* Modal Background */
