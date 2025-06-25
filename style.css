@@ -190,6 +190,16 @@
            
             
         }
+        .mobile_contact-button {
+  white-space: nowrap;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  background-color: #3f84ff;
+  color: white;
+  font-weight: 600;
+  display: inline-block;
+}
+
         .contact-button:hover {
             background-color: #0056b3;
             cursor: pointer;
@@ -1329,7 +1339,7 @@
     .menu-toggle {
         display: block !important;
         font-size: 24px;
-        margin-left: 50px;
+        margin-left:1rem;
         cursor: pointer;
         padding: 0 0 0 60px
         z-index:1000;
