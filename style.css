@@ -187,9 +187,18 @@
             padding: 5px 10px;
             border-radius: 5px;
             margin-left: 10px;
-           
-            
+          
         }
+       .mobile_contact-button {
+  white-space: nowrap;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  background-color: #3f84ff;
+  color: white;
+  font-weight: 600;
+  display: inline-block;
+}
+
         .contact-button:hover {
             background-color: #0056b3;
             cursor: pointer;
