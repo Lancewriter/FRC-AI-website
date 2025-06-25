@@ -190,13 +190,13 @@
           
         }
        .mobile_contact-button {
-  white-space: nowrap;
-  padding: 0.5em 1em;
-  border-radius: 8px;
-  background-color: #3f84ff;
-  color: white;
-  font-weight: 600;
-  display: inline-block;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  font-size: 0.875rem;
+  border-radius: 16px;
 }
 
         .contact-button:hover {
@@ -1241,6 +1241,7 @@
   padding: 0;
   margin: 0;
   vertical-align: middle;
+  height:32px;
 }
 
 
