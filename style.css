@@ -1237,6 +1237,7 @@
   cursor: pointer;
   line-height: 1;
   margin: 0px;
+  margin-left: 1rem;
   padding-right: 20px;
   color: #333;
 }
