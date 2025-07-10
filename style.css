@@ -154,6 +154,25 @@
         .dropdown a:hover {
             background-color: #555;
          }
+         .menu-item li {
+        position: relative; /* Required for positioning the dropdown */
+        }
+
+        .menu-item a {
+        text-decoration: none;
+        color:  white;
+        padding: 10px 15px;
+        display: block;
+        transition: background-color 0.3s;
+        font-size: 20px; /* Adjust font size here */
+        }
+
+        .menu-item a:hover {
+        background-color: #007bff;
+        color:white;
+        border-radius: 5px;
+        }
+
         .menu-item:hover .dropdown,
         .menu-item.active .dropdown {
             display: block; /* Show the dropdown */
