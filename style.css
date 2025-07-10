@@ -70,6 +70,19 @@
         .logo img {
             height: 50px;
         }
+        .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Optional: remove if unnecessary */
+  padding: 0 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
         .navbar li {
         position: relative; /* Required for positioning the dropdown */
         }
@@ -198,15 +211,14 @@ menu-item li {
             background-color: #0056b3;
         }
         .contact-button {
-            background-color: #3f84ff;
+            background-color: #4285f4;
   color: white;
-  padding: 0.6em 1.2em;
-  border-radius: 8px;
-  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 6px;
   font-weight: bold;
-  display: block;
-  text-align: center;
-  margin-bottom: 1rem;
+  font-size: 14px;
+  text-decoration: none;
+  white-space: nowrap; /* Prevents wrapping */
           
         }
        .mobile_contact-button {
