@@ -177,12 +177,12 @@ menu-item li {
 }
 
 .menu-item a {
-  text-decoration: none;
-  color: #222;
-  font-size: 1rem;
-  padding: 0.3rem 0;
-  display: block;
-  transition: color 0.2s ease;
+   text-decoration: none;
+        color:  white;
+        padding: 10px 15px;
+        display: block;
+        transition: background-color 0.3s;
+        font-size: 20px; /* Adjust font size here */
 }
         .menu-item:hover .dropdown,
         .menu-item.active .dropdown {
