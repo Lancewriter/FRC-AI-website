@@ -2683,4 +2683,50 @@ select.form-control {
             display: block;
 
         }
+/* Top-level dropdown menu items (Sectors, Services) */
+ul.navbar > li.menu-item > a {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  padding: 8px 0;
+}
+
+/* Dropdown container */
+ul.navbar li.menu-item ul.dropdown {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  min-width: 220px;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+/* Dropdown items */
+ul.navbar li.menu-item ul.dropdown li a {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  font-size: 16px;
+  font-weight: normal;
+  background: none;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Hover effect for dropdown items */
+ul.navbar li.menu-item ul.dropdown li a:hover {
+  background-color: #f5f5f5;
+  color: #007BFF;
+}
+
+/* Show dropdown on hover */
+ul.navbar li.menu-item:hover > ul.dropdown {
+  display: block;
+}
+
 
