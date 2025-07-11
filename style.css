@@ -1,4 +1,5 @@
 
+        
         title h1{font-size:45px ;}
         body {
             font-family: Arial, sans-serif;
@@ -70,19 +71,6 @@
         .logo img {
             height: 50px;
         }
-        .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap; /* Optional: remove if unnecessary */
-  padding: 0 20px;
-}
-
-.nav-links {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-}
         .navbar li {
         position: relative; /* Required for positioning the dropdown */
         }
@@ -167,23 +155,6 @@
         .dropdown a:hover {
             background-color: #555;
          }
-        .menu-item {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-        }
-menu-item li {
-  margin: 0.5rem 0;
-}
-
-.menu-item a {
-   text-decoration: none;
-        color:  white;
-        padding: 10px 15px;
-        display: block;
-        transition: background-color 0.3s;
-        font-size: 20px; /* Adjust font size here */
-}
         .menu-item:hover .dropdown,
         .menu-item.active .dropdown {
             display: block; /* Show the dropdown */
@@ -211,14 +182,12 @@ menu-item li {
             background-color: #0056b3;
         }
         .contact-button {
-            background-color: #4285f4;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-weight: bold;
-  font-size: 14px;
-  text-decoration: none;
-  white-space: nowrap; /* Prevents wrapping */
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-left: 10px;
           
         }
        .mobile_contact-button {
@@ -2683,50 +2652,4 @@ select.form-control {
             display: block;
 
         }
-/* Top-level dropdown menu items (Sectors, Services) */
-ul.navbar > li.menu-item > a {
-  font-family: Arial, sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  color: #333;
-  text-decoration: none;
-  padding: 8px 0;
-}
-
-/* Dropdown container */
-ul.navbar li.menu-item ul.dropdown {
-  display: none;
-  position: absolute;
-  top: 35px;
-  left: 0;
-  background-color: white;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  min-width: 220px;
-  padding: 10px 0;
-  z-index: 1000;
-}
-
-/* Dropdown items */
-ul.navbar li.menu-item ul.dropdown li a {
-  display: block;
-  padding: 10px 20px;
-  color: #333;
-  font-size: 16px;
-  font-weight: normal;
-  background: none;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-/* Hover effect for dropdown items */
-ul.navbar li.menu-item ul.dropdown li a:hover {
-  background-color: #f5f5f5;
-  color: #007BFF;
-}
-
-/* Show dropdown on hover */
-ul.navbar li.menu-item:hover > ul.dropdown {
-  display: block;
-}
-
 
