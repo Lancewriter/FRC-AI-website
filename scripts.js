@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initializeMobileMenu();
     initializeDropdowns();
     initializeSmoothScrolling();
+    initializeContactModal();
 });
 
 // ========================================
@@ -344,21 +345,7 @@ function toggleMenu() {
     }
 }
 
-// ========================================
-// SMOOTH SCROLLING FOR ANCHOR LINKS
-// ========================================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
+// (Removed duplicate smooth scrolling; handled by initializeSmoothScrolling)
 
 // ========================================
 // SCROLL TO TOP FUNCTIONALITY
@@ -428,3 +415,44 @@ window.scrollToTab = scrollToTab;
 window.Menu_scrollToSection = Menu_scrollToSection;
 window.closeDropdown = closeDropdown;
 window.toggleMenu = toggleMenu;
+
+// ========================================
+// CONTACT MODAL: OPEN/CLOSE HANDLERS
+// ========================================
+function initializeContactModal() {
+    const openBtn = document.getElementById("get-in-touch");
+    const modal = document.getElementById("strategyModal");
+    if (!modal || !openBtn) return;
+
+    const closeBtn = modal.querySelector(".close");
+    const firstFocusable = modal.querySelector("input, select, button, [href], textarea");
+
+    function openModal(e) {
+        if (e) e.preventDefault();
+        modal.classList.add("open");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+        setTimeout(() => firstFocusable && firstFocusable.focus(), 10);
+    }
+
+    function closeModal() {
+        modal.classList.remove("open");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+        openBtn.focus();
+    }
+
+    // Click handlers
+    openBtn.addEventListener("click", openModal);
+    if (closeBtn) closeBtn.addEventListener("click", closeModal);
+
+    // Click outside content closes
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    // ESC to close
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
+    });
+}

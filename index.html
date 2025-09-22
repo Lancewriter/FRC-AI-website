@@ -1,164 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="FRAICLY - Financial Risk Consultants AI. We help SMEs manage financial risks with AI-powered solutions and expert consulting services.">
-    <meta name="keywords" content="financial risk, AI solutions, SME consulting, business resilience, financial analysis">
+    <meta name="description"
+        content="FRAICLY - Financial Risk Consultants AI. We help SMEs manage financial risks with AI-powered solutions and expert consulting services.">
+    <meta name="keywords"
+        content="financial risk, AI solutions, SME consulting, business resilience, financial analysis">
     <meta name="author" content="FRAICLY">
-    
+
     <title>FRAICLY - Financial Risk Consultants AI for Medium-Sized Entities</title>
-    
+
     <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-13YFQW1WST"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-13YFQW1WST');
-  gtag('event', 'scroll', {
-  'event_category': 'user_engagement',
-  'event_label': 'Scrolled 50%'
-});
-</script>
-    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-13YFQW1WST"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-13YFQW1WST');
+        gtag('event', 'scroll', {
+            'event_category': 'user_engagement',
+            'event_label': 'Scrolled 50%'
+        });
+    </script>
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
     <!-- Header -->
     <header>
         <div class="header-content">
             <div class="logo">
-             <div class="fraicly-image"></div>
+                <div class="fraicly-image"></div>
             </div>
-            
+
             <!-- Desktop Navigation -->
             <nav class="desktop-nav">
-             <ul class="navbar">
+                <ul class="navbar">
                     <li><a href="#landing" onclick="Menu_scrollToSection('landing')">Home</a></li>
-             <li class="menu-item">
+                    <li class="menu-item">
                         <a href="#sectors">Sectors</a>
-               <ul class="dropdown">
-                            <li><a href="#construction" onclick="Menu_scrollToSection('Construction_cell'); closeDropdown(this);" class="contact-button">Construction/Contractors</a></li>
-                            <li><a href="#consultancies" onclick="Menu_scrollToSection('Non_Finance_consultancy_cell'); closeDropdown(this);" class="contact-button">Consultancies</a></li>
-                            <li><a href="#manufacturing" onclick="Menu_scrollToSection('Manu/Corporates-cell'); closeDropdown(this);" class="contact-button">Manufacturing/Corporates</a></li>
-                            <li><a href="#fintech" onclick="Menu_scrollToSection('Fintech_cell'); closeDropdown(this);" class="contact-button">Fin-techs/Start-ups</a></li>
-                            <li><a href="#hospitality" onclick="Menu_scrollToSection('Hospitality_cell'); closeDropdown(this);" class="contact-button">Hospitality/Restaurants</a></li>
-                            <li><a href="#nonprofit" onclick="Menu_scrollToSection('Non-Profit_cell'); closeDropdown(this);" class="contact-button">Non-Profits</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item_services">
+                        <ul class="dropdown">
+                            <li><a href="#construction"
+                                    onclick="Menu_scrollToSection('Construction_cell'); closeDropdown(this);"
+                                    class="contact-button">Construction/Contractors</a></li>
+                            <li><a href="#consultancies"
+                                    onclick="Menu_scrollToSection('Non_Finance_consultancy_cell'); closeDropdown(this);"
+                                    class="contact-button">Consultancies</a></li>
+                            <li><a href="#manufacturing"
+                                    onclick="Menu_scrollToSection('Manu/Corporates-cell'); closeDropdown(this);"
+                                    class="contact-button">Manufacturing/Corporates</a></li>
+                            <li><a href="#fintech" onclick="Menu_scrollToSection('Fintech_cell'); closeDropdown(this);"
+                                    class="contact-button">Fin-techs/Start-ups</a></li>
+                            <li><a href="#hospitality"
+                                    onclick="Menu_scrollToSection('Hospitality_cell'); closeDropdown(this);"
+                                    class="contact-button">Hospitality/Restaurants</a></li>
+                            <li><a href="#nonprofit"
+                                    onclick="Menu_scrollToSection('Non-Profit_cell'); closeDropdown(this);"
+                                    class="contact-button">Non-Profits</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item_services">
                         <a href="#services">Services</a>
-                    <ul class="dropdown">
-                            <li><a href="#ai-services" onclick="scrollToSection('Services_tabs'); scrollToTab('ai-services-tab'); closeDropdown(this);" class="contact-button">AI Design and Deployment</a></li>
-                            <li><a href="#financial-analysis" onclick="scrollToSection('Services_tabs'); scrollToTab('financial-analysis-tab'); closeDropdown(this);" class="contact-button">Financial Analysis</a></li>
-                            <li><a href="#finance-projects" onclick="scrollToSection('Services_tabs'); scrollToTab('finance-projects-tab'); closeDropdown(this);" class="contact-button">Finance Projects (M&A/Exit)</a></li>
-                            <li><a href="#economic-analysis" onclick="scrollToSection('Services_tabs'); scrollToTab('economic-analysis-tab'); closeDropdown(this);" class="contact-button">Economic Analysis</a></li>
-                            <li><a href="#business-recovery" onclick="scrollToSection('Services_tabs'); scrollToTab('business_recovery-tab'); closeDropdown(this);" class="contact-button">Business Recovery/Resilience</a></li>
-                    </ul>
-                </li>
+                        <ul class="dropdown">
+                            <li><a href="#ai-services"
+                                    onclick="scrollToSection('Services_tabs'); scrollToTab('ai-services-tab'); closeDropdown(this);"
+                                    class="contact-button">AI Design and Deployment</a></li>
+                            <li><a href="#financial-analysis"
+                                    onclick="scrollToSection('Services_tabs'); scrollToTab('financial-analysis-tab'); closeDropdown(this);"
+                                    class="contact-button">Financial Analysis</a></li>
+                            <li><a href="#finance-projects"
+                                    onclick="scrollToSection('Services_tabs'); scrollToTab('finance-projects-tab'); closeDropdown(this);"
+                                    class="contact-button">Finance Projects (M&A/Exit)</a></li>
+                            <li><a href="#economic-analysis"
+                                    onclick="scrollToSection('Services_tabs'); scrollToTab('economic-analysis-tab'); closeDropdown(this);"
+                                    class="contact-button">Economic Analysis</a></li>
+                            <li><a href="#business-recovery"
+                                    onclick="scrollToSection('Services_tabs'); scrollToTab('business_recovery-tab'); closeDropdown(this);"
+                                    class="contact-button">Business Recovery/Resilience</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#why-us" onclick="Menu_scrollToSection('Why_US_section')">Why Us</a></li>
-                <li><a href="mailto:info@fraicly.com?subject=Inquiry from Website" class="contact-button">Contact Us</a></li>
-            </ul>
-        </nav>
-        
+                    <li><a href="mailto:info@fraicly.com?subject=Inquiry from Website" class="contact-button">Contact
+                            Us</a></li>
+                </ul>
+            </nav>
+
             <!-- Mobile Menu Toggle -->
             <div class="mobile-menu-toggle">
                 <button class="menu-toggle" onclick="Mobile_toggleMenu()" aria-label="Toggle mobile menu">
                     <span class="menu-icon">☰</span>
                 </button>
-</div>
+            </div>
         </div>
-       
+
         <!-- Mobile Navigation -->
         <nav id="mobile-menu" class="mobile-nav hidden">
             <ul class="navbar">
                 <li><a href="#landing" onclick="Menu_scrollToSection('landing')">Home</a></li>
                 <li><a href="#why-us" onclick="Menu_scrollToSection('Why_US_section')">Why Us</a></li>
-        <li class="menu-item">
+                <li class="menu-item">
                     <a href="#sectors">Sectors</a>
-            <ul class="dropdown">
-                        <li><a href="#construction" onclick="Menu_scrollToSection('Construction_cell'); closeDropdown(this);" class="contact-button">Construction/Contractors</a></li>
-                        <li><a href="#consultancies" onclick="Menu_scrollToSection('Non_Finance_consultancy_cell'); closeDropdown(this);" class="contact-button">Consultancies</a></li>
-                        <li><a href="#manufacturing" onclick="Menu_scrollToSection('Manu/Corporates-cell'); closeDropdown(this);" class="contact-button">Manufacturing/Corporates</a></li>
-                        <li><a href="#fintech" onclick="Menu_scrollToSection('Fintech_cell'); closeDropdown(this);" class="contact-button">Fin-techs/Start-ups</a></li>
-                        <li><a href="#hospitality" onclick="Menu_scrollToSection('Hospitality_cell'); closeDropdown(this);" class="contact-button">Hospitality/Restaurants</a></li>
-                        <li><a href="#nonprofit" onclick="Menu_scrollToSection('Non-Profit_cell'); closeDropdown(this);" class="contact-button">Non-Profits</a></li>
-            </ul>
-        </li>
-        <li class="menu-item">
+                    <ul class="dropdown">
+                        <li><a href="#construction"
+                                onclick="Menu_scrollToSection('Construction_cell'); closeDropdown(this);"
+                                class="contact-button">Construction/Contractors</a></li>
+                        <li><a href="#consultancies"
+                                onclick="Menu_scrollToSection('Non_Finance_consultancy_cell'); closeDropdown(this);"
+                                class="contact-button">Consultancies</a></li>
+                        <li><a href="#manufacturing"
+                                onclick="Menu_scrollToSection('Manu/Corporates-cell'); closeDropdown(this);"
+                                class="contact-button">Manufacturing/Corporates</a></li>
+                        <li><a href="#fintech" onclick="Menu_scrollToSection('Fintech_cell'); closeDropdown(this);"
+                                class="contact-button">Fin-techs/Start-ups</a></li>
+                        <li><a href="#hospitality"
+                                onclick="Menu_scrollToSection('Hospitality_cell'); closeDropdown(this);"
+                                class="contact-button">Hospitality/Restaurants</a></li>
+                        <li><a href="#nonprofit" onclick="Menu_scrollToSection('Non-Profit_cell'); closeDropdown(this);"
+                                class="contact-button">Non-Profits</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
                     <a href="#services">Services</a>
-            <ul class="dropdown">
-                        <li><a href="#ai-services" onclick="scrollToSection('Services_tabs'); scrollToTab('ai-services-tab'); closeDropdown(this);" class="contact-button">AI Design and Deployment</a></li>
-                        <li><a href="#financial-analysis" onclick="scrollToSection('Services_tabs'); scrollToTab('financial-analysis-tab'); closeDropdown(this);" class="contact-button">Financial Analysis</a></li>
-                        <li><a href="#finance-projects" onclick="scrollToSection('Services_tabs'); scrollToTab('finance-projects-tab'); closeDropdown(this);" class="contact-button">Finance Projects (M&A/Exit)</a></li>
-                        <li><a href="#economic-analysis" onclick="scrollToSection('Services_tabs'); scrollToTab('economic-analysis-tab'); closeDropdown(this);" class="contact-button">Economic Analysis</a></li>
-                        <li><a href="#business-recovery" onclick="scrollToSection('Services_tabs'); scrollToTab('business_recovery-tab'); closeDropdown(this);" class="contact-button">Business Recovery/Resilience</a></li>
+                    <ul class="dropdown">
+                        <li><a href="#ai-services"
+                                onclick="scrollToSection('Services_tabs'); scrollToTab('ai-services-tab'); closeDropdown(this);"
+                                class="contact-button">AI Design and Deployment</a></li>
+                        <li><a href="#financial-analysis"
+                                onclick="scrollToSection('Services_tabs'); scrollToTab('financial-analysis-tab'); closeDropdown(this);"
+                                class="contact-button">Financial Analysis</a></li>
+                        <li><a href="#finance-projects"
+                                onclick="scrollToSection('Services_tabs'); scrollToTab('finance-projects-tab'); closeDropdown(this);"
+                                class="contact-button">Finance Projects (M&A/Exit)</a></li>
+                        <li><a href="#economic-analysis"
+                                onclick="scrollToSection('Services_tabs'); scrollToTab('economic-analysis-tab'); closeDropdown(this);"
+                                class="contact-button">Economic Analysis</a></li>
+                        <li><a href="#business-recovery"
+                                onclick="scrollToSection('Services_tabs'); scrollToTab('business_recovery-tab'); closeDropdown(this);"
+                                class="contact-button">Business Recovery/Resilience</a></li>
+                    </ul>
+                </li>
             </ul>
-        </li>
-    </ul>
-</nav>
+        </nav>
     </header>
-    
+
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
         <section id="landing" class="hero">
-        <div class="hero-content">
+            <div class="hero-content">
                 <h1>We help your business manage financial risks with AI-powered solutions.</h1>
-                <p>SMEs face heightened risks from both AI and economic shocks. FRAICLY's AI-driven insights and reporting can help.</p>
-            <a href="mailto:info@FRAICLY.com?subject=Inquiry from Website" class="cta-button">Get in Touch</a>
-        </div>
-        
-        <div class="hero-video">
-        <div class="video-container">
-                    <iframe 
-                        src="https://www.youtube.com/embed/8I-PcHx8Ukk?si=4ukYRRFND2Tvst4V" 
-                        title="FRAICLY Introduction Video" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen>
+                <p>SMEs face heightened risks from both AI and economic shocks. FRAICLY's AI-driven insights and
+                    reporting can help.</p>
+                <a href="#" id="get-in-touch" class="cta-button" aria-haspopup="dialog" aria-controls="strategyModal">Get in Touch</a>
+            </div>
+
+            <div class="hero-video">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/8I-PcHx8Ukk?si=4ukYRRFND2Tvst4V"
+                        title="FRAICLY Introduction Video" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                     </iframe>
-        </div>
-        </div>
+                </div>
+            </div>
         </section>
 
         <!-- Call to Action Section -->
         <section class="sidekick-content">
             <h2>Take the first step to mitigate these risks and capture opportunities with the below:</h2>
-            <p>Get a <a href="mailto:info@FRAICLY.com?subject=Free Data Maturity Assessment" class="narrative-button">free</a> data maturity assessment.</p>
-            <p>Let's talk about growing your sales pipeline for <a href="mailto:info@FRAICLY.com?subject=Free Sales Pipeline Discussion" class="narrative-button">free</a>.</p>
-    </section>
-    
-    <div class="separator"></div>
-   
+            <p>Get a <a href="mailto:info@FRAICLY.com?subject=Free Data Maturity Assessment"
+                    class="narrative-button">free</a> data maturity assessment.</p>
+            <p>Let's talk about growing your sales pipeline for <a
+                    href="mailto:info@FRAICLY.com?subject=Free Sales Pipeline Discussion"
+                    class="narrative-button">free</a>.</p>
+        </section>
+
+        <div class="separator"></div>
+
         <!-- Journey Section -->
         <section id="journey" class="section">
             <div class="section-hero">
-            <h1>Your Journey</h1>
-        </div>
-            
+                <h1>Your Journey</h1>
+            </div>
+
             <div class="container">
                 <div class="grid-container">
                     <div class="large-cell">
                         <h3>Tools for SMEs</h3>
-            <div class="vulnerable-container">
-            <p>SMEs are especially vulnerable to Economic uncertainty and AI proliferation.</p>
+                        <div class="vulnerable-container">
+                            <p>SMEs are especially vulnerable to Economic uncertainty and AI proliferation.</p>
                             <ul>
-                                <li>Have a look at the <a href="#sectors" onclick="toggleSectorsMenu(); return false;">Sectors</a> we provide our <a href="#services" onclick="toggleServicesMenu(); return false;">Services</a> to.</li>
-            </ul>
-            </div>
-        </div>
+                                <li>Have a look at the <a href="#sectors"
+                                        onclick="toggleSectorsMenu(); return false;">Sectors</a> we provide our <a
+                                        href="#services" onclick="toggleServicesMenu(); return false;">Services</a> to.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
 
                     <div class="small-cell">
                         <h3>Risk Escalation Timeline</h3>
                         <p>The table below demonstrates how these risks to SMEs escalate over time:</p>
-                        
+
                         <div class="risk-timeline">
                             <div class="risk-timeline-header">
                                 <div class="risk-header-cell"><strong>Risk</strong></div>
@@ -167,204 +217,260 @@
                                 <div class="risk-header-cell">Long term impact</div>
                                 <div class="risk-header-cell"><strong>How FRAICLY helps today</strong></div>
                             </div>
-                            
+
                             <div class="risk-timeline-row">
                                 <div class="risk-cell"><strong>AI Proliferation</strong></div>
                                 <div class="impact-cell">Miss customer expectations</div>
                                 <div class="impact-cell">Can't Compete</div>
                                 <div class="impact-cell">Distressed / failed business</div>
-                                <div class="solution-cell"><strong><a href="#ai-services" onclick="scrollToTab('ai-services-tab')">AI Design and Deployment</a></strong></div>
-            </div>
-            
+                                <div class="solution-cell"><strong><a href="#ai-services"
+                                            onclick="scrollToTab('ai-services-tab')">AI Design and
+                                            Deployment</a></strong></div>
+                            </div>
+
                             <div class="risk-timeline-row">
                                 <div class="risk-cell"><strong>Economic downturns</strong></div>
                                 <div class="impact-cell">Low / declining revenue</div>
                                 <div class="impact-cell">Client defaults / Supplier failure</div>
                                 <div class="impact-cell">Distressed cashflows</div>
-                                <div class="solution-cell"><strong><a href="#business-recovery" onclick="scrollToTab('business_recovery-tab')">Business Recovery/Resilience</a></strong></div>
+                                <div class="solution-cell"><strong><a href="#business-recovery"
+                                            onclick="scrollToTab('business_recovery-tab')">Business
+                                            Recovery/Resilience</a></strong></div>
                             </div>
-        </div>
-        </div>
-     </div>
-    </div>
-    </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <div class="separator"></div>
+        <div class="separator"></div>
 
         <!-- Why Us Section -->
         <section id="why-us" class="section">
             <div class="section-hero">
                 <h1>Why Us</h1>
-        </div>
-            
+            </div>
+
             <div class="container">
                 <div class="feature-list">
                     <div class="feature">
                         <div class="feature-icon">
-                            <img src="AI logo.jpg" alt="AI Expertise" style="width: 80px; height: 80px; object-fit: contain;">
-                </div>
+                            <img src="AI logo.jpg" alt="AI Expertise"
+                                style="width: 80px; height: 80px; object-fit: contain;">
+                        </div>
                         <h3>AI Expertise</h3>
                         <p>We have designed and deployed AI tools at Fortune 500 companies and global organisations.</p>
-                </div>
-                
-                    <div class="feature">
-                        <div class="feature-icon">
-                            <img src="fortune 500.jpg" alt="Global 500 Experience" style="width: 80px; height: 80px; object-fit: contain;">
-            </div>
-                        <h3>Global 500 Experience</h3>
-                        <p>We have honed our expertise and experience at global companies such as Citigroup, Willis Ltd and top 4 consultancies.</p>
-                </div>
-
-                    <div class="feature">
-                        <div class="feature-icon">
-                            <img src="mission.jpg" alt="Mission" style="width: 80px; height: 80px; object-fit: contain;">
-                </div>
-                        <h3>Mission</h3>
-                        <p>For businesses to leverage our global expertise to achieve financial resilience, competitive advantages, and growth, because SMEs are foundational to all economies.</p>
-                </div>
-
-                    <div class="feature">
-                        <div class="feature-icon">
-                            <img src="Ownership.jpg" alt="Ownership" style="width: 80px; height: 80px; object-fit: contain;">
-                </div>
-                        <h3>Ownership</h3>
-                        <p>We consider ourselves the owners of our clients' resilience and AI journeys, via timely, clear communication, A+ deliverables, and dedication to the target outcome.</p>
                     </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <img src="fortune 500.jpg" alt="Global 500 Experience"
+                                style="width: 80px; height: 80px; object-fit: contain;">
+                        </div>
+                        <h3>Global 500 Experience</h3>
+                        <p>We have honed our expertise and experience at global companies such as Citigroup, Willis Ltd
+                            and top 4 consultancies.</p>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <img src="mission.jpg" alt="Mission"
+                                style="width: 80px; height: 80px; object-fit: contain;">
+                        </div>
+                        <h3>Mission</h3>
+                        <p>For businesses to leverage our global expertise to achieve financial resilience, competitive
+                            advantages, and growth, because SMEs are foundational to all economies.</p>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <img src="Ownership.jpg" alt="Ownership"
+                                style="width: 80px; height: 80px; object-fit: contain;">
+                        </div>
+                        <h3>Ownership</h3>
+                        <p>We consider ourselves the owners of our clients' resilience and AI journeys, via timely,
+                            clear communication, A+ deliverables, and dedication to the target outcome.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
-   
-    <div class="separator"></div>
+        </section>
+
+        <div class="separator"></div>
 
         <!-- Sectors Section -->
         <section id="sectors" class="section">
             <div class="section-hero">
-            <h1>Sectors in Focus</h1>
-        </div>
-            
+                <h1>Sectors in Focus</h1>
+            </div>
+
             <div class="sectors-container">
                 <div class="sectors-intro">
                     <h3>Tools for SMEs</h3>
                     <p>Comprehensive solutions tailored for different industry sectors</p>
                 </div>
-        
+
                 <div class="sectors-list">
                     <div class="sector-item" id="Construction_cell">
-                    <h3>Construction Companies</h3>
-                    <div class="container2">
-                        <ul>
-                                <li>Construction companies often grapple with irregular cashflows due to delayed payments from clients, unforeseen project overruns, and the need to evaluate the creditworthiness of clients and the solvency of banking partners.</li>
-                        <li>FRAICLY provides data-driven tools to optimize cash flow, assess client credit risk, evaluate banking partner reliability, and deliver actionable insights to streamline operations, reduce financial uncertainty, and support sustainable growth.</li>
-                    </ul>
+                        <h3>Construction Companies</h3>
+                        <div class="container2">
+                            <ul>
+                                <li>Construction companies often grapple with irregular cashflows due to delayed
+                                    payments from clients, unforeseen project overruns, and the need to evaluate the
+                                    creditworthiness of clients and the solvency of banking partners.</li>
+                                <li>FRAICLY provides data-driven tools to optimize cash flow, assess client credit risk,
+                                    evaluate banking partner reliability, and deliver actionable insights to streamline
+                                    operations, reduce financial uncertainty, and support sustainable growth.</li>
+                            </ul>
+                        </div>
+                        <button onclick="scrollToSection('Construction_section')"
+                            aria-label="Learn more about construction solutions">Use cases</button>
                     </div>
-                    <button onclick="scrollToSection('Construction_section')" aria-label="Learn more about construction solutions">Use cases</button>
-                </div>
-                    
+
                     <div class="sector-item" id="Non_Finance_consultancy_cell">
-                    <h3>Non Finance Consultancies</h3>
-                    <div class="container2">
-                    <ul>
-                                <li>Non Finance Consultancies such as marketing agencies, legal consultancies, and IT firms often face irregular cashflows due to delayed client payments, project overruns, or unpredictable demand.</li>
-                        <li>FRAICLY offers methodologies and tools to forecast cashflow, evaluate client creditworthiness, assess banking partner reliability, and deliver actionable insights to streamline operations, mitigate risks, and drive sustainable growth.</li>
-                    </ul>
+                        <h3>Non Finance Consultancies</h3>
+                        <div class="container2">
+                            <ul>
+                                <li>Non Finance Consultancies such as marketing agencies, legal consultancies, and IT
+                                    firms often face irregular cashflows due to delayed client payments, project
+                                    overruns, or unpredictable demand.</li>
+                                <li>FRAICLY offers methodologies and tools to forecast cashflow, evaluate client
+                                    creditworthiness, assess banking partner reliability, and deliver actionable
+                                    insights to streamline operations, mitigate risks, and drive sustainable growth.
+                                </li>
+                            </ul>
+                        </div>
+                        <button onclick="scrollToSection('Non_Finance_consultancies_section')">Use cases</button>
                     </div>
-                    <button onclick="scrollToSection('Non_Finance_consultancies_section')">Use cases</button>
-                </div>
-                    
+
                     <div class="sector-item" id="Manu/Corporates-cell">
-                    <h3>Manufacturing and Corporates</h3>
-                    <div class="container2">
-                    <ul>
-                        <li>Manufacturing companies and corporates often struggle with supply chain disruptions, client credit risks, depository bank solvency, rising costs, and maintaining cashflow in volatile economic conditions.</li>
-                        <li>FRAICLY delivers data-driven tools to optimize cashflow, assess client creditworthiness, evaluate bank solvency, and provide actionable insights to enhance operational efficiency, mitigate risks, and drive sustainable growth.</li>
-                        <li>FRAICLY also offers finance projects that provide competitive advantages and financial resilience. We help businesses prepare for economic shocks.</li>
-                    </ul>
-                    </div>
+                        <h3>Manufacturing and Corporates</h3>
+                        <div class="container2">
+                            <ul>
+                                <li>Manufacturing companies and corporates often struggle with supply chain disruptions,
+                                    client credit risks, depository bank solvency, rising costs, and maintaining
+                                    cashflow in volatile economic conditions.</li>
+                                <li>FRAICLY delivers data-driven tools to optimize cashflow, assess client
+                                    creditworthiness, evaluate bank solvency, and provide actionable insights to enhance
+                                    operational efficiency, mitigate risks, and drive sustainable growth.</li>
+                                <li>FRAICLY also offers finance projects that provide competitive advantages and
+                                    financial resilience. We help businesses prepare for economic shocks.</li>
+                            </ul>
+                        </div>
                         <button onclick="scrollToSection('Manufacturing_Corporates_section')">Use cases</button>
-                </div>
-                    
+                    </div>
+
                     <div class="sector-item" id="Fintech_cell">
                         <h3>Fin-techs and High Growth Financial Services</h3>
-                    <div class="container2">
-                        <h4>Financiers</h4>
+                        <div class="container2">
+                            <h4>Financiers</h4>
                             <ul>
-                                <li>Fintechs and growth-stage finance providers often encounter challenges like managing liquidity constraints, evaluating client creditworthiness, mitigating default risks, and scaling operations efficiently in a rapidly evolving market.</li>
-                                <li>FRAICLY delivers advanced financial analytics, risk assessment tools, and AI-driven insights to optimize liquidity, evaluate client solvency, reduce credit risks, and enhance decision-making for sustainable growth and operational scalability.</li>
+                                <li>Fintechs and growth-stage finance providers often encounter challenges like managing
+                                    liquidity constraints, evaluating client creditworthiness, mitigating default risks,
+                                    and scaling operations efficiently in a rapidly evolving market.</li>
+                                <li>FRAICLY delivers advanced financial analytics, risk assessment tools, and AI-driven
+                                    insights to optimize liquidity, evaluate client solvency, reduce credit risks, and
+                                    enhance decision-making for sustainable growth and operational scalability.</li>
                             </ul>
-                            
+
                             <h4>Insurers</h4>
                             <ul>
-                                <li>Insurtech and startup-stage insurers or brokers often struggle with managing underwriting risks, ensuring reinsurance partner reliability, maintaining liquidity, and scaling operations efficiently while navigating regulatory complexities.</li>
-                                <li>FRAICLY provides advanced risk assessment tools, evaluates reinsurance solvency, optimizes liquidity management, and delivers AI-driven insights to enhance decision-making, streamline operations, and support scalable growth in a competitive market.</li>
-                                <li>FRAICLY can also provide guidance on optimising IFRS 17 and other finance projects.</li>
-                    </ul>
+                                <li>Insurtech and startup-stage insurers or brokers often struggle with managing
+                                    underwriting risks, ensuring reinsurance partner reliability, maintaining liquidity,
+                                    and scaling operations efficiently while navigating regulatory complexities.</li>
+                                <li>FRAICLY provides advanced risk assessment tools, evaluates reinsurance solvency,
+                                    optimizes liquidity management, and delivers AI-driven insights to enhance
+                                    decision-making, streamline operations, and support scalable growth in a competitive
+                                    market.</li>
+                                <li>FRAICLY can also provide guidance on optimising IFRS 17 and other finance projects.
+                                </li>
+                            </ul>
+                        </div>
+                        <button onclick="scrollToSection('Fintech_section')">Use cases</button>
                     </div>
-                    <button onclick="scrollToSection('Fintech_section')">Use cases</button>
-                </div>
-                    
+
                     <div class="sector-item" id="Hospitality_cell">
                         <h3>Hospitality and Restaurants</h3>
-                    <div class="container2">
+                        <div class="container2">
                             <h4>Hotels</h4>
                             <ul>
-                                <li>Hotels often struggle with unpredictable cashflow, inefficient operations, rising costs, and difficulty in making data-driven decisions to optimize pricing, manage resources, and meet customer expectations.</li>
-                                <li>FRAICLY leverages advanced financial tools and AI-driven insights to optimize cashflow, streamline operations, enhance pricing strategies, reduce inefficiencies, and provide actionable customer and market intelligence for sustainable growth.</li>
+                                <li>Hotels often struggle with unpredictable cashflow, inefficient operations, rising
+                                    costs, and difficulty in making data-driven decisions to optimize pricing, manage
+                                    resources, and meet customer expectations.</li>
+                                <li>FRAICLY leverages advanced financial tools and AI-driven insights to optimize
+                                    cashflow, streamline operations, enhance pricing strategies, reduce inefficiencies,
+                                    and provide actionable customer and market intelligence for sustainable growth.</li>
                             </ul>
-                            
+
                             <h4>Restaurants</h4>
                             <ul>
-                                <li>Restaurants face challenges such as managing fluctuating demand, controlling food costs, minimizing waste, ensuring consistent cashflow, and delivering personalized customer experiences in a competitive market.</li>
-                                <li>FRAICLY provides AI-driven tools to optimize menu pricing, forecast demand, streamline inventory management, reduce waste, and analyze customer preferences, enabling restaurants to increase profitability and enhance operational efficiency.</li>
-                                <li><strong>FRAICLY's Partnerships:</strong> If your restaurant/club is lacking footfall we can introduce you to our partners that specialize in social media marketing campaigns.</li>
-                    </ul>
+                                <li>Restaurants face challenges such as managing fluctuating demand, controlling food
+                                    costs, minimizing waste, ensuring consistent cashflow, and delivering personalized
+                                    customer experiences in a competitive market.</li>
+                                <li>FRAICLY provides AI-driven tools to optimize menu pricing, forecast demand,
+                                    streamline inventory management, reduce waste, and analyze customer preferences,
+                                    enabling restaurants to increase profitability and enhance operational efficiency.
+                                </li>
+                                <li><strong>FRAICLY's Partnerships:</strong> If your restaurant/club is lacking footfall
+                                    we can introduce you to our partners that specialize in social media marketing
+                                    campaigns.</li>
+                            </ul>
+                        </div>
+                        <button onclick="scrollToSection('Hotels_section')">Use cases</button>
                     </div>
-                    <button onclick="scrollToSection('Hotels_section')">Use cases</button>
-                </div>
-                    
-                    <div class="sector-item" id="Non-Profit_cell">
-                    <h3>Non Profits</h3>
-                    <div class="container2">
-                    <ul>
-                                <li>Non-profits often face inconsistent funding streams, delayed donor contributions, and challenges in evaluating the financial reliability of donors or banking partners.</li>
-                        <li>FRAICLY offers tailored solutions to forecast cashflow, assess donor creditworthiness, evaluate banking partner solvency, and provide actionable insights to optimize resource allocation, enhance financial stability, and ensure sustainable impact.</li>
-                    </ul>
-                    </div>
-                    <button onclick="scrollToSection('Non_Profit_section')">Use cases</button>
-                </div>
-        </div>
-    </div>
-    </section>
 
-    <div class="separator"></div>
-   
+                    <div class="sector-item" id="Non-Profit_cell">
+                        <h3>Non Profits</h3>
+                        <div class="container2">
+                            <ul>
+                                <li>Non-profits often face inconsistent funding streams, delayed donor contributions,
+                                    and challenges in evaluating the financial reliability of donors or banking
+                                    partners.</li>
+                                <li>FRAICLY offers tailored solutions to forecast cashflow, assess donor
+                                    creditworthiness, evaluate banking partner solvency, and provide actionable insights
+                                    to optimize resource allocation, enhance financial stability, and ensure sustainable
+                                    impact.</li>
+                            </ul>
+                        </div>
+                        <button onclick="scrollToSection('Non_Profit_section')">Use cases</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="separator"></div>
+
         <!-- Services Section -->
         <section id="services" class="section">
             <div class="section-hero">
                 <h1>Our Services</h1>
-        </div>
-            
-        <div class="container">
+            </div>
+
+            <div class="container">
                 <div class="tab-container" id="Services_tabs">
-                <div class="tabs">
+                    <div class="tabs">
                         <button class="tab-button active" data-tab="ai-services-tab">AI Design & Deployment</button>
-                    <button class="tab-button" data-tab="financial-analysis-tab">Financial Analysis</button>
-                    <button class="tab-button" data-tab="finance-projects-tab">Finance Projects</button>
-                    <button class="tab-button" data-tab="economic-analysis-tab">Economic Analysis</button>
+                        <button class="tab-button" data-tab="financial-analysis-tab">Financial Analysis</button>
+                        <button class="tab-button" data-tab="finance-projects-tab">Finance Projects</button>
+                        <button class="tab-button" data-tab="economic-analysis-tab">Economic Analysis</button>
                         <button class="tab-button" data-tab="business_recovery-tab">Business Recovery</button>
-                </div>
-    
-                <div id="ai-services-tab" class="tab-content active">
+                    </div>
+
+                    <div id="ai-services-tab" class="tab-content active">
                         <h2>AI Design and Deployment</h2>
-                        <p>We help SMEs leverage artificial intelligence to automate processes, enhance decision-making, and gain competitive advantages.</p>
-                        
+                        <p>We help SMEs leverage artificial intelligence to automate processes, enhance decision-making,
+                            and gain competitive advantages.</p>
+
                         <h3>Our AI Services Include:</h3>
                         <ul>
-                            <li><strong>Process Automation:</strong> Automate repetitive tasks to reduce costs and improve efficiency</li>
-                            <li><strong>Predictive Analytics:</strong> Use AI to forecast trends and make data-driven decisions</li>
-                            <li><strong>Custom AI Solutions:</strong> Develop tailored AI tools for your specific business needs</li>
+                            <li><strong>Process Automation:</strong> Automate repetitive tasks to reduce costs and
+                                improve efficiency</li>
+                            <li><strong>Predictive Analytics:</strong> Use AI to forecast trends and make data-driven
+                                decisions</li>
+                            <li><strong>Custom AI Solutions:</strong> Develop tailored AI tools for your specific
+                                business needs</li>
                             <li><strong>AI Strategy Consulting:</strong> Help you plan and implement AI initiatives</li>
-                    </ul>
-                        
+                        </ul>
+
                         <h3>Implementation Process:</h3>
                         <ol>
                             <li><strong>Assessment:</strong> Evaluate your current data maturity and AI readiness</li>
@@ -373,68 +479,86 @@
                             <li><strong>Deploy:</strong> Implement and integrate AI tools into your operations</li>
                             <li><strong>Optimize:</strong> Continuously improve and scale your AI capabilities</li>
                         </ol>
-                </div>
-    
-                <div id="financial-analysis-tab" class="tab-content">
-                    <h2>Financial Analysis</h2>
-                        <p>Comprehensive financial analysis services to help you understand your business performance and identify opportunities for improvement.</p>
-                        
+                    </div>
+
+                    <div id="financial-analysis-tab" class="tab-content">
+                        <h2>Financial Analysis</h2>
+                        <p>Comprehensive financial analysis services to help you understand your business performance
+                            and identify opportunities for improvement.</p>
+
                         <h3>Our Financial Analysis Services:</h3>
                         <ul>
-                            <li><strong>Cash Flow Analysis:</strong> Optimize your cash flow management and forecasting</li>
-                            <li><strong>Credit Risk Assessment:</strong> Evaluate client and partner creditworthiness</li>
-                            <li><strong>Bank Solvency Evaluation:</strong> Assess the financial stability of your banking partners</li>
-                            <li><strong>Financial Performance Review:</strong> Analyze your business's financial health and performance</li>
+                            <li><strong>Cash Flow Analysis:</strong> Optimize your cash flow management and forecasting
+                            </li>
+                            <li><strong>Credit Risk Assessment:</strong> Evaluate client and partner creditworthiness
+                            </li>
+                            <li><strong>Bank Solvency Evaluation:</strong> Assess the financial stability of your
+                                banking partners</li>
+                            <li><strong>Financial Performance Review:</strong> Analyze your business's financial health
+                                and performance</li>
                             <li><strong>Risk Management:</strong> Identify and mitigate financial risks</li>
                         </ul>
-                </div>
-                    
-                <div id="finance-projects-tab" class="tab-content">
+                    </div>
+
+                    <div id="finance-projects-tab" class="tab-content">
                         <h2>Finance Projects (M&A/Exit)</h2>
-                        <p>Expert guidance for mergers, acquisitions, and business exit strategies to maximize value and minimize risk.</p>
-                        
+                        <p>Expert guidance for mergers, acquisitions, and business exit strategies to maximize value and
+                            minimize risk.</p>
+
                         <h3>Our Finance Project Services:</h3>
                         <ul>
-                            <li><strong>M&A Advisory:</strong> Support for mergers and acquisitions from valuation to integration</li>
-                            <li><strong>Business Valuation:</strong> Accurate valuation of your business for sale or investment</li>
-                            <li><strong>Exit Strategy Planning:</strong> Develop comprehensive exit strategies for business owners</li>
+                            <li><strong>M&A Advisory:</strong> Support for mergers and acquisitions from valuation to
+                                integration</li>
+                            <li><strong>Business Valuation:</strong> Accurate valuation of your business for sale or
+                                investment</li>
+                            <li><strong>Exit Strategy Planning:</strong> Develop comprehensive exit strategies for
+                                business owners</li>
                             <li><strong>Due Diligence:</strong> Thorough financial and operational due diligence</li>
                             <li><strong>Deal Structuring:</strong> Optimize deal structures for maximum value</li>
                         </ul>
-                </div>
-                    
-                <div id="economic-analysis-tab" class="tab-content">
-                    <h2>Economic Analysis</h2>
-                        <p>In-depth economic analysis to help you understand market trends and make informed strategic decisions.</p>
-                        
+                    </div>
+
+                    <div id="economic-analysis-tab" class="tab-content">
+                        <h2>Economic Analysis</h2>
+                        <p>In-depth economic analysis to help you understand market trends and make informed strategic
+                            decisions.</p>
+
                         <h3>Our Economic Analysis Services:</h3>
                         <ul>
-                            <li><strong>Market Analysis:</strong> Comprehensive analysis of your industry and market conditions</li>
-                            <li><strong>Economic Forecasting:</strong> Predict future economic trends affecting your business</li>
-                            <li><strong>Competitive Intelligence:</strong> Analyze competitor performance and market positioning</li>
+                            <li><strong>Market Analysis:</strong> Comprehensive analysis of your industry and market
+                                conditions</li>
+                            <li><strong>Economic Forecasting:</strong> Predict future economic trends affecting your
+                                business</li>
+                            <li><strong>Competitive Intelligence:</strong> Analyze competitor performance and market
+                                positioning</li>
                             <li><strong>Risk Assessment:</strong> Identify economic risks and opportunities</li>
                             <li><strong>Strategic Planning:</strong> Develop strategies based on economic insights</li>
                         </ul>
-                </div>
-                    
-                <div id="business_recovery-tab" class="tab-content">
-                    <h2>Business Recovery/Resilience</h2>
-                        <p>Comprehensive support to help your business recover from financial challenges and build long-term resilience.</p>
-                        
+                    </div>
+
+                    <div id="business_recovery-tab" class="tab-content">
+                        <h2>Business Recovery/Resilience</h2>
+                        <p>Comprehensive support to help your business recover from financial challenges and build
+                            long-term resilience.</p>
+
                         <h3>Our Business Recovery Services:</h3>
                         <ul>
-                            <li><strong>Financial Turnaround:</strong> Restructure and optimize your financial position</li>
-                            <li><strong>Resilience Building:</strong> Develop strategies to withstand economic shocks</li>
+                            <li><strong>Financial Turnaround:</strong> Restructure and optimize your financial position
+                            </li>
+                            <li><strong>Resilience Building:</strong> Develop strategies to withstand economic shocks
+                            </li>
                             <li><strong>Cost Optimization:</strong> Identify and implement cost-saving measures</li>
-                            <li><strong>Revenue Enhancement:</strong> Develop strategies to increase revenue streams</li>
-                            <li><strong>Crisis Management:</strong> Navigate through challenging business situations</li>
+                            <li><strong>Revenue Enhancement:</strong> Develop strategies to increase revenue streams
+                            </li>
+                            <li><strong>Crisis Management:</strong> Navigate through challenging business situations
+                            </li>
                         </ul>
-                            </div>
-                        </div>
-                       </div>
-            </section>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -464,6 +588,49 @@
     </div>
 
     <!-- Scripts -->
+    
+    <!-- Contact Modal -->
+    <div id="strategyModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="strategyModalTitle" aria-hidden="true">
+        <div class="modal-content">
+            <button class="close" type="button" aria-label="Close dialog">&times;</button>
+            <h1 id="strategyModalTitle">Get Your Free Insight or Assessment from Fraicly</h1>
+            <form target="_blank" action="https://hook.us2.make.com/84lf8ghwcenu765dymmc4to6k9jz8t3n" method="POST">
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+                        </div>
+                        <div class="col">
+                            <input type="email" name="email" class="form-control" placeholder="Work Email Address" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="text" name="Sector" class="form-control" placeholder="Sector / Industry" required>
+                        </div>
+                        <div class="col">
+                            <input type="text" name="Company" class="form-control" placeholder="Company / Employer" required>
+                        </div>
+                        <div class="col">
+                            <input type="text" name="Position" class="form-control" placeholder="Position / Title" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <select name="message" class="form-control" required>
+                        <option value="">Select What You Are Requesting</option>
+                        <option value="Weekly Economic Update Newsletter Signup">Weekly Economic Update Newsletter Signup</option>
+                        <option value="AI Readiness / Data Maturity Assessment">AI Readiness / Data Maturity Assessment</option>
+                        <option value="Cash Flow Resilience Assessment">Cash Flow Resilience Assessment</option>
+                        <option value="Other (please specify)">Other (please contact me)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
+            </form>
+        </div>
+    </div>
+    
     <script src="scripts.js"></script>
 </body>
+
 </html>

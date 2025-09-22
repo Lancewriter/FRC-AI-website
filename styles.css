@@ -664,6 +664,133 @@ header {
     font-family: 'Segoe UI', sans-serif;
 }
 
+/* ========================================
+   MODAL & FORM (GET IN TOUCH)
+   ======================================== */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    z-index: 3000;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-content {
+    background: #ffffff;
+    width: 100%;
+    max-width: 520px;
+    border-radius: 12px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.2);
+    padding: 2rem; /* compact padding */
+    border: 1px solid #e9ecef;
+}
+
+.modal-content h1 {
+    font-size: clamp(1.25rem, 2.8vw, 1.75rem);
+    margin-bottom: 0.75rem; /* compact */
+}
+
+.modal .close {
+    background: none;
+    border: none;
+    font-size: 1.75rem;
+    line-height: 1;
+    cursor: pointer;
+    color: #6c757d;
+    float: right;
+}
+
+.form-group {
+    margin-bottom: 0.75rem; /* compact */
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem; /* compact gutters */
+    margin-bottom: 1rem;
+}
+
+.form-row .col {
+    display: flex;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.55rem 0.7rem; /* compact height */
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.12);
+}
+
+/* Improve native select look to match inputs */
+select.form-control {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='%236c757d' d='M5.516 7.548a.75.75 0 0 1 1.06-.032L10 10.65l3.424-3.134a.75.75 0 1 1 1.028 1.092l-3.94 3.607a.75.75 0 0 1-1.028 0L5.548 8.608a.75.75 0 0 1-.032-1.06Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.65rem center;
+    background-size: 16px 16px;
+    padding-right: 2rem; /* space for arrow */
+}
+
+/* Ensure button looks full-width and prominent */
+.btn {
+    display: inline-block;
+    font: inherit;
+}
+
+.btn.btn-lg.btn-dark.btn-block {
+    width: 100%;
+    background: #2c3e50;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 0.85rem 1rem; /* slightly taller for emphasis */
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.05s ease;
+}
+
+.btn.btn-lg.btn-dark.btn-block:hover {
+    background: #1f2d3a;
+}
+
+.btn.btn-lg.btn-dark.btn-block:active {
+    transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 1rem; /* tighter on mobile */
+        border-radius: 10px;
+    }
+    .form-row {
+        grid-template-columns: 1fr; /* stack fields */
+        gap: 0.45rem;
+    }
+    .form-control {
+        font-size: 1rem;
+    }
+}
+
 .chatbot-button {
     width: 60px;
     height: 60px;
@@ -995,7 +1122,7 @@ footer {
 .separator {
     height: 1px;
     background-color: #e9ecef;
-    margin: 2rem 0;
+    margin: 1rem 0; /* reduced for a more compact look */
 }
 
 .hidden {
